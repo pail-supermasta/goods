@@ -25,15 +25,7 @@ use Avaks\Goods\Sticker;
 
 
 
-$newOrder = '{	"meta": {},	"data": {		"shipments": [{			"shipmentId": "846882375",			"shipmentDate": "2019-08-19T16:08:58+03:00",
-			"items": [{				"itemIndex": "1",				"offerId": "390",				"price": 700,				"finalPrice": 700,				"discounts": [],				"quantity": 1
-			}],			"label": {				"deliveryId": "880376857",				"region": "Москва",				"city": "Москва",
-				"address": "г Москва, р-н Аэропорт, ул Балтийская, д 4, кв. 3",				"fullName": "Тест Тест",				"merchantName": "ООО \"ЭДИЛ-ИМПОРТ\"",
-				"merchantId": 1231,				"shipmentId": "846882375",				"shippingDate": "2019-08-19T20:00:00+03:00",
-				"deliveryType": "Доставка курьером"				},			"shipping": {				"shippingDate": "2019-08-19T20:00:00+03:00",
-				"shippingPoint": 123257			},
-			"fulfillmentMethod": "FULFILLMENT_BY_MERCHANT"		}],		"merchantId": 1231	}}';
-$goods = json_decode($newOrder, true);
+
 
 /*после создания нового заказа*/
 /*берем доставкку и формируем новый экземпляр класса

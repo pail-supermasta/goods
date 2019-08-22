@@ -84,3 +84,27 @@ Stack trace:
 #0 C:\Users\User\Documents\goods\ex3.php(61): Mpdf\Mpdf->Output()
 #1 {main}
   thrown in C:\Users\User\Documents\goods\vendor\mpdf\mpdf\src\Mpdf.php on line 9392
+[21-Aug-2019 09:39:38 UTC] PHP Notice:  Undefined property: mysqli_result::$row in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 29
+[21-Aug-2019 09:39:38 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 31
+[21-Aug-2019 11:29:18 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 41
+[21-Aug-2019 11:31:37 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 41
+[21-Aug-2019 11:36:25 UTC] PHP Notice:  Array to string conversion in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 42
+[21-Aug-2019 11:38:55 UTC] PHP Notice:  Array to string conversion in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 42
+[21-Aug-2019 11:38:55 UTC] PHP Notice:  Array to string conversion in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 42
+[21-Aug-2019 11:55:36 UTC] PHP Notice:  Array to string conversion in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 55
+[21-Aug-2019 11:55:36 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 59
+[21-Aug-2019 11:55:36 UTC] PHP Notice:  Array to string conversion in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 55
+[21-Aug-2019 11:55:36 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 59
+[21-Aug-2019 11:58:58 UTC] PHP Notice:  Array to string conversion in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 55
+[21-Aug-2019 11:58:58 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 59
+[21-Aug-2019 11:58:58 UTC] PHP Notice:  Array to string conversion in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 55
+[21-Aug-2019 11:58:58 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 59
+[21-Aug-2019 12:01:38 UTC] PHP Notice:  Undefined index: href in C:\Users\User\Documents\goods\class\MS\Products.php on line 30
+[21-Aug-2019 12:01:38 UTC] PHP Notice:  Undefined index: href in C:\Users\User\Documents\goods\class\MS\Products.php on line 30
+[21-Aug-2019 12:11:38 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 59
+[21-Aug-2019 12:11:38 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 59
+[21-Aug-2019 12:12:30 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 60
+[21-Aug-2019 12:12:30 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 60
+[21-Aug-2019 13:39:23 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 59
+[21-Aug-2019 13:39:23 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 59
+[21-Aug-2019 14:03:11 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 56

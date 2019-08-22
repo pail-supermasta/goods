@@ -21,10 +21,10 @@ class Sticker
     public function printPdf()
     {
 //        продавец на проде 608 на тесте 1231
-//        "boxCodes":["608*846882375*1"]
+//        "boxCodes":['608*846882375*1']
         $data = '{
                     "shipmentId": "842818431",
-                    "boxCodes":["1231*842818431*1"]
+                    "boxCodes":['1231*842818431*1']
                 }';
         $data = json_decode($data, true);
         $pdf = Curl::curl('orderService/sticker/print', $data);

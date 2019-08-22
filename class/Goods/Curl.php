@@ -11,14 +11,8 @@ namespace Avaks\Goods;
 
 class Curl
 {
-
-    function __construct()
-    {
-        /*		$this->token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
-                $this->api_url = "https://partner.goods.ru/api/market/v1/";*/
-        $this->token = "6881430B-882F-4C4F-8DCA-14FDAFEBAFEC";
-        $this->api_url = "https://test-partner.goods.ru/api/market/v1/";
-    }
+    /*		$this->token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
+            $this->api_url = "https://partner.goods.ru/api/market/v1/";*/
 
     public static function curl($link, $_data)
     {

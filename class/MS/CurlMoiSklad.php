@@ -12,11 +12,8 @@ namespace Avaks\MS;
 class CurlMoiSklad
 {
 
-    private $username = 'kurskii@техтрэнд';
-    private $password = 'UR4638YFe';
-    private $path = 'https://online.moysklad.ru/api/remap/1.1';
 
-    public function curlMS($link = false, $data = false)
+    public static function curlMS($link, $data = false)
     {
 
         $curl = curl_init();
@@ -24,9 +21,9 @@ class CurlMoiSklad
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, false);
-        curl_setopt($curl, CURLOPT_URL, $this->path . $link);
+        curl_setopt($curl, CURLOPT_URL, 'https://online.moysklad.ru/api/remap/1.1/' . $link);
         curl_setopt($curl, CURLOPT_HTTPGET, true);
-        curl_setopt($curl, CURLOPT_USERPWD, $this->username . ':' . $this->password);
+        curl_setopt($curl, CURLOPT_USERPWD, 'kurskii@техтрэнд:UR4638YFe');
 
 
         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 30);

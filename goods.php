@@ -5,9 +5,8 @@
 /**
  * 
  */
-//class GoodsCustomerorder extends Customerorder{
-class GoodsCustomerorder {
-
+class GoodsCustomerorder extends Customerorder{
+	
 	function __construct(){
 		$this->goods_id = 'goods_id';
 	}
@@ -20,10 +19,8 @@ class GoodsCustomerorder {
 class Goods{
 	
 	function __construct(){
-/*		$this->token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
-		$this->api_url = "https://partner.goods.ru/api/market/v1/";*/
-		$this->token = "6881430B-882F-4C4F-8DCA-14FDAFEBAFEC";
-		$this->api_url = "https://test-partner.goods.ru/api/market/v1/";
+		$this->token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
+		$this->api_url = "https://partner.goods.ru/api/market/v1/";
 	}
 
 
@@ -51,8 +48,7 @@ class Goods{
 		$result = curl_exec($curl);
 
     	if (curl_errno($curl)){
-//    		dump(curl_error());
-            var_dump(curl_errno($curl) . PHP_EOL);
+    		dump(curl_error());
     	} else {
     		$result = json_decode($result, true);
     	}
@@ -60,10 +56,8 @@ class Goods{
     	if ($result['success'] == '1'){
     		return $result;
     	} else {
-/*    		dump('error');
-    		dump($result);*/
-            var_dump('error');
-            var_dump($result);
+    		dump('error');
+    		dump($result);
     	}
 
 

@@ -83,12 +83,12 @@ class Order
                         }]                    
                 }';
         $data = json_decode($data, true);
-        $goods_order_names = Curl::curl('orderService/order/reject', $data);
+        $goodsOrderNames = Curl::curl('orderService/order/reject', $data);
 
         if ($this->state == 'NEW') {
             $this->state = 'REJECT PARTIALLY';
         }
-        return $goods_order_names;
+        return $goodsOrderNames;
     }
 
     /**
@@ -108,12 +108,12 @@ class Order
                         }]                    
                 }';
         $data = json_decode($data, true);
-        $goods_order_names = Curl::curl('orderService/order/confirm', $data);
+        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data);
 
         if ($this->state == 'NEW') {
             $this->state = 'CONFIRMED PARTIALLY';
         }
-        return $goods_order_names;
+        return $goodsOrderNames;
     }
 
     /**
@@ -143,12 +143,12 @@ class Order
                         }]                    
                 }';
         $data = json_decode($data, true);
-        $goods_order_names = Curl::curl('orderService/order/reject', $data);
+        $goodsOrderNames = Curl::curl('orderService/order/reject', $data);
 
         if ($this->state == 'NEW') {
             $this->state = 'REJECT';
         }
-        return $goods_order_names;
+        return $goodsOrderNames;
     }
 
     /**
@@ -174,12 +174,12 @@ class Order
                         }]                    
                 }';
         $data = json_decode($data, true);
-        $goods_order_names = Curl::curl('orderService/order/confirm', $data);
+        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data);
 
         if ($this->state == 'NEW') {
             $this->state = 'CONFIRM';
         }
-        return $goods_order_names;
+        return $goodsOrderNames;
     }
 
     /**
@@ -224,14 +224,42 @@ class Order
                 $cargo->setCargo();*/
 
 
-        $goods_order_names = Curl::curl('orderService/order/packing', $data);
+        $goodsOrderNames = Curl::curl('orderService/order/packing', $data);
 
         if ($this->state == 'CONFIRM') {
             $this->state = 'PACKED';
         }
-        return $goods_order_names;
+        return $goodsOrderNames;
 
 
     }
 
+    public function setShipping()
+    {
+        /*изменился с на выдаче на доставляется = shippingDate*/
+        $data = '{
+                "shipments": [{
+                    "shipmentId": "842818431",
+                    "orderCode": "842818431",
+                    "items": [{
+                        "itemIndex": 2,
+                        "quantity": 1,
+                        "boxes": [{
+                            "boxIndex": 1,
+                            "boxCode": "1231*842818431*1"
+                        }],
+                        "shipping":{  "shippingDate":"2019-11-23T14:00:00+03:00"}
+                    }]
+                }]
+            }';
+
+        $data = json_decode($data, true);
+
+        $goodsOrderNames = Curl::curl('orderService/order/shipping', $data);
+
+        if ($this->state == 'PACKED') {
+            $this->state = 'SHIPPED';
+        }
+        return $goodsOrderNames;
+    }
 }

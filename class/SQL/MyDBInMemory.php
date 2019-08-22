@@ -9,7 +9,7 @@
 namespace SQL;
 
 
-class MyDB extends \SQLite3
+class MyDBInMemory extends \SQLite3
 {
     function __construct()
     {
@@ -17,7 +17,7 @@ class MyDB extends \SQLite3
     }
 }
 
-$db = new MyDB();
+$db = new MyDBInMemory();
 if (!$db) {
     echo $db->lastErrorMsg();
 } else {
