@@ -14,10 +14,11 @@ class Order
 //    private $token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
 //    private $api_url = "https://partner.goods.ru/api/market/v1/";
     public $state = "NEW";
-    private $postToken = '6881430B-882F-4C4F-8DCA-14FDAFEBAFEC';
 
     /**
      * GETTERS
+     * @param $id
+     * @return array
      */
 
     public function getOrder($id)
@@ -31,9 +32,10 @@ class Order
     }
 
 
-    public function getOrdersNew()
+    public function getOrdersNew($token)
     {
         $result = Curl::curl('orderService/order/search', array(
+            "token" => "$token",
             "statuses" => array(
                 0 => "NEW",
             )
@@ -69,10 +71,12 @@ class Order
 
     /**
      * в котором содержатся все Лоты, которые Продавец отгрузить не готов
+     * @param array $rejectSome
+     * @return mixed
      */
-    public function setRejectLots()
+    public function setRejectLots(array $rejectSome)
     {
-        $data = '{
+/*        $data = '{
                         "shipments": [{
                             "shipmentId": "842818431",
                             "orderCode": "",
@@ -81,8 +85,9 @@ class Order
                                 "offerId": "390"
                             }]
                         }]                    
-                }';
-        $data = json_decode($data, true);
+                }';*/
+//        $data = json_decode($data, true);
+        $data = $rejectSome;
         $goodsOrderNames = Curl::curl('orderService/order/reject', $data);
 
         if ($this->state == 'NEW') {
@@ -93,11 +98,13 @@ class Order
 
     /**
      * в котором содержатся все Лоты, которые Продавец готов отгрузить
+     * @param array $confirmSome
+     * @return mixed
      */
-    public function setConfirmLots()
+    public function setConfirmLots(array $confirmSome)
     {
 
-        $data = '{
+/*        $data = '{
                         "shipments": [{
                             "shipmentId": "842818431",
                             "orderCode": "",
@@ -106,8 +113,9 @@ class Order
                                 "offerId": "392"
                             }]
                         }]                    
-                }';
-        $data = json_decode($data, true);
+                }';*/
+//        $data = json_decode($data, true);
+        $data = $confirmSome;
         $goodsOrderNames = Curl::curl('orderService/order/confirm', $data);
 
         if ($this->state == 'NEW') {
@@ -126,8 +134,10 @@ class Order
      * 2. Причина отмены / reason
      *  1. Тип причины / type
      *  2. Комментарий / comment
+     * @param array $rejectAll
+     * @return mixed
      */
-    public function setReject()
+    public function setReject(array $rejectAll)
     {
         $data = '{
                         "shipments": [{
@@ -142,7 +152,8 @@ class Order
                             }]
                         }]                    
                 }';
-        $data = json_decode($data, true);
+        $data = $rejectAll;
+//        $data = json_decode($data, true);
         $goodsOrderNames = Curl::curl('orderService/order/reject', $data);
 
         if ($this->state == 'NEW') {
@@ -159,9 +170,11 @@ class Order
      *  3. Данные о Лотах / itemsДа
      *      1. Порядковый номер Лота / itemIndexДа
      *      2. Идентификатор Оффера Продавца/ offerIdДа
+     * @param array $confirmAll
+     * @return mixed
      */
 
-    public function setConfirm()
+    public function setConfirm(array $confirmAll)
     {
         $data = '{
                         "shipments": [{
@@ -173,7 +186,8 @@ class Order
                             }]
                         }]                    
                 }';
-        $data = json_decode($data, true);
+        $data = $confirmAll;
+//        $data = json_decode($data, true);
         $goodsOrderNames = Curl::curl('orderService/order/confirm', $data);
 
         if ($this->state == 'NEW') {
@@ -184,41 +198,31 @@ class Order
 
     /**
      * комплектации Отправления
+     * @param $orderToPack
+     * @return mixed
      */
 
-    public function setPacking()
+    public function setPacking(array $orderToPack)
     {
         /*показал ошибку почему то хотя перешел в packed*/
+
         /*        $data = '{
                         "shipments": [{
-                            "shipmentId": "846882375",
-                            "orderCode": "846882375",
+                            "shipmentId": "842818431",
+                            "orderCode": "842818431",
                             "items": [{
-                                "itemIndex": 1,
+                                "itemIndex": 2,
                                 "quantity": 1,
                                 "boxes": [{
                                     "boxIndex": 1,
-                                    "boxCode": "1231*846882375*1"
+                                    "boxCode": "1231*842818431*1"
                                 }]
                             }]
                         }]
-                    }';*/
-        $data = '{
-                "shipments": [{
-                    "shipmentId": "842818431",
-                    "orderCode": "842818431",
-                    "items": [{
-                        "itemIndex": 2,
-                        "quantity": 1,
-                        "boxes": [{
-                            "boxIndex": 1,
-                            "boxCode": "1231*842818431*1"
-                        }]
-                    }]
-                }]
-            }';
+                    }';    */
 
-        $data = json_decode($data, true);
+        $data = $orderToPack;
+//        $data = json_decode($data, true);
 //        $items = $data['shipments']['items'];
         /*        $cargo = new Cargo($items);
                 $cargo->setCargo();*/
@@ -237,7 +241,7 @@ class Order
     public function setShipping()
     {
         /*изменился с на выдаче на доставляется = shippingDate*/
-        $data = '{
+/*        $data = '{
                 "shipments": [{
                     "shipmentId": "842818431",
                     "orderCode": "842818431",
@@ -251,7 +255,7 @@ class Order
                         "shipping":{  "shippingDate":"2019-11-23T14:00:00+03:00"}
                     }]
                 }]
-            }';
+            }';*/
 
         $data = json_decode($data, true);
 

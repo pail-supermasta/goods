@@ -9,6 +9,8 @@
 namespace Avaks\Goods;
 
 
+use Mpdf\MpdfException;
+
 class Sticker
 {
     private $state = false;
@@ -16,29 +18,55 @@ class Sticker
 
     /**
      * Печать и наклеивание Этикетки на каждое Грузовое место(запрос sticker/print
+     * @param $shipmentId
+     * @return bool
      */
 
-    public function printPdf()
+    public function printPdf($shipmentId)
     {
+        $toReturn = false;
 //        продавец на проде 608 на тесте 1231
 //        "boxCodes":['608*846882375*1']
-        $data = '{
+        /*$data = '{
                     "shipmentId": "842818431",
-                    "boxCodes":['1231*842818431*1']
+                    "boxCodes":["1231*842818431*1"]
+                }';*/
+        $data = '{
+                    "shipmentId": "' . $shipmentId . '",
+                    "boxCodes":["'.BOX_CODE_ID.'*' . $shipmentId . '*1"]
                 }';
         $data = json_decode($data, true);
         $pdf = Curl::curl('orderService/sticker/print', $data);
 
 
         if ($pdf) {
-            $mpdf = new \Mpdf\Mpdf();
-            $mpdf->WriteHTML($pdf['data']);
-            if ($mpdf->Output('pdf/sticker-files/filename.pdf', \Mpdf\Output\Destination::FILE)) {
-                return true;
-            } else {
-                return false;
+            try {
+                $mpdf = new \Mpdf\Mpdf();
+            } catch (MpdfException $e) {
+                error_log($e . " \n", 3, "printPdf_errors.log");
             }
+
+
+            try {
+                $mpdf->WriteHTML($pdf['data']);
+            } catch (MpdfException $e) {
+                error_log($e . " \n", 3, "printPdf_errors.log");
+            }
+
+
+            try {
+                if ($mpdf->Output('pdf/sticker-files/Маркировка '.$shipmentId.'.pdf', \Mpdf\Output\Destination::FILE)) {
+                    $toReturn = true;
+                } else {
+                    $toReturn = false;
+                }
+            } catch (MpdfException $e) {
+                error_log($e . " \n", 3, "printPdf_errors.log");
+            }
+
+
         }
+        return $toReturn;
     }
 
 

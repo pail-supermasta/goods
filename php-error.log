@@ -108,3 +108,9 @@ Stack trace:
 [21-Aug-2019 13:39:23 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 59
 [21-Aug-2019 13:39:23 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\Users\User\Documents\goods\class\SQL\AvaksSQL.php on line 59
 [21-Aug-2019 14:03:11 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 56
+[26-Aug-2019 12:45:47 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 56
+[27-Aug-2019 14:47:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\class\MS\Orders.php on line 32
+[27-Aug-2019 14:50:50 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 57
+[27-Aug-2019 14:50:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 40
+[27-Aug-2019 14:51:23 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 57
+[27-Aug-2019 14:51:23 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 42

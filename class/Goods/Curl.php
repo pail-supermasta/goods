@@ -14,6 +14,11 @@ class Curl
     /*		$this->token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
             $this->api_url = "https://partner.goods.ru/api/market/v1/";*/
 
+    /**
+     * @param $link
+     * @param $_data
+     * @return mixed
+     */
     public static function curl($link, $_data)
     {
         $data = array(
@@ -31,6 +36,7 @@ class Curl
 
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, 'https://test-partner.goods.ru/api/market/v1/' . $link);
+//        curl_setopt($curl, CURLOPT_URL, 'https://partner.goods.ru/api/market/v1/' . $link);
 
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
 

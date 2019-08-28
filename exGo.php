@@ -15,7 +15,7 @@ ini_set("error_log", "php-error.log");
 header('Content-Type: application/json');
 
 require_once 'vendor/autoload.php';
-require_once 'goods.php';
+//require_once 'goods.php';
 
 use Avaks\Goods\Cargo;
 use Avaks\Goods\Order;
@@ -32,13 +32,13 @@ use Avaks\Goods\Sticker;
 передаем лоты
 лот и отправляем в МС на проверку*/
 
-$items = $goods['data']['shipments'][0]['items'];
+//$items = $goods['data']['shipments'][0]['items'];
 //$cargo = new Cargo($items);
 //print_r($cargo->validateCargo());
 
 
 $goods = new Order();
-//$res = $goods->getOrder('842818431');
+$res = $goods->getOrder('863018218');
 //$res = $goods->getOrdersNew();
 //$res = $goods->setConfirmLots();
 //$res = $goods->setRejectLots();
@@ -51,7 +51,7 @@ $res= $sticker->printPdf();*/
 
 //$res = $goods->setPacking();
 //$res = $goods->getOrdersPacked();
-//var_dump($res);
+var_dump($res);
 
 
 
