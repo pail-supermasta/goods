@@ -27,7 +27,7 @@ $ordersMS = new Orders();
 
 $goods = new Order();
 
-/*ШАГ 2 из описания - подтверждение или отмена*/
+/*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
 
 /*№1 получить заказы гудса из МС в статусе В работе*/
 //$ordersMSInWork = $ordersMS->getInWork();
@@ -131,11 +131,12 @@ function setOrderConfimation(Order $goods, $orderID, array $notFoundInMS, array 
     return $toReturn;
 }
 
+/*ШАГ 2 КОНЕЦ*/
 
 //getOrdersDetails($goods, $ordersMSInWork);
 
 
-/*ШАГ 3 из описания - убедиться что заказы подтвердились в Гудс и в МС*/
+/*ШАГ 3 НАЧАЛО из описания - убедиться что заказы подтвердились в Гудс и в МС*/
 
 /*№1 получить заказы гудса в статусе CONFIRMED */
 
@@ -144,9 +145,9 @@ $resOrdersConfirmed = $goods->getOrdersConfirmed();
 
 
 /*Что то в МС делаем если CONFIRMED ?*/
+/*ШАГ 3 КОНЕЦ*/
 
-
-/*ШАГ 4 из описания - комплектация заказов и наклеивание этикетки*/
+/*ШАГ 4 НАЧАЛО из описания - комплектация заказов и наклеивание этикетки*/
 
 /*№1 получить заказы гудса в статусе CONFIRMED */
 
@@ -156,7 +157,6 @@ var_dump($toPack);
 
 
 /*№2 для каждого заказа - установить в Гудс заказа скомплектован */
-
 
 function setOrderPacking(Order $goods, $toPack)
 {
@@ -181,28 +181,24 @@ function setOrderPacking(Order $goods, $toPack)
 
 //setOrderPacking($goods, $toPack);
 
-
-/*№3 для каждого заказа - печать этикетки и добавление файла в заказ в МС */
-
-/*ШАГ 1 получить список упакованных заказов*/
+/*№3  - получить список упакованных заказов из Гудс*/
 $resOrdersPacked = $goods->getOrdersPacked();
 
-//var_dump($resOrdersPacked);
+/*№4 для каждого заказа - печать этикетки и добавление файла в заказ в МС */
 $sticker = new Sticker();
 
 foreach ($resOrdersPacked as $orderPacked) {
-//ШАГ 2 записать в заказ МС файл маркировочного листа//
-    /*get pdf code from Goods*/
+
+    /*получить стикер из Гудс для заказа*/
     $pdfCode = $sticker->printPdf($orderPacked, BOX_CODE_ID);
-    /*init order MS*/
     $orderMS = new OrderMS('', $orderPacked);
     $orderMS->id = $orderMS->getByName()['id'];
 
-
-    /*set to Order MS*/
+    /*записать в заказ МС файл маркировочного листа*/
     $put_data = array();
     $attribute = array();
 
+//    если надо получить из файла
 //    $content = base64_encode(file_get_contents("pdf/sticker-files/Маркировка $orderMS->name.pdf"));
     $content = base64_encode($pdfCode);
     $attribute['id'] = 'b8a8f6d6-5782-11e8-9ff4-34e800181bf6';
@@ -215,7 +211,14 @@ foreach ($resOrdersPacked as $orderPacked) {
 }
 
 
+/*ШАГ 4 КОНЕЦ*/
 
+
+/*ШАГ 6 НАЧАЛО из описания*/
+
+/*отгрузить все заказы которые в МС со статусом доставляются но в Гудс статус Ожидает отгрузки*/
+
+/*ШАГ 6 КОНЕЦ*/
 
 
 

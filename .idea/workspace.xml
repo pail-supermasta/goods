@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c897fa2a-f79e-4601-866a-3c4cb7a174ad" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Goods/Cargo.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/class/Goods/Sticker.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Goods/Sticker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/OrderMS.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/Orders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exFinal.php" beforeDir="false" afterPath="$PROJECT_DIR$/exFinal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exMS.php" beforeDir="false" afterPath="$PROJECT_DIR$/exMS.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,8 +37,8 @@
       <file leaf-file-name="exFinal.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exFinal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="205" column="25" lean-forward="true" selection-start-line="205" selection-start-column="25" selection-end-line="205" selection-end-column="25" />
+            <state relative-caret-position="510">
+              <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
               <folding>
                 <element signature="e#299#321#0#PHP" expanded="true" />
               </folding>
@@ -64,8 +58,8 @@
       <file leaf-file-name="Sticker.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/Goods/Sticker.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="62" column="19" lean-forward="true" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+            <state relative-caret-position="540">
+              <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -284,12 +278,12 @@
       <workItem from="1567061488694" duration="17927000" />
       <workItem from="1567162548977" duration="92000" />
       <workItem from="1567165476128" duration="502000" />
-      <workItem from="1567171207494" duration="3723000" />
+      <workItem from="1567171207494" duration="5293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134197000" />
+    <option name="totallyTimeSpent" value="135767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="483" y="181" width="1222" height="915" extended-state="0" />
@@ -647,6 +641,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/class/Goods/Sticker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="64" column="33" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -654,17 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/Goods/Sticker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="62" column="19" lean-forward="true" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exFinal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="205" column="25" lean-forward="true" selection-start-line="205" selection-start-column="25" selection-end-line="205" selection-end-column="25" />
+        <state relative-caret-position="510">
+          <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
           <folding>
             <element signature="e#299#321#0#PHP" expanded="true" />
           </folding>

@@ -56,11 +56,13 @@ class Sticker
 
 
             try {
+//                если надо сохранить в файл
                 /*if ($mpdf->Output('pdf/sticker-files/Маркировка ' . $shipmentId . '.pdf', \Mpdf\Output\Destination::FILE)) {
                     $toReturn = true;
                 } else {
                     $toReturn = false;
                 }*/
+//                вернуть строкой
                 return $mpdf->Output(null, \Mpdf\Output\Destination::STRING_RETURN);
             } catch (MpdfException $e) {
                 error_log($e . " \n", 3, "printPdf_errors.log");
