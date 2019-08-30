@@ -10,7 +10,7 @@ namespace Avaks\MS;
 
 
 use Avaks\SQL\AvaksSQL;
-use Avaks\MS\Order;
+use Avaks\MS\OrderMS;
 use Avaks\MS\Products;
 
 class Orders
@@ -31,7 +31,7 @@ class Orders
         $orderByState = array();
         foreach ($ordersByState as $item) {
 
-            $orderMS = new Order($item['id'], $item['name'], $item['positions']);
+            $orderMS = new OrderMS($item['id'], $item['name'], $item['positions']);
             $orderByState['name'] = $item['name'];
 
             $positions = new Products($orderMS->positions);

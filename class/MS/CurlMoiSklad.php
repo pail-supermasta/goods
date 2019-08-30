@@ -13,7 +13,7 @@ class CurlMoiSklad
 {
 
 
-    public static function curlMS($link, $data = false)
+    public static function curlMS($link, $data = false, $type = false)
     {
 
         $curl = curl_init();
@@ -22,24 +22,34 @@ class CurlMoiSklad
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_FOLLOWLOCATION, false);
         curl_setopt($curl, CURLOPT_URL, 'https://online.moysklad.ru/api/remap/1.1/' . $link);
-        curl_setopt($curl, CURLOPT_HTTPGET, true);
         curl_setopt($curl, CURLOPT_USERPWD, 'kurskii@техтрэнд:UR4638YFe');
+
+        if ($type == 'put') {
+            curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PUT');
+        } else{
+            curl_setopt($curl, CURLOPT_HTTPGET, true);
+        }
 
 
         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 30);
         if ($data) {
-            curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+            echo "Post body is: \n" . $data . "\n";
         }
 
-        $headers = array();
-        $headers[] = 'Content-Type: application/json';
-        if ($data) {
-            $headers[] = 'Content-Length:' . strlen(json_encode($data));
-        }
+        $headers = array(
+            0 => "Content-Type: application/json",
+        );
 
         curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($curl, CURLINFO_HEADER_OUT, true);
 
         $result = curl_exec($curl);
+        $info = curl_getinfo($curl);
+
+
+        print_r("\n" . $info['request_header']);
+
         $curl_errno = curl_errno($curl);
         curl_close($curl);
 

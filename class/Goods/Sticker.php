@@ -22,7 +22,7 @@ class Sticker
      * @return bool
      */
 
-    public function printPdf($shipmentId)
+    public function printPdf($shipmentId, $boxCode)
     {
         $toReturn = false;
 //        продавец на проде 608 на тесте 1231
@@ -33,10 +33,11 @@ class Sticker
                 }';*/
         $data = '{
                     "shipmentId": "' . $shipmentId . '",
-                    "boxCodes":["'.BOX_CODE_ID.'*' . $shipmentId . '*1"]
+                    "boxCodes":["' . $boxCode . '*' . $shipmentId . '*1"]
                 }';
         $data = json_decode($data, true);
         $pdf = Curl::curl('orderService/sticker/print', $data);
+
 
 
         if ($pdf) {
@@ -55,11 +56,12 @@ class Sticker
 
 
             try {
-                if ($mpdf->Output('pdf/sticker-files/Маркировка '.$shipmentId.'.pdf', \Mpdf\Output\Destination::FILE)) {
+                /*if ($mpdf->Output('pdf/sticker-files/Маркировка ' . $shipmentId . '.pdf', \Mpdf\Output\Destination::FILE)) {
                     $toReturn = true;
                 } else {
                     $toReturn = false;
-                }
+                }*/
+                return $mpdf->Output(null, \Mpdf\Output\Destination::STRING_RETURN);
             } catch (MpdfException $e) {
                 error_log($e . " \n", 3, "printPdf_errors.log");
             }

@@ -18,6 +18,7 @@ require_once 'vendor/autoload.php';
 use Avaks\Goods\Order;
 use Avaks\Goods\Sticker;
 use Avaks\MS\Orders;
+use Avaks\MS\OrderMS;
 
 define('BOX_CODE_ID', '1231'); //TEST
 //define('BOX_CODE_ID','608'); //PRODUCTION
@@ -33,9 +34,9 @@ $goods = new Order();
 
 /*№2 получить детали по заказам в выборке №1 из Goods API*/
 
-function getOrdersDetails(array $ordersMSInWork)
+function getOrdersDetails(Order $goods, array $ordersMSInWork)
 {
-    $goods = new Order();
+
     $notFoundInMS = array();
     $foundInMS = array();
     foreach ($ordersMSInWork as $orderMSInWork) {
@@ -64,7 +65,7 @@ function getOrdersDetails(array $ordersMSInWork)
         }
 
         /*run order confirmation*/
-        $res = setOrderConfimation($orderMSInWork['name'], $notFoundInMS, $foundInMS);
+        $res = setOrderConfimation($goods, $orderMSInWork['name'], $notFoundInMS, $foundInMS);
         var_dump($res);
 
     }
@@ -72,9 +73,9 @@ function getOrdersDetails(array $ordersMSInWork)
 }
 
 /*№3 подтвердить или отклонить позиции в Goods*/
-function setOrderConfimation($orderID, array $notFoundInMS, array $foundInMS)
+function setOrderConfimation(Order $goods, $orderID, array $notFoundInMS, array $foundInMS)
 {
-    $goods = new Order();
+
     $toReturn = array();
     /*если все позиции совпадают то отправить setConfirm*/
     /*нет ненайденных в МС*/
@@ -131,7 +132,7 @@ function setOrderConfimation($orderID, array $notFoundInMS, array $foundInMS)
 }
 
 
-//getOrdersDetails($ordersMSInWork);
+//getOrdersDetails($goods, $ordersMSInWork);
 
 
 /*ШАГ 3 из описания - убедиться что заказы подтвердились в Гудс и в МС*/
@@ -157,7 +158,7 @@ var_dump($toPack);
 /*№2 для каждого заказа - установить в Гудс заказа скомплектован */
 
 
-function setOrderPacking($toPack)
+function setOrderPacking(Order $goods, $toPack)
 {
     foreach ($toPack as $orderToPackId) {
 
@@ -178,15 +179,42 @@ function setOrderPacking($toPack)
     }
 }
 
-setOrderPacking($toPack);
+//setOrderPacking($goods, $toPack);
 
 
 /*№3 для каждого заказа - печать этикетки и добавление файла в заказ в МС */
 
+/*ШАГ 1 получить список упакованных заказов*/
+$resOrdersPacked = $goods->getOrdersPacked();
+
+//var_dump($resOrdersPacked);
 $sticker = new Sticker();
-foreach ($resOrdersConfirmed as $orderConfirmed) {
-//    $res = $sticker->printPdf($orderConfirmed,BOX_CODE_ID);
+
+foreach ($resOrdersPacked as $orderPacked) {
+//ШАГ 2 записать в заказ МС файл маркировочного листа//
+    /*get pdf code from Goods*/
+    $pdfCode = $sticker->printPdf($orderPacked, BOX_CODE_ID);
+    /*init order MS*/
+    $orderMS = new OrderMS('', $orderPacked);
+    $orderMS->id = $orderMS->getByName()['id'];
+
+
+    /*set to Order MS*/
+    $put_data = array();
+    $attribute = array();
+
+//    $content = base64_encode(file_get_contents("pdf/sticker-files/Маркировка $orderMS->name.pdf"));
+    $content = base64_encode($pdfCode);
+    $attribute['id'] = 'b8a8f6d6-5782-11e8-9ff4-34e800181bf6';
+    $attribute['file']['filename'] = "Маркировка $orderMS->name.pdf";
+    $attribute['file']['content'] = $content;
+    $put_data['attributes'][] = $attribute;
+
+    $final = json_encode($put_data);
+    $res = $orderMS->setSticker($final);
 }
+
+
 
 
 

@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c897fa2a-f79e-4601-866a-3c4cb7a174ad" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/goods.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/goods.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Goods/Curl.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Goods/Curl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Goods/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Goods/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/Goods/Cargo.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/class/Goods/Sticker.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Goods/Sticker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/MS/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/OrderMS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/MS/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/Orders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exFinal.php" beforeDir="false" afterPath="$PROJECT_DIR$/exFinal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exGo.php" beforeDir="false" afterPath="$PROJECT_DIR$/exGo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/php-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exMS.php" beforeDir="false" afterPath="$PROJECT_DIR$/exMS.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,59 +40,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="45" column="38" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="38" />
-              <folding>
-                <element signature="e#355#381#0#PHP" />
-                <element signature="e#441#569#0#PHP" />
-                <element signature="e#478#568#0#PHP" />
-                <element signature="e#512#558#1#PHP" />
-                <element signature="e#631#909#0#PHP" />
-                <element signature="e#692#857#0#PHP" />
-                <element signature="e#732#856#0#PHP" />
-                <element signature="e#798#846#1#PHP" />
-                <element signature="e#1173#1418#0#PHP" />
-                <element signature="e#1425#1451#0#PHP" />
-                <element signature="e#1457#1542#0#PHP" />
-                <element signature="e#2122#2207#0#PHP" />
-                <element signature="e#2235#2317#0#PHP" />
-                <element signature="e#2901#2989#0#PHP" />
-                <element signature="e#3016#3416#0#PHP" />
-                <element signature="e#3488#4331#0#PHP" />
-                <element signature="e#4104#4179#0#PHP" />
-                <element signature="e#4224#4578#0#PHP" />
-                <element signature="e#4697#5416#0#PHP" />
-                <element signature="e#5140#5216#0#PHP" />
-                <element signature="e#6573#6648#0#PHP" />
-                <element signature="e#6736#6815#0#PHP" />
-                <element signature="e#7653#7732#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Curl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/Goods/Curl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="exFinal.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exFinal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+            <state relative-caret-position="438">
+              <caret line="205" column="25" lean-forward="true" selection-start-line="205" selection-start-column="25" selection-end-line="205" selection-end-column="25" />
               <folding>
                 <element signature="e#299#321#0#PHP" expanded="true" />
-                <element signature="n#getOrdersDetails#0;n#!!top" />
-                <element signature="n#setOrderConfimation#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderMS.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -100,20 +64,17 @@
       <file leaf-file-name="Sticker.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/Goods/Sticker.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="506">
+              <caret line="62" column="19" lean-forward="true" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exGo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exGo.php">
+      <file leaf-file-name="exMS.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exMS.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="52" column="2" lean-forward="true" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="35" />
-              <folding>
-                <element signature="e#329#351#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="650">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -122,25 +83,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$this-&gt;curl</find>
-      <find>curl</find>
-      <find>pi.goods.ru/api/marke</find>
-      <find>«</find>
-      <find>getOrdersNew</find>
-      <find>addCustomerorder</find>
-      <find>items</find>
-      <find>order</find>
-      <find>608</find>
-      <find>throw</find>
-      <find>selectByState</find>
-      <find>$goods_order_names</find>
-      <find>$goodsOrderNames</find>
-      <find>[&quot;</find>
       <find>&quot;]</find>
       <find>getOrderDetails</find>
       <find>getOrder</find>
       <find>var_dump</find>
-      <find>getOrdersDetails</find>
       <find>859150562</find>
       <find>846882375</find>
       <find>@noinspection</find>
@@ -152,6 +98,21 @@
       <find>\/\*        \$data \= \'\{\n                        \&quot;shipments\&quot;\: \[\{\n                            \&quot;shipmentId\&quot;\: \&quot;842818431\&quot;\,\n                            \&quot;orderCode\&quot;\: \&quot;\&quot;\,\n                            \&quot;items\&quot;\: \[\{\n                                \&quot;itemIndex\&quot;\: 1\,\n                                \&quot;offerId\&quot;\: \&quot;390\&quot;\n                            \}\]\n                        \}\]                    \n                \}\'\;\*\/</find>
       <find>842818431</find>
       <find>new Order();</find>
+      <find>new Order()</find>
+      <find>getOrdersDetails</find>
+      <find>Order $goods</find>
+      <find>base64_encode</find>
+      <find>request_header</find>
+      <find>conten</find>
+      <find>OrderMS()</find>
+      <find>$ordersMS</find>
+      <find>$ordersMSInWork</find>
+      <find>getByName</find>
+      <find>/*set to Order MS*/</find>
+      <find>output</find>
+      <find>printPdf</find>
+      <find>Output</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>Curl::curl</replace>
@@ -191,21 +152,22 @@
         <option value="$PROJECT_DIR$/printPDF.php" />
         <option value="$PROJECT_DIR$/ex2.php" />
         <option value="$PROJECT_DIR$/ex.php" />
-        <option value="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" />
         <option value="$PROJECT_DIR$/class/SQL/MyDBInMemory.php" />
-        <option value="$PROJECT_DIR$/class/MS/Order.php" />
         <option value="$PROJECT_DIR$/class/MS/Product.php" />
         <option value="$PROJECT_DIR$/class/Customs.php" />
         <option value="$PROJECT_DIR$/class/SQL/AvaksSQL.php" />
-        <option value="$PROJECT_DIR$/exMS.php" />
         <option value="$PROJECT_DIR$/class/MS/Products.php" />
         <option value="$PROJECT_DIR$/class/MS/Orders.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/nezab.php" />
         <option value="$PROJECT_DIR$/exGo.php" />
         <option value="$PROJECT_DIR$/class/Goods/Curl.php" />
-        <option value="$PROJECT_DIR$/class/Goods/Sticker.php" />
         <option value="$PROJECT_DIR$/class/Goods/Order.php" />
+        <option value="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" />
+        <option value="$PROJECT_DIR$/class/MS/Order.php" />
+        <option value="$PROJECT_DIR$/class/MS/OrderMS.php" />
+        <option value="$PROJECT_DIR$/exMS.php" />
+        <option value="$PROJECT_DIR$/class/Goods/Sticker.php" />
         <option value="$PROJECT_DIR$/exFinal.php" />
       </list>
     </option>
@@ -230,8 +192,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="213" />
-    <option name="y" value="102" />
+    <option name="x" value="483" />
+    <option name="y" value="181" />
     <option name="width" value="1222" />
     <option name="height" value="915" />
   </component>
@@ -248,6 +210,17 @@
               <item name="goods" type="b2602c69:ProjectViewProjectNode" />
               <item name="goods" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="goods" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="class" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goods" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="class" type="462c0819:PsiDirectoryNode" />
+              <item name="Goods" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -256,7 +229,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="goods&#9;FILE&#9;file://C:/Users/User/Documents/goods/goods.php&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;printPdf&#9;null&#9;null&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;ыуее&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;goods&#9;FILE&#9;file://C:/Users/User/Documents/goods/goods.php&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;printPdf&#9;null&#9;null&#10;ыуее&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -306,35 +279,40 @@
       <workItem from="1566304634271" duration="5228000" />
       <workItem from="1566367581947" duration="24650000" />
       <workItem from="1566823062849" duration="2013000" />
-      <workItem from="1566917163858" duration="25994000" />
+      <workItem from="1566917163858" duration="26392000" />
+      <workItem from="1567004877522" duration="1239000" />
+      <workItem from="1567061488694" duration="17927000" />
+      <workItem from="1567162548977" duration="92000" />
+      <workItem from="1567165476128" duration="502000" />
+      <workItem from="1567171207494" duration="3723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110316000" />
+    <option name="totallyTimeSpent" value="134197000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="213" y="102" width="1222" height="915" extended-state="0" />
+    <frame x="483" y="181" width="1222" height="915" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.235" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2371476" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection Results" />
       <window_info anchor="right" id="Database" order="3" weight="0.3295362" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
@@ -342,19 +320,19 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.20585842" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.25531915" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -509,13 +487,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class/MS/moysklad.php" />
-    <entry file="file://$PROJECT_DIR$/class/Goods/Cargo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exGo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -527,13 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/mpdf/mpdf/src/Output/Destination.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -552,24 +516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/mpdf/mpdf/src/Mpdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="9337" column="30" lean-forward="true" selection-start-line="9337" selection-start-column="30" selection-end-line="9337" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/class/SQL/MyDBInMemory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/CurlMoiSklad.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -581,45 +531,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goods_get_new_orders.php" />
-    <entry file="file://$PROJECT_DIR$/class/MS/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exMS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nezab.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/nezab.php" />
     <entry file="file://$PROJECT_DIR$/class/MS/Products.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="60" lean-forward="true" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -651,13 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/Goods/Curl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/class/SQL/AvaksSQL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -665,63 +574,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/Goods/Sticker.php">
+    <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="45" column="38" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="38" />
-          <folding>
-            <element signature="e#355#381#0#PHP" />
-            <element signature="e#441#569#0#PHP" />
-            <element signature="e#478#568#0#PHP" />
-            <element signature="e#512#558#1#PHP" />
-            <element signature="e#631#909#0#PHP" />
-            <element signature="e#692#857#0#PHP" />
-            <element signature="e#732#856#0#PHP" />
-            <element signature="e#798#846#1#PHP" />
-            <element signature="e#1173#1418#0#PHP" />
-            <element signature="e#1425#1451#0#PHP" />
-            <element signature="e#1457#1542#0#PHP" />
-            <element signature="e#2122#2207#0#PHP" />
-            <element signature="e#2235#2317#0#PHP" />
-            <element signature="e#2901#2989#0#PHP" />
-            <element signature="e#3016#3416#0#PHP" />
-            <element signature="e#3488#4331#0#PHP" />
-            <element signature="e#4104#4179#0#PHP" />
-            <element signature="e#4224#4578#0#PHP" />
-            <element signature="e#4697#5416#0#PHP" />
-            <element signature="e#5140#5216#0#PHP" />
-            <element signature="e#6573#6648#0#PHP" />
-            <element signature="e#6736#6815#0#PHP" />
-            <element signature="e#7653#7732#0#PHP" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exGo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="52" column="2" lean-forward="true" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="35" />
+        <state relative-caret-position="616">
+          <caret line="52" column="2" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="45" column="38" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/MS/CurlMoiSklad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Goods/Curl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="72" column="27" lean-forward="true" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Goods/Cargo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exMS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mpdf/mpdf/src/Output/Destination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mpdf/mpdf/src/Mpdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="9320" column="43" lean-forward="true" selection-start-line="9320" selection-start-column="43" selection-end-line="9320" selection-end-column="43" />
           <folding>
-            <element signature="e#329#351#0#PHP" expanded="true" />
+            <element signature="e#471635#504795#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Goods/Sticker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="62" column="19" lean-forward="true" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exFinal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        <state relative-caret-position="438">
+          <caret line="205" column="25" lean-forward="true" selection-start-line="205" selection-start-column="25" selection-end-line="205" selection-end-column="25" />
           <folding>
             <element signature="e#299#321#0#PHP" expanded="true" />
-            <element signature="n#getOrdersDetails#0;n#!!top" />
-            <element signature="n#setOrderConfimation#0;n#!!top" />
           </folding>
         </state>
       </provider>

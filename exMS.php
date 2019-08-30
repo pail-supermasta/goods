@@ -18,14 +18,34 @@ require_once 'vendor/autoload.php';
 
 
 use \Avaks\MS\Orders;
+use \Avaks\MS\OrderMS;
 
 /*получить заказы в работе готовые к передаче в гудс для статуса CONFIRMED*/
 /*получить номера тваров и номер заказа*/
-//$orderMS = new Order('b10c6d9b-c3de-11e9-9ff4-31500006cf2c');
+//$orderMS = new OrderMS('e6ae45cf-ca68-11e9-9ff4-34e8000982f8');
+$orderMS = new OrderMS('9083c131-cb2e-11e9-9ff4-31500008994c');
 
 
 //$res = $orderMS->getByName();
-$ordersMS = new Orders();
+/*$ordersMS = new Orders();
 $res = $ordersMS->getInWork();
 
-var_dump($res);
+var_dump($res);*/
+
+
+
+
+$put_data = array();
+$attribute = array();
+
+$content = base64_encode(file_get_contents('pdf/sticker-files/Маркировка 863018218.pdf'));
+$attribute['id'] = 'b8a8f6d6-5782-11e8-9ff4-34e800181bf6';
+$attribute['file']['filename'] = 'Маркировка 863018218.pdf';
+$attribute['file']['content'] = $content;
+
+$put_data['attributes'][] = $attribute;
+
+
+$final = json_encode($put_data);
+//$res = $orderMS->setSticker($final);
+$res = $orderMS->setSticker($final);
