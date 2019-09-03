@@ -27,12 +27,12 @@ class Products
         $positions = json_decode($this->orderPositionsRaw, true);
 
         $products = array();
-        foreach ($positions as $position) {
+        foreach ((array)$positions as $position) {
             /*search by id in ms_product*/
 
             $position = Customs::findUUID($position['assortment']['meta']['href']);
             $products[] = AvaksSQL::selectProductById($position);
         }
-    return $products;
+        return $products;
     }
 }

@@ -19,7 +19,7 @@ class Curl
      * @param $_data
      * @return mixed
      */
-    public static function curl($link, $_data)
+    public static function curl($link, $_data, $display = false)
     {
         $data = array(
             "data" => array(
@@ -44,7 +44,10 @@ class Curl
         curl_setopt($curl, CURLINFO_HEADER_OUT, true);
 
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
-        echo "Post body is: \n" . json_encode($data) . "\n";
+
+        if ($display == true) {
+            echo "Post body is: \n" . json_encode($data) . "\n";
+        }
 
         // For debugging
 
@@ -59,7 +62,10 @@ class Curl
         $info = curl_getinfo($curl);
 
 
-        print_r("\n" . $info['request_header']);
+        if ($display == true) {
+            print_r("\n" . $info['request_header']);
+        }
+
 
 
         if (curl_errno($curl)) {

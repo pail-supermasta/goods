@@ -14,6 +14,7 @@ class Order
 //    private $token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
 //    private $api_url = "https://partner.goods.ru/api/market/v1/";
     public $state = "NEW";
+    public $id;
 
     /**
      * GETTERS
@@ -32,10 +33,9 @@ class Order
     }
 
 
-    public function getOrdersNew($token)
+    public function getOrdersNew()
     {
         $result = Curl::curl('orderService/order/search', array(
-            "token" => "$token",
             "statuses" => array(
                 0 => "NEW",
             )
@@ -88,7 +88,7 @@ class Order
                 }';*/
 //        $data = json_decode($data, true);
         $data = $rejectSome;
-        $goodsOrderNames = Curl::curl('orderService/order/reject', $data);
+        $goodsOrderNames = Curl::curl('orderService/order/reject', $data,true);
 
         if ($this->state == 'NEW') {
             $this->state = 'REJECT PARTIALLY';
@@ -116,7 +116,7 @@ class Order
                 }';*/
 //        $data = json_decode($data, true);
         $data = $confirmSome;
-        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data);
+        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data,true);
 
         if ($this->state == 'NEW') {
             $this->state = 'CONFIRMED PARTIALLY';
@@ -139,7 +139,7 @@ class Order
      */
     public function setReject(array $rejectAll)
     {
-        $data = '{
+/*        $data = '{
                         "shipments": [{
                             "shipmentId": "812224691",
                             "orderCode": "",
@@ -151,10 +151,10 @@ class Order
                                 "offerId": "425"
                             }]
                         }]                    
-                }';
+                }';*/
         $data = $rejectAll;
 //        $data = json_decode($data, true);
-        $goodsOrderNames = Curl::curl('orderService/order/reject', $data);
+        $goodsOrderNames = Curl::curl('orderService/order/reject', $data,true);
 
         if ($this->state == 'NEW') {
             $this->state = 'REJECT';
@@ -176,7 +176,7 @@ class Order
 
     public function setConfirm(array $confirmAll)
     {
-        $data = '{
+/*        $data = '{
                         "shipments": [{
                             "shipmentId": "846882375",
                             "orderCode": "",
@@ -185,10 +185,10 @@ class Order
                                 "offerId": "390"
                             }]
                         }]                    
-                }';
+                }';*/
         $data = $confirmAll;
 //        $data = json_decode($data, true);
-        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data);
+        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data,true);
 
         if ($this->state == 'NEW') {
             $this->state = 'CONFIRM';
@@ -204,7 +204,6 @@ class Order
 
     public function setPacking(array $orderToPack)
     {
-        /*показал ошибку почему то хотя перешел в packed*/
 
         /*        $data = '{
                         "shipments": [{
@@ -238,7 +237,7 @@ class Order
 
     }
 
-    public function setShipping()
+    public function setShipping(array $orderToShip)
     {
         /*изменился с на выдаче на доставляется = shippingDate*/
 /*        $data = '{
@@ -257,7 +256,7 @@ class Order
                 }]
             }';*/
 
-        $data = json_decode($data, true);
+        $data = $orderToShip;
 
         $goodsOrderNames = Curl::curl('orderService/order/shipping', $data);
 

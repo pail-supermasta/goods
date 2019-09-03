@@ -74,11 +74,4 @@ class Sticker
     }
 
 
-    public function glue()
-    {
-
-        return $this->state = true;
-    }
-
-
 }

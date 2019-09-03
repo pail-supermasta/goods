@@ -13,7 +13,7 @@ class CurlMoiSklad
 {
 
 
-    public static function curlMS($link, $data = false, $type = false)
+    public static function curlMS($link, $data = false, $type = false, $display = false)
     {
 
         $curl = curl_init();
@@ -26,7 +26,7 @@ class CurlMoiSklad
 
         if ($type == 'put') {
             curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PUT');
-        } else{
+        } else {
             curl_setopt($curl, CURLOPT_HTTPGET, true);
         }
 
@@ -34,7 +34,10 @@ class CurlMoiSklad
         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 30);
         if ($data) {
             curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-            echo "Post body is: \n" . $data . "\n";
+            if ($display == true) {
+                echo "Post body is: \n" . $data . "\n";
+            }
+
         }
 
         $headers = array(
@@ -47,8 +50,11 @@ class CurlMoiSklad
         $result = curl_exec($curl);
         $info = curl_getinfo($curl);
 
+        if ($display == true) {
+            print_r("\n" . $info['request_header']);
+        }
 
-        print_r("\n" . $info['request_header']);
+
 
         $curl_errno = curl_errno($curl);
         curl_close($curl);

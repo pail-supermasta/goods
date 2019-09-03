@@ -22,6 +22,7 @@ use Avaks\MS\OrderMS;
 
 define('BOX_CODE_ID', '1231'); //TEST
 //define('BOX_CODE_ID','608'); //PRODUCTION
+define('ID_REGEXP', '/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/'); // Регулярка для UUID
 
 $ordersMS = new Orders();
 
@@ -30,7 +31,7 @@ $goods = new Order();
 /*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
 
 /*№1 получить заказы гудса из МС в статусе В работе*/
-//$ordersMSInWork = $ordersMS->getInWork();
+$ordersMSInWork = $ordersMS->getInWork();
 
 /*№2 получить детали по заказам в выборке №1 из Goods API*/
 
@@ -131,9 +132,10 @@ function setOrderConfimation(Order $goods, $orderID, array $notFoundInMS, array 
     return $toReturn;
 }
 
-/*ШАГ 2 КОНЕЦ*/
 
-//getOrdersDetails($goods, $ordersMSInWork);
+getOrdersDetails($goods, $ordersMSInWork);
+
+/*ШАГ 2 КОНЕЦ*/
 
 
 /*ШАГ 3 НАЧАЛО из описания - убедиться что заказы подтвердились в Гудс и в МС*/
@@ -147,17 +149,21 @@ $resOrdersConfirmed = $goods->getOrdersConfirmed();
 /*Что то в МС делаем если CONFIRMED ?*/
 /*ШАГ 3 КОНЕЦ*/
 
+
 /*ШАГ 4 НАЧАЛО из описания - комплектация заказов и наклеивание этикетки*/
 
 /*№1 получить заказы гудса в статусе CONFIRMED */
 
 $toPack = $resOrdersConfirmed;
 //$res = $goods->setPacking();
-var_dump($toPack);
 
 
 /*№2 для каждого заказа - установить в Гудс заказа скомплектован */
 
+/**
+ * @param Order $goods
+ * @param $toPack
+ */
 function setOrderPacking(Order $goods, $toPack)
 {
     foreach ($toPack as $orderToPackId) {
@@ -179,20 +185,31 @@ function setOrderPacking(Order $goods, $toPack)
     }
 }
 
-//setOrderPacking($goods, $toPack);
+setOrderPacking($goods, $toPack);
 
 /*№3  - получить список упакованных заказов из Гудс*/
-$resOrdersPacked = $goods->getOrdersPacked();
+$goodsOrdersPacked = $goods->getOrdersPacked();
 
-/*№4 для каждого заказа - печать этикетки и добавление файла в заказ в МС */
-$sticker = new Sticker();
+/*№4 для каждого заказа - печать этикетки и добавление файла в заказ в МС + Отгрузка заказа */
+foreach ($goodsOrdersPacked as $orderPacked) {
+    uploadSticker($orderPacked);
+}
 
-foreach ($resOrdersPacked as $orderPacked) {
+function uploadSticker($orderPacked)
+{
+    $sticker = new Sticker();
 
     /*получить стикер из Гудс для заказа*/
     $pdfCode = $sticker->printPdf($orderPacked, BOX_CODE_ID);
     $orderMS = new OrderMS('', $orderPacked);
-    $orderMS->id = $orderMS->getByName()['id'];
+    $orderDetails = $orderMS->getByName();
+    $orderMS->id = $orderDetails['id'];
+
+    /*получить Статус заказа в МС*/
+    preg_match(ID_REGEXP, $orderDetails['state']['meta']['href'], $matches);
+    $state_id = $matches[0];
+    $orderMS->state = $state_id;
+
 
     /*записать в заказ МС файл маркировочного листа*/
     $put_data = array();
@@ -207,7 +224,13 @@ foreach ($resOrdersPacked as $orderPacked) {
     $put_data['attributes'][] = $attribute;
 
     $final = json_encode($put_data);
-    $res = $orderMS->setSticker($final);
+    $orderMS->setSticker($final);
+
+
+    /*Отгрузить заказ*/
+    $orderMS->setToPack();
+
+
 }
 
 
@@ -216,9 +239,40 @@ foreach ($resOrdersPacked as $orderPacked) {
 
 /*ШАГ 6 НАЧАЛО из описания*/
 
-/*отгрузить все заказы которые в МС со статусом доставляются но в Гудс статус Ожидает отгрузки*/
 
+/*№1  - получить список заказов в статусе Доставляется из МС*/
+$ordersMSOnDelivery = $ordersMS->getOnDelivery();
+
+function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery)
+{
+    foreach ($goodsOrdersPacked as $key => $orderToShipId) {
+        foreach ($ordersMSOnDelivery as $msOrder) {
+            /*№2  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
+            if (in_array($orderToShipId, $msOrder) == 1) {
+
+                $goods->id = $orderToShipId;
+
+                $boxes[] = array('boxIndex' => 1, 'boxCode' => '1231*' . $goods->id . '*1');
+
+                date_default_timezone_set('Europe/Moscow');
+                $shippingDate = date('c');
+
+                $orderToShip['shipments'][] = array('shipmentId' => $goods->id,
+                    'boxes' => $boxes,
+                    'shipping' => array('shippingDate' => $shippingDate));
+
+                /*№3 - Отгрузить заказ в Гудс*/
+                $res = $goods->setShipping($orderToShip);
+            }
+        }
+    }
+}
+
+sendOrdersToGoods($goods, $goodsOrdersPacked, $ordersMSOnDelivery);
 /*ШАГ 6 КОНЕЦ*/
+
+
+
 
 
 
