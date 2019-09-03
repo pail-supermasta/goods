@@ -33,47 +33,59 @@ $goods = new Order();
 /*№1 получить заказы гудса из МС в статусе В работе*/
 $ordersMSInWork = $ordersMS->getInWork();
 
-/*№2 получить детали по заказам в выборке №1 из Goods API*/
+/*№2 получить заказы из гудса в статусе Ожидает подтверждения*/
+$goodsOrdersNew = $goods->getOrdersNew();
 
-function getOrdersDetails(Order $goods, array $ordersMSInWork)
+foreach ($goodsOrdersNew as $key => $orderToConfirmId) {
+    foreach ($ordersMSInWork as $msOrder) {
+        /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
+        if (in_array($orderToConfirmId, $msOrder) == 1) {
+            getOrderDetails($goods, $msOrder);
+        }
+    }
+}
+
+
+/*№4 получить детали по заказам в выборке №1 из Goods API*/
+
+function getOrderDetails(Order $goods, array $orderMSInWork)
 {
 
     $notFoundInMS = array();
     $foundInMS = array();
-    foreach ($ordersMSInWork as $orderMSInWork) {
-        $goodsOrderDetails = $goods->getOrder($orderMSInWork['name']);
 
-        $goodsOrderItems = $goodsOrderDetails['items'];
+    $goodsOrderDetails = $goods->getOrder($orderMSInWork['name']);
 
-        /*сравнить товары выборки №2 и выборки №1*/
-        foreach ($goodsOrderItems as $goodsOrderItem) {
-            /*есть в заказе в МС*/
-            if (!in_array($goodsOrderItem['offerId'], $orderMSInWork['positions'])) {
+    $goodsOrderItems = $goodsOrderDetails['items'];
 
-                $notFoundInMS[$goodsOrderItem['itemIndex']] = $goodsOrderItem['offerId'];
-                $pos = array_search($goodsOrderItem['offerId'], $orderMSInWork['positions']);
-                unset($orderMSInWork['positions'][$pos]);
-            } else {
+    /*сравнить товары выборки №2 и выборки №1*/
+    foreach ($goodsOrderItems as $goodsOrderItem) {
+        /*есть в заказе в МС*/
+        if (!in_array($goodsOrderItem['offerId'], $orderMSInWork['positions'])) {
 
-                $pos = array_search($goodsOrderItem['offerId'], $orderMSInWork['positions']);
-                unset($orderMSInWork['positions'][$pos]);
-                $foundInMS[$goodsOrderItem['itemIndex']] = $goodsOrderItem['offerId'];
-            }
-            /*количество найденной позиции совпадает с Гудс*/
-            /*Гудс отдает кол-во товара № как отдельный лот с кол-вом 1*/
-            /*МС сохраняет кол-во товара № как отдельный лот с кол-вом 1*/
+            $notFoundInMS[$goodsOrderItem['itemIndex']] = $goodsOrderItem['offerId'];
+            $pos = array_search($goodsOrderItem['offerId'], $orderMSInWork['positions']);
+            unset($orderMSInWork['positions'][$pos]);
+        } else {
 
+            $pos = array_search($goodsOrderItem['offerId'], $orderMSInWork['positions']);
+            unset($orderMSInWork['positions'][$pos]);
+            $foundInMS[$goodsOrderItem['itemIndex']] = $goodsOrderItem['offerId'];
         }
-
-        /*run order confirmation*/
-        $res = setOrderConfimation($goods, $orderMSInWork['name'], $notFoundInMS, $foundInMS);
-        var_dump($res);
+        /*количество найденной позиции совпадает с Гудс*/
+        /*Гудс отдает кол-во товара № как отдельный лот с кол-вом 1*/
+        /*МС сохраняет кол-во товара № как отдельный лот с кол-вом 1*/
 
     }
 
+    /*run order confirmation*/
+    $res = setOrderConfimation($goods, $orderMSInWork['name'], $notFoundInMS, $foundInMS);
+    var_dump($res);
+
+
 }
 
-/*№3 подтвердить или отклонить позиции в Goods*/
+/*№5 подтвердить или отклонить позиции в Goods*/
 function setOrderConfimation(Order $goods, $orderID, array $notFoundInMS, array $foundInMS)
 {
 
@@ -133,7 +145,7 @@ function setOrderConfimation(Order $goods, $orderID, array $notFoundInMS, array 
 }
 
 
-getOrdersDetails($goods, $ordersMSInWork);
+
 
 /*ШАГ 2 КОНЕЦ*/
 
@@ -150,7 +162,7 @@ $resOrdersConfirmed = $goods->getOrdersConfirmed();
 /*ШАГ 3 КОНЕЦ*/
 
 
-/*ШАГ 4 НАЧАЛО из описания - комплектация заказов и наклеивание этикетки*/
+/*ШАГ 4 НАЧАЛО из описания - комплектация заказов*/
 
 /*№1 получить заказы гудса в статусе CONFIRMED */
 
@@ -187,13 +199,21 @@ function setOrderPacking(Order $goods, $toPack)
 
 setOrderPacking($goods, $toPack);
 
+
+
+
+/*ШАГ 4 КОНЕЦ*/
+
+
+/*ШАГ 4 НАЧАЛО из описания - наклеивание этикетки*/
+
+
+
 /*№3  - получить список упакованных заказов из Гудс*/
 $goodsOrdersPacked = $goods->getOrdersPacked();
 
+
 /*№4 для каждого заказа - печать этикетки и добавление файла в заказ в МС + Отгрузка заказа */
-foreach ($goodsOrdersPacked as $orderPacked) {
-    uploadSticker($orderPacked);
-}
 
 function uploadSticker($orderPacked)
 {
@@ -232,6 +252,12 @@ function uploadSticker($orderPacked)
 
 
 }
+
+foreach ($goodsOrdersPacked as $orderPacked) {
+    uploadSticker($orderPacked);
+}
+
+
 
 
 /*ШАГ 4 КОНЕЦ*/

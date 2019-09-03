@@ -5,18 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c897fa2a-f79e-4601-866a-3c4cb7a174ad" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/confirmation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivering.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labeling.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Goods/Curl.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Goods/Curl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Goods/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Goods/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/Goods/Sticker.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/Goods/Sticker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/OrderMS.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/OrderMS.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/Orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/Products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exFinal.php" beforeDir="false" afterPath="$PROJECT_DIR$/exFinal.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,44 +33,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="confirmation.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/confirmation.php">
+      <file leaf-file-name="exFinal.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/exFinal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1371">
-              <caret line="148" lean-forward="true" selection-start-line="27" selection-end-line="148" />
+            <state relative-caret-position="650">
+              <caret line="297" column="15" selection-start-line="297" selection-start-column="15" selection-end-line="297" selection-end-column="15" />
               <folding>
-                <element signature="e#299#321#0#PHP" expanded="true" />
-                <element signature="e#2332#4694#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="packing.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packing.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
-              <folding>
-                <element signature="e#1141#1189#0#PHP" />
-                <element signature="e#1190#1945#0#PHP" />
-                <element signature="e#1244#1943#0#PHP" />
-                <element signature="e#1518#1734#0#PHP" />
-                <element signature="e#1594#1723#0#PHP" />
-                <element signature="e#1773#1887#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="labeling.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labeling.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#889#2004#0#PHP" />
-                <element signature="e#2178#2259#0#PHP" />
+                <element signature="e#2606#4968#0#PHP" />
+                <element signature="e#5473#5521#0#PHP" />
+                <element signature="e#5522#6277#0#PHP" />
+                <element signature="e#5576#6275#0#PHP" />
+                <element signature="e#5850#6066#0#PHP" />
+                <element signature="e#5926#6055#0#PHP" />
+                <element signature="e#6105#6219#0#PHP" />
+                <element signature="e#6590#7705#0#PHP" />
+                <element signature="e#7707#7788#0#PHP" />
+                <element signature="e#8300#8446#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -91,8 +57,8 @@
       <file leaf-file-name="delivering.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/delivering.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="680">
+              <caret line="65" column="15" lean-forward="true" selection-start-line="32" selection-end-line="65" selection-end-column="15" />
               <folding>
                 <element signature="e#299#321#0#PHP" expanded="true" />
                 <element signature="e#8300#8446#0#PHP" />
@@ -190,7 +156,6 @@
         <option value="$PROJECT_DIR$/class/MS/Orders.php" />
         <option value="$PROJECT_DIR$/class/MS/Products.php" />
         <option value="$PROJECT_DIR$/class/MS/OrderMS.php" />
-        <option value="$PROJECT_DIR$/exFinal.php" />
         <option value="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" />
         <option value="$PROJECT_DIR$/class/Goods/Curl.php" />
         <option value="$PROJECT_DIR$/confirmation.php" />
@@ -198,6 +163,7 @@
         <option value="$PROJECT_DIR$/packing.php" />
         <option value="$PROJECT_DIR$/labeling.php" />
         <option value="$PROJECT_DIR$/delivering.php" />
+        <option value="$PROJECT_DIR$/exFinal.php" />
       </list>
     </option>
   </component>
@@ -319,12 +285,12 @@
       <workItem from="1567061488694" duration="17927000" />
       <workItem from="1567162548977" duration="92000" />
       <workItem from="1567165476128" duration="502000" />
-      <workItem from="1567171207494" duration="31435000" />
+      <workItem from="1567171207494" duration="31540000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161909000" />
+    <option name="totallyTimeSpent" value="162014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="462" y="73" width="1222" height="915" extended-state="0" />
@@ -648,43 +614,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exFinal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="252" column="44" lean-forward="true" selection-start-line="252" selection-start-column="16" selection-end-line="252" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="26" column="55" selection-start-line="20" selection-start-column="30" selection-end-line="26" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="56" column="3" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
-          <folding>
-            <element signature="e#1141#1189#0#PHP" />
-            <element signature="e#1190#1945#0#PHP" />
-            <element signature="e#1244#1943#0#PHP" />
-            <element signature="e#1518#1734#0#PHP" />
-            <element signature="e#1594#1723#0#PHP" />
-            <element signature="e#1773#1887#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labeling.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#889#2004#0#PHP" />
-            <element signature="e#2178#2259#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,10 +635,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/confirmation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="148" lean-forward="true" selection-start-line="27" selection-end-line="148" />
+          <folding>
+            <element signature="e#299#321#0#PHP" expanded="true" />
+            <element signature="e#2332#4694#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="31" selection-start-line="31" selection-end-line="83" selection-end-column="15" />
+          <folding>
+            <element signature="e#1141#1189#0#PHP" />
+            <element signature="e#1190#1945#0#PHP" />
+            <element signature="e#1244#1943#0#PHP" />
+            <element signature="e#1518#1734#0#PHP" />
+            <element signature="e#1594#1723#0#PHP" />
+            <element signature="e#1773#1887#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labeling.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="86" column="15" lean-forward="true" selection-start-line="30" selection-end-line="86" selection-end-column="15" />
+          <folding>
+            <element signature="e#889#2004#0#PHP" />
+            <element signature="e#2178#2259#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/delivering.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="680">
+          <caret line="65" column="15" lean-forward="true" selection-start-line="32" selection-end-line="65" selection-end-column="15" />
           <folding>
             <element signature="e#299#321#0#PHP" expanded="true" />
             <element signature="e#8300#8446#0#PHP" />
@@ -713,13 +683,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/confirmation.php">
+    <entry file="file://$PROJECT_DIR$/exFinal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1371">
-          <caret line="148" lean-forward="true" selection-start-line="27" selection-end-line="148" />
+        <state relative-caret-position="650">
+          <caret line="297" column="15" selection-start-line="297" selection-start-column="15" selection-end-line="297" selection-end-column="15" />
           <folding>
-            <element signature="e#299#321#0#PHP" expanded="true" />
-            <element signature="e#2332#4694#0#PHP" />
+            <element signature="e#2606#4968#0#PHP" />
+            <element signature="e#5473#5521#0#PHP" />
+            <element signature="e#5522#6277#0#PHP" />
+            <element signature="e#5576#6275#0#PHP" />
+            <element signature="e#5850#6066#0#PHP" />
+            <element signature="e#5926#6055#0#PHP" />
+            <element signature="e#6105#6219#0#PHP" />
+            <element signature="e#6590#7705#0#PHP" />
+            <element signature="e#7707#7788#0#PHP" />
+            <element signature="e#8300#8446#0#PHP" />
           </folding>
         </state>
       </provider>
