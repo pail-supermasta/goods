@@ -33,7 +33,7 @@ class OrderMS
     public function getByName()
     {
         $res = CurlMoiSklad::curlMS('/entity/customerorder/?filter=name=' . $this->name);
-        return (json_decode($res, true))['rows'][0];
+        return isset((json_decode($res, true))['rows'][0])? (json_decode($res, true))['rows'][0] : $res;
     }
 
     public function setSticker($postdata)

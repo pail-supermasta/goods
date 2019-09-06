@@ -11,19 +11,29 @@ namespace Avaks\Goods;
 
 class Curl
 {
-    /*		$this->token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
-            $this->api_url = "https://partner.goods.ru/api/market/v1/";*/
 
     /**
      * @param $link
+     * @param $token
      * @param $_data
+     * @param bool $display
      * @return mixed
      */
+
+//Amaze 97B1BC55-189D-4EB4-91AF-4B9E9A985B3D
+//Фирдус C12405BF-01CB-4A6C-A41E-0E179EF00F54
     public static function curl($link, $_data, $display = false)
     {
+
+        /*$data = array(
+                    "data" => array(
+                        "token" => "6881430B-882F-4C4F-8DCA-14FDAFEBAFEC", // test-partner
+                    ),
+                    "meta" => array(),
+                );*/
         $data = array(
             "data" => array(
-                "token" => "6881430B-882F-4C4F-8DCA-14FDAFEBAFEC",
+                "token" => 'C12405BF-01CB-4A6C-A41E-0E179EF00F54',
             ),
             "meta" => array(),
         );
@@ -35,8 +45,8 @@ class Curl
         $data['data'] = array_merge($data['data'], $_data);
 
         $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, 'https://test-partner.goods.ru/api/market/v1/' . $link);
-//        curl_setopt($curl, CURLOPT_URL, 'https://partner.goods.ru/api/market/v1/' . $link);
+//        curl_setopt($curl, CURLOPT_URL, 'https://test-partner.goods.ru/api/market/v1/' . $link);
+        curl_setopt($curl, CURLOPT_URL, 'https://partner.goods.ru/api/market/v1/' . $link);
 
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
 
@@ -65,7 +75,6 @@ class Curl
         if ($display == true) {
             print_r("\n" . $info['request_header']);
         }
-
 
 
         if (curl_errno($curl)) {

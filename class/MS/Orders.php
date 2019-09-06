@@ -49,7 +49,8 @@ class Orders
                   FROM `ms_customerorder`  
                   WHERE agent = '64710328-2e6f-11e8-9ff4-34e8000f81c8' 
                   AND state = '327c070c-75c5-11e5-7a40-e8970013993b' 
-                  AND moment > NOW() - INTERVAL 3 DAY 
+                  AND moment > NOW() - INTERVAL 3 DAY
+                  AND deleted='' 
                   AND description LIKE '%GOODS1364895%'";
         $ordersByState = AvaksSQL::selectOrdersByState($queryOrderByState);
 

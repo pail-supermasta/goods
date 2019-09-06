@@ -38,6 +38,7 @@ $ordersMSInCancel = $ordersMS->getInCancel();
 /*№2 получить заказы из гудса в статусе Отменен покупателем*/
 $goodsOrdersUserCanceled = $goods->getOrdersCustomerCanceled();
 
+
 foreach ($goodsOrdersUserCanceled as $key => $orderToCancelId) {
     foreach ($ordersMSInCancel as $msOrder) {
         /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
@@ -49,16 +50,11 @@ foreach ($goodsOrdersUserCanceled as $key => $orderToCancelId) {
                 $orderMS->setCanceled();
                 $message ="Заказ №$orderToCancelId ОТМЕНЕН покупателем";
                 echo $message;
-            }else{
-                $message ="Заказ №$orderToCancelId не найден в МС";
-                echo $message;
             }
 
         }
     }
 }
-
-die();
 
 
 /*ШАГ 1 КОНЕЦ отмененные покупателем - отмена в МС*/
