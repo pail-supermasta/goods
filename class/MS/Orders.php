@@ -29,13 +29,36 @@ class Orders
 
         $updatedOrdersByState = array();
         $orderByState = array();
-        foreach ($ordersByState as $item) {
+        foreach ((array)$ordersByState as $item) {
 
             $orderMS = new OrderMS($item['id'], $item['name'], $item['positions']);
             $orderByState['name'] = $item['name'];
 
             $positions = new Products($orderMS->positions);
             $orderByState['positions'] = $positions->getOrderProducts();
+            $updatedOrdersByState[] = $orderByState;
+        }
+        return $updatedOrdersByState;
+    }
+
+
+    public function getInCancel()
+    {
+        /*get orders from MS DB*/
+        $queryOrderByState = "SELECT id,`name`,positions  
+                  FROM `ms_customerorder`  
+                  WHERE agent = '64710328-2e6f-11e8-9ff4-34e8000f81c8' 
+                  AND state = '327c070c-75c5-11e5-7a40-e8970013993b' 
+                  AND moment > NOW() - INTERVAL 3 DAY 
+                  AND description LIKE '%GOODS1364895%'";
+        $ordersByState = AvaksSQL::selectOrdersByState($queryOrderByState);
+
+        $updatedOrdersByState = array();
+        $orderByState = array();
+        foreach ((array)$ordersByState as $item) {
+
+            $orderMS = new OrderMS($item['id'], $item['name']);
+            $orderByState['name'] = $item['name'];
             $updatedOrdersByState[] = $orderByState;
         }
         return $updatedOrdersByState;

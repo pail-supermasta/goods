@@ -61,4 +61,21 @@ class OrderMS
         }
         return $res;
     }
+
+    public function setCanceled()
+    {
+        $postdata = '{
+            "state": {
+                "meta": {
+                    "href": "https://online.moysklad.ru/api/remap/1.1/entity/customerorder/metadata/states/327c070c-75c5-11e5-7a40-e8970013993b",
+                    "type": "state",
+                    "mediaType": "application/json"
+                }
+            }
+        }';
+        $res = '';
+        $res = CurlMoiSklad::curlMS('/entity/customerorder/' . $this->id, $postdata, 'put');
+        $this->state = '327c070c-75c5-11e5-7a40-e8970013993b';
+        return $res;
+    }
 }

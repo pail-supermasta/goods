@@ -28,6 +28,41 @@ $ordersMS = new Orders();
 
 $goods = new Order();
 
+
+
+/*ШАГ 1 НАЧАЛО отмененные покупателем - отмена в МС*/
+
+/*№1 получить заказы гудса из МС в статусе Отменен*/
+$ordersMSInCancel = $ordersMS->getInCancel();
+
+/*№2 получить заказы из гудса в статусе Отменен покупателем*/
+$goodsOrdersUserCanceled = $goods->getOrdersCustomerCanceled();
+
+foreach ($goodsOrdersUserCanceled as $key => $orderToCancelId) {
+    foreach ($ordersMSInCancel as $msOrder) {
+        /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
+        if (in_array($orderToCancelId, $msOrder) != 1) {
+            $orderMS = new OrderMS('',$orderToCancelId,'');
+            $orderMSDetails = $orderMS->getByName();
+            if(isset($orderMSDetails['id'])){
+                $orderMS->id = $orderMSDetails['id'];
+                $orderMS->setCanceled();
+                $message ="Заказ №$orderToCancelId ОТМЕНЕН покупателем";
+                echo $message;
+            }else{
+                $message ="Заказ №$orderToCancelId не найден в МС";
+                echo $message;
+            }
+
+        }
+    }
+}
+
+die();
+
+
+/*ШАГ 1 КОНЕЦ отмененные покупателем - отмена в МС*/
+
 /*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
 
 /*№1 получить заказы гудса из МС в статусе В работе*/
@@ -211,7 +246,6 @@ setOrderPacking($goods, $toPack);
 
 /*№3  - получить список упакованных заказов из Гудс*/
 $goodsOrdersPacked = $goods->getOrdersPacked();
-
 
 /*№4 для каждого заказа - печать этикетки и добавление файла в заказ в МС + Отгрузка заказа */
 

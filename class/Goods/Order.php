@@ -43,6 +43,16 @@ class Order
         return $result['data']['shipments'];
     }
 
+    public function getOrdersCustomerCanceled()
+    {
+        $result = Curl::curl('orderService/order/search', array(
+            "statuses" => array(
+                0 => "CUSTOMER_CANCELED",
+            )
+        ));
+        return $result['data']['shipments'];
+    }
+
     public function getOrdersConfirmed()
     {
         $result = Curl::curl('orderService/order/search', array(
@@ -76,19 +86,19 @@ class Order
      */
     public function setRejectLots(array $rejectSome)
     {
-/*        $data = '{
-                        "shipments": [{
-                            "shipmentId": "842818431",
-                            "orderCode": "",
-                            "items": [{
-                                "itemIndex": 1,
-                                "offerId": "390"
-                            }]
-                        }]                    
-                }';*/
+        /*        $data = '{
+                                "shipments": [{
+                                    "shipmentId": "842818431",
+                                    "orderCode": "",
+                                    "items": [{
+                                        "itemIndex": 1,
+                                        "offerId": "390"
+                                    }]
+                                }]
+                        }';*/
 //        $data = json_decode($data, true);
         $data = $rejectSome;
-        $goodsOrderNames = Curl::curl('orderService/order/reject', $data,true);
+        $goodsOrderNames = Curl::curl('orderService/order/reject', $data, true);
 
         if ($this->state == 'NEW') {
             $this->state = 'REJECT PARTIALLY';
@@ -104,19 +114,19 @@ class Order
     public function setConfirmLots(array $confirmSome)
     {
 
-/*        $data = '{
-                        "shipments": [{
-                            "shipmentId": "842818431",
-                            "orderCode": "",
-                            "items": [{
-                                "itemIndex": 2,
-                                "offerId": "392"
-                            }]
-                        }]                    
-                }';*/
+        /*        $data = '{
+                                "shipments": [{
+                                    "shipmentId": "842818431",
+                                    "orderCode": "",
+                                    "items": [{
+                                        "itemIndex": 2,
+                                        "offerId": "392"
+                                    }]
+                                }]
+                        }';*/
 //        $data = json_decode($data, true);
         $data = $confirmSome;
-        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data,true);
+        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data, true);
 
         if ($this->state == 'NEW') {
             $this->state = 'CONFIRMED PARTIALLY';
@@ -139,22 +149,22 @@ class Order
      */
     public function setReject(array $rejectAll)
     {
-/*        $data = '{
-                        "shipments": [{
-                            "shipmentId": "812224691",
-                            "orderCode": "",
-                            "items": [{
-                                "itemIndex": 1,
-                                "offerId": "421"
-                            },{
-                                "itemIndex": 2,
-                                "offerId": "425"
-                            }]
-                        }]                    
-                }';*/
+        /*        $data = '{
+                                "shipments": [{
+                                    "shipmentId": "812224691",
+                                    "orderCode": "",
+                                    "items": [{
+                                        "itemIndex": 1,
+                                        "offerId": "421"
+                                    },{
+                                        "itemIndex": 2,
+                                        "offerId": "425"
+                                    }]
+                                }]
+                        }';*/
         $data = $rejectAll;
 //        $data = json_decode($data, true);
-        $goodsOrderNames = Curl::curl('orderService/order/reject', $data,true);
+        $goodsOrderNames = Curl::curl('orderService/order/reject', $data, true);
 
         if ($this->state == 'NEW') {
             $this->state = 'REJECT';
@@ -176,19 +186,19 @@ class Order
 
     public function setConfirm(array $confirmAll)
     {
-/*        $data = '{
-                        "shipments": [{
-                            "shipmentId": "846882375",
-                            "orderCode": "",
-                            "items": [{
-                                "itemIndex": 1,
-                                "offerId": "390"
-                            }]
-                        }]                    
-                }';*/
+        /*        $data = '{
+                                "shipments": [{
+                                    "shipmentId": "846882375",
+                                    "orderCode": "",
+                                    "items": [{
+                                        "itemIndex": 1,
+                                        "offerId": "390"
+                                    }]
+                                }]
+                        }';*/
         $data = $confirmAll;
 //        $data = json_decode($data, true);
-        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data,true);
+        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data, true);
 
         if ($this->state == 'NEW') {
             $this->state = 'CONFIRM';
@@ -240,21 +250,21 @@ class Order
     public function setShipping(array $orderToShip)
     {
         /*изменился с на выдаче на доставляется = shippingDate*/
-/*        $data = '{
-                "shipments": [{
-                    "shipmentId": "842818431",
-                    "orderCode": "842818431",
-                    "items": [{
-                        "itemIndex": 2,
-                        "quantity": 1,
-                        "boxes": [{
-                            "boxIndex": 1,
-                            "boxCode": "1231*842818431*1"
-                        }],
-                        "shipping":{  "shippingDate":"2019-11-23T14:00:00+03:00"}
-                    }]
-                }]
-            }';*/
+        /*        $data = '{
+                        "shipments": [{
+                            "shipmentId": "842818431",
+                            "orderCode": "842818431",
+                            "items": [{
+                                "itemIndex": 2,
+                                "quantity": 1,
+                                "boxes": [{
+                                    "boxIndex": 1,
+                                    "boxCode": "1231*842818431*1"
+                                }],
+                                "shipping":{  "shippingDate":"2019-11-23T14:00:00+03:00"}
+                            }]
+                        }]
+                    }';*/
 
         $data = $orderToShip;
 
