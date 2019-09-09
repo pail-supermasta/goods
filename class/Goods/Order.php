@@ -13,8 +13,10 @@ class Order
 {
 //    private $token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
 //    private $api_url = "https://partner.goods.ru/api/market/v1/";
-    public $state = "NEW";
+    public $state;
     public $id;
+    public $shopToken;
+    public $dateFrom;
 
     /**
      * GETTERS
@@ -22,9 +24,20 @@ class Order
      * @return array
      */
 
+
+    public function __construct($token)
+    {
+        /*for 3 prev days*/
+        $offsetNow = 72 * 60 * 60;
+        $now = strtotime(date('c')) - $offsetNow;
+        $this->dateFrom = date('c', $now);
+        $this->shopToken = $token;
+    }
+
+
     public function getOrder($id)
     {
-        $result = Curl::curl('orderService/order/get', array(
+        $result = Curl::execute('orderService/order/get', $this->shopToken, array(
             "shipments" => array(
                 0 => $id,
             )
@@ -35,30 +48,35 @@ class Order
 
     public function getOrdersNew()
     {
-        $result = Curl::curl('orderService/order/search', array(
+        $result = Curl::execute('orderService/order/search', $this->shopToken, array(
             "statuses" => array(
                 0 => "NEW",
-            )
+            ),
+            "dateFrom" => $this->dateFrom
         ));
         return $result['data']['shipments'];
     }
 
     public function getOrdersCustomerCanceled()
     {
-        $result = Curl::curl('orderService/order/search', array(
+
+        $result = Curl::execute('orderService/order/search', $this->shopToken, array(
             "statuses" => array(
                 0 => "CUSTOMER_CANCELED",
-            )
+            ),
+            "dateFrom" => $this->dateFrom
         ));
+
         return $result['data']['shipments'];
     }
 
     public function getOrdersConfirmed()
     {
-        $result = Curl::curl('orderService/order/search', array(
+        $result = Curl::execute('orderService/order/search', $this->shopToken, array(
             "statuses" => array(
                 0 => "CONFIRMED",
-            )
+            ),
+            "dateFrom" => $this->dateFrom
         ));
         return $result['data']['shipments'];
     }
@@ -66,10 +84,11 @@ class Order
 
     public function getOrdersPacked()
     {
-        $result = Curl::curl('orderService/order/search', array(
+        $result = Curl::execute('orderService/order/search', $this->shopToken, array(
             "statuses" => array(
                 0 => "PACKED",
-            )
+            ),
+            "dateFrom" => $this->dateFrom
         ));
         return $result['data']['shipments'];
     }
@@ -98,7 +117,7 @@ class Order
                         }';*/
 //        $data = json_decode($data, true);
         $data = $rejectSome;
-        $goodsOrderNames = Curl::curl('orderService/order/reject', $data, true);
+        $goodsOrderNames = Curl::execute('orderService/order/reject', $this->shopToken, $data, true);
 
         if ($this->state == 'NEW') {
             $this->state = 'REJECT PARTIALLY';
@@ -126,7 +145,7 @@ class Order
                         }';*/
 //        $data = json_decode($data, true);
         $data = $confirmSome;
-        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data, true);
+        $goodsOrderNames = Curl::execute('orderService/order/confirm', $this->shopToken, $data, true);
 
         if ($this->state == 'NEW') {
             $this->state = 'CONFIRMED PARTIALLY';
@@ -164,7 +183,7 @@ class Order
                         }';*/
         $data = $rejectAll;
 //        $data = json_decode($data, true);
-        $goodsOrderNames = Curl::curl('orderService/order/reject', $data, true);
+        $goodsOrderNames = Curl::execute('orderService/order/reject', $this->shopToken, $data, true);
 
         if ($this->state == 'NEW') {
             $this->state = 'REJECT';
@@ -198,7 +217,7 @@ class Order
                         }';*/
         $data = $confirmAll;
 //        $data = json_decode($data, true);
-        $goodsOrderNames = Curl::curl('orderService/order/confirm', $data, true);
+        $goodsOrderNames = Curl::execute('orderService/order/confirm', $this->shopToken, $data, true);
 
         if ($this->state == 'NEW') {
             $this->state = 'CONFIRM';
@@ -237,7 +256,7 @@ class Order
                 $cargo->setCargo();*/
 
 
-        $goodsOrderNames = Curl::curl('orderService/order/packing', $data);
+        $goodsOrderNames = Curl::execute('orderService/order/packing', $this->shopToken, $data);
 
         if ($this->state == 'CONFIRM') {
             $this->state = 'PACKED';
@@ -266,13 +285,21 @@ class Order
                         }]
                     }';*/
 
-        $data = $orderToShip;
+        $ThatTime ="14:00:00";
+        if (time() >= strtotime($ThatTime)) {
+            echo "order #$orderToShip set to shipped".PHP_EOL;
+            $data = $orderToShip;
 
-        $goodsOrderNames = Curl::curl('orderService/order/shipping', $data);
+            $goodsOrderNames = Curl::execute('orderService/order/shipping', $this->shopToken, $data);
 
-        if ($this->state == 'PACKED') {
-            $this->state = 'SHIPPED';
+            if ($this->state == 'PACKED') {
+                $this->state = 'SHIPPED';
+            }
+            return $goodsOrderNames;
+        } else{
+            echo 'too early to ship';
+            return false;
         }
-        return $goodsOrderNames;
+
     }
 }

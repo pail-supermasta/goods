@@ -24,58 +24,14 @@ define('BOX_CODE_ID', '1231'); //TEST
 //define('BOX_CODE_ID','608'); //PRODUCTION
 define('ID_REGEXP', '/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/'); // Регулярка для UUID
 
-$ordersMS = new Orders();
-
-$goods = new Order();
+date_default_timezone_set('Europe/Moscow');
 
 
 
-/*ШАГ 1 НАЧАЛО отмененные покупателем - отмена в МС*/
 
-/*№1 получить заказы гудса из МС в статусе Отменен*/
-$ordersMSInCancel = $ordersMS->getInCancel();
-
-/*№2 получить заказы из гудса в статусе Отменен покупателем*/
-$goodsOrdersUserCanceled = $goods->getOrdersCustomerCanceled();
-
-
-foreach ($goodsOrdersUserCanceled as $key => $orderToCancelId) {
-    foreach ($ordersMSInCancel as $msOrder) {
-        /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
-        if (in_array($orderToCancelId, $msOrder) != 1) {
-            $orderMS = new OrderMS('',$orderToCancelId,'');
-            $orderMSDetails = $orderMS->getByName();
-            if(isset($orderMSDetails['id'])){
-                $orderMS->id = $orderMSDetails['id'];
-                $orderMS->setCanceled();
-                $message ="Заказ №$orderToCancelId ОТМЕНЕН покупателем";
-                echo $message;
-            }
-
-        }
-    }
-}
-
-
-/*ШАГ 1 КОНЕЦ отмененные покупателем - отмена в МС*/
+/*FUNCTION INIT BEGINS*/
 
 /*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
-
-/*№1 получить заказы гудса из МС в статусе В работе*/
-$ordersMSInWork = $ordersMS->getInWork();
-
-/*№2 получить заказы из гудса в статусе Ожидает подтверждения*/
-$goodsOrdersNew = $goods->getOrdersNew();
-
-foreach ($goodsOrdersNew as $key => $orderToConfirmId) {
-    foreach ($ordersMSInWork as $msOrder) {
-        /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
-        if (in_array($orderToConfirmId, $msOrder) == 1) {
-            getOrderDetails($goods, $msOrder);
-        }
-    }
-}
-
 
 /*№4 получить детали по заказам в выборке №1 из Goods API*/
 
@@ -175,41 +131,20 @@ function setOrderConfimation(Order $goods, $orderID, array $notFoundInMS, array 
     return $toReturn;
 }
 
-
-
-
 /*ШАГ 2 КОНЕЦ*/
-
-
-/*ШАГ 3 НАЧАЛО из описания - убедиться что заказы подтвердились в Гудс и в МС*/
-
-/*№1 получить заказы гудса в статусе CONFIRMED */
-
-
-$resOrdersConfirmed = $goods->getOrdersConfirmed();
-
-
-/*Что то в МС делаем если CONFIRMED ?*/
-/*ШАГ 3 КОНЕЦ*/
 
 
 /*ШАГ 4 НАЧАЛО из описания - комплектация заказов*/
 
-/*№1 получить заказы гудса в статусе CONFIRMED */
-
-$toPack = $resOrdersConfirmed;
-//$res = $goods->setPacking();
-
 
 /*№2 для каждого заказа - установить в Гудс заказа скомплектован */
-
 /**
  * @param Order $goods
  * @param $toPack
  */
-function setOrderPacking(Order $goods, $toPack)
+function setOrderPacking(Order $goods,$toPack)
 {
-    foreach ($toPack as $orderToPackId) {
+    foreach ((array)$toPack as $orderToPackId) {
 
         /*запросить детали заказа из Гудс*/
         $orderToPackDetails = $goods->getOrder($orderToPackId);
@@ -228,20 +163,11 @@ function setOrderPacking(Order $goods, $toPack)
     }
 }
 
-setOrderPacking($goods, $toPack);
-
-
-
 
 /*ШАГ 4 КОНЕЦ*/
 
 
 /*ШАГ 4 НАЧАЛО из описания - наклеивание этикетки*/
-
-
-
-/*№3  - получить список упакованных заказов из Гудс*/
-$goodsOrdersPacked = $goods->getOrdersPacked();
 
 /*№4 для каждого заказа - печать этикетки и добавление файла в заказ в МС + Отгрузка заказа */
 
@@ -283,26 +209,15 @@ function uploadSticker($orderPacked)
 
 }
 
-foreach ($goodsOrdersPacked as $orderPacked) {
-    uploadSticker($orderPacked);
-}
-
-
-
-
 /*ШАГ 4 КОНЕЦ*/
 
 
 /*ШАГ 6 НАЧАЛО из описания*/
 
-
-/*№1  - получить список заказов в статусе Доставляется из МС*/
-$ordersMSOnDelivery = $ordersMS->getOnDelivery();
-
 function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery)
 {
-    foreach ($goodsOrdersPacked as $key => $orderToShipId) {
-        foreach ($ordersMSOnDelivery as $msOrder) {
+    foreach ((array)$goodsOrdersPacked as $key => $orderToShipId) {
+        foreach ((array)$ordersMSOnDelivery as $msOrder) {
             /*№2  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
             if (in_array($orderToShipId, $msOrder) == 1) {
 
@@ -310,7 +225,7 @@ function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery
 
                 $boxes[] = array('boxIndex' => 1, 'boxCode' => '1231*' . $goods->id . '*1');
 
-                date_default_timezone_set('Europe/Moscow');
+
                 $shippingDate = date('c');
 
                 $orderToShip['shipments'][] = array('shipmentId' => $goods->id,
@@ -324,9 +239,131 @@ function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery
     }
 }
 
-sendOrdersToGoods($goods, $goodsOrdersPacked, $ordersMSOnDelivery);
 /*ШАГ 6 КОНЕЦ*/
 
+
+
+function processShop($token)
+{
+
+    $ordersMS = new Orders();
+
+    $goods = new Order($token);
+
+
+    /*ШАГ 1 НАЧАЛО отмененные покупателем - отмена в МС*/
+
+    /*№1 получить заказы гудса из МС в статусе Отменен*/
+    $ordersMSInCancel = $ordersMS->getInCancel();
+    var_dump('$ordersMS->getInCancel call'.PHP_EOL);
+
+
+
+    /*№2 получить заказы из гудса в статусе Отменен покупателем*/
+    $goodsOrdersUserCanceled = $goods->getOrdersCustomerCanceled();
+    var_dump('$goods->getOrdersCustomerCanceled'.PHP_EOL);
+
+
+    foreach ((array)$goodsOrdersUserCanceled as $key => $orderToCancelId) {
+        foreach ((array)$ordersMSInCancel as $msOrder) {
+            /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
+            if (in_array($orderToCancelId, $msOrder) != 1) {
+                $orderMS = new OrderMS('', $orderToCancelId, '');
+                $orderMSDetails = $orderMS->getByName();
+                if (isset($orderMSDetails['id'])) {
+                    $orderMS->id = $orderMSDetails['id'];
+                    $orderMS->setCanceled();
+                    $message = "Заказ №$orderToCancelId ОТМЕНЕН покупателем";
+                    echo $message;
+                }
+
+            }
+        }
+    }
+
+    /*ШАГ 1 КОНЕЦ отмененные покупателем - отмена в МС*/
+
+
+    /*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
+
+    /*№1 получить заказы гудса из МС в статусе В работе*/
+    $ordersMSInWork = $ordersMS->getInWork();
+    var_dump('$ordersMS->getInWork call'.PHP_EOL);
+
+    /*№2 получить заказы из гудса в статусе Ожидает подтверждения*/
+    $goodsOrdersNew = $goods->getOrdersNew();
+    var_dump('$goods->getOrdersNew call'.PHP_EOL);
+
+
+
+    foreach ((array)$goodsOrdersNew as $key => $orderToConfirmId) {
+        foreach ((array)$ordersMSInWork as $msOrder) {
+            /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
+            if (in_array($orderToConfirmId, $msOrder) == 1) {
+                getOrderDetails($goods, $msOrder);
+                var_dump('getOrderDetails call'.PHP_EOL);
+            }
+        }
+    }
+
+    /*ШАГ 2 КОНЕЦ*/
+
+
+    /*ШАГ 3 НАЧАЛО из описания - убедиться что заказы подтвердились в Гудс и в МС*/
+
+    /*№1 получить заказы гудса в статусе CONFIRMED */
+
+    $resOrdersConfirmed = $goods->getOrdersConfirmed();
+    var_dump('$goods->getOrdersConfirmed call'.PHP_EOL);
+
+
+    /*Что то в МС делаем если CONFIRMED ?*/
+    /*ШАГ 3 КОНЕЦ*/
+
+
+    /*ШАГ 4 НАЧАЛО из описания - комплектация заказов*/
+
+    /*№1 получить заказы гудса в статусе CONFIRMED */
+
+    $toPack = $resOrdersConfirmed;
+//$res = $goods->setPacking();
+
+    /*№2 для каждого заказа - установить в Гудс заказа скомплектован */
+
+    setOrderPacking($goods, $toPack);
+    var_dump('setOrderPacking call'.PHP_EOL);
+
+    /*ШАГ 4 КОНЕЦ*/
+
+
+    /*ШАГ 4 НАЧАЛО из описания - наклеивание этикетки*/
+
+    /*№3  - получить список упакованных заказов из Гудс*/
+    $goodsOrdersPacked = $goods->getOrdersPacked();
+    var_dump('$goods->getOrdersPacked call'.PHP_EOL);
+
+    foreach ((array)$goodsOrdersPacked as $orderPacked) {
+        uploadSticker($orderPacked);
+        var_dump('uploadSticker call'.PHP_EOL);
+    }
+
+    /*ШАГ 4 КОНЕЦ*/
+
+
+    /*ШАГ 6 НАЧАЛО из описания*/
+
+    /*№1  - получить список заказов в статусе Доставляется из МС*/
+    $ordersMSOnDelivery = $ordersMS->getOnDelivery();
+    var_dump('$ordersMS->getOnDelivery call'.PHP_EOL);
+
+    sendOrdersToGoods($goods, $goodsOrdersPacked, $ordersMSOnDelivery);
+    var_dump('sendOrdersToGoods call'.PHP_EOL);
+    /*ШАГ 6 КОНЕЦ*/
+
+}
+
+
+/*FUNCTION INIT ENDS*/
 
 
 

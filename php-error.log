@@ -1,0 +1,27 @@
+[09-Sep-2019 07:07:16 UTC] PHP Deprecated:  Non-static method Avaks\Goods\Curl::curl() should not be called statically in C:\Users\User\Documents\goods\class\Goods\Order.php on line 54
+[09-Sep-2019 07:07:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 261
+[09-Sep-2019 07:07:16 UTC] PHP Deprecated:  Non-static method Avaks\Goods\Curl::curl() should not be called statically in C:\Users\User\Documents\goods\class\Goods\Order.php on line 44
+[09-Sep-2019 07:07:16 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 289
+[09-Sep-2019 07:07:16 UTC] PHP Deprecated:  Non-static method Avaks\Goods\Curl::curl() should not be called statically in C:\Users\User\Documents\goods\class\Goods\Order.php on line 64
+[09-Sep-2019 07:07:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 145
+[09-Sep-2019 07:07:17 UTC] PHP Deprecated:  Non-static method Avaks\Goods\Curl::curl() should not be called statically in C:\Users\User\Documents\goods\class\Goods\Order.php on line 75
+[09-Sep-2019 07:07:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 330
+[09-Sep-2019 07:07:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 217
+[09-Sep-2019 07:07:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 261
+[09-Sep-2019 07:07:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 289
+[09-Sep-2019 07:07:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 145
+[09-Sep-2019 07:07:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 330
+[09-Sep-2019 07:07:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 217
+[09-Sep-2019 07:08:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 289
+[09-Sep-2019 07:08:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 145
+[09-Sep-2019 07:08:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 330
+[09-Sep-2019 07:08:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 217
+[09-Sep-2019 07:08:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 145
+[09-Sep-2019 07:08:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 330
+[09-Sep-2019 07:08:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 217
+[09-Sep-2019 07:08:53 UTC] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to setOrderPacking() must be of the type array, null given, called in C:\Users\User\Documents\goods\exFinal.php on line 320 and defined in C:\Users\User\Documents\goods\exFinal.php:143
+Stack trace:
+#0 C:\Users\User\Documents\goods\exFinal.php(320): setOrderPacking(Object(Avaks\Goods\Order), NULL)
+#1 C:\Users\User\Documents\goods\shops.php(35): processShop('6881430B-882F-4...')
+#2 {main}
+  thrown in C:\Users\User\Documents\goods\exFinal.php on line 143

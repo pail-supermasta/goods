@@ -20,23 +20,24 @@ class Curl
      * @return mixed
      */
 
+
 //Amaze 97B1BC55-189D-4EB4-91AF-4B9E9A985B3D
 //Фирдус C12405BF-01CB-4A6C-A41E-0E179EF00F54
-    public static function curl($link, $_data, $display = false)
+    public static function execute($link,$token, $_data, $display = true)
     {
 
-        /*$data = array(
+        $data = array(
                     "data" => array(
-                        "token" => "6881430B-882F-4C4F-8DCA-14FDAFEBAFEC", // test-partner
+                        "token" => $token, // test-partner
                     ),
                     "meta" => array(),
-                );*/
-        $data = array(
+                );
+/*        $data = array(
             "data" => array(
                 "token" => 'C12405BF-01CB-4A6C-A41E-0E179EF00F54',
             ),
             "meta" => array(),
-        );
+        );*/
 
         $headers = array(
             0 => "Content-Type: application/json",
@@ -68,6 +69,7 @@ class Curl
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
 
+
         $result = curl_exec($curl);
         $info = curl_getinfo($curl);
 
@@ -91,6 +93,7 @@ class Curl
                         dump($result);*/
             var_dump('error');
             var_dump($result);
+            return $result;
         }
 
 
