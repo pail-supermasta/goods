@@ -17,6 +17,7 @@ class Order
     public $id;
     public $shopToken;
     public $dateFrom;
+    public $shopID;
 
     /**
      * GETTERS
@@ -269,22 +270,7 @@ class Order
 
     public function setShipping(array $orderToShip)
     {
-        /*изменился с на выдаче на доставляется = shippingDate*/
-        /*        $data = '{
-                        "shipments": [{
-                            "shipmentId": "842818431",
-                            "orderCode": "842818431",
-                            "items": [{
-                                "itemIndex": 2,
-                                "quantity": 1,
-                                "boxes": [{
-                                    "boxIndex": 1,
-                                    "boxCode": "1231*842818431*1"
-                                }],
-                                "shipping":{  "shippingDate":"2019-11-23T14:00:00+03:00"}
-                            }]
-                        }]
-                    }';*/
+
 
         $ThatTime ="14:00:00";
         if (time() >= strtotime($ThatTime)) {

@@ -27,8 +27,6 @@ define('ID_REGEXP', '/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{1
 date_default_timezone_set('Europe/Moscow');
 
 
-
-
 /*FUNCTION INIT BEGINS*/
 
 /*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
@@ -142,15 +140,15 @@ function setOrderConfimation(Order $goods, $orderID, array $notFoundInMS, array 
  * @param Order $goods
  * @param $toPack
  */
-function setOrderPacking(Order $goods,$toPack)
+function setOrderPacking(Order $goods, $toPack)
 {
     foreach ((array)$toPack as $orderToPackId) {
 
         /*запросить детали заказа из Гудс*/
         $orderToPackDetails = $goods->getOrder($orderToPackId);
-
+        $boxCode = $goods->shopID;
         $shipment = array();
-        $boxes[] = array('boxIndex' => 1, 'boxCode' => '608*' . $orderToPackId . '*1');
+        $boxes[] = array('boxIndex' => 1, 'boxCode' => $boxCode.'*' . $orderToPackId . '*1');
         foreach ($orderToPackDetails['items'] as $item) {
             $shipment[] = array('itemIndex' => (int)$item['itemIndex'],
                 'quantity' => $item['quantity'],
@@ -171,12 +169,12 @@ function setOrderPacking(Order $goods,$toPack)
 
 /*№4 для каждого заказа - печать этикетки и добавление файла в заказ в МС + Отгрузка заказа */
 
-function uploadSticker($orderPacked,$boxCode,$shopToken)
+function uploadSticker($orderPacked, $boxCode, $shopToken)
 {
     $sticker = new Sticker();
 
     /*получить стикер из Гудс для заказа*/
-    $pdfCode = $sticker->printPdf($orderPacked,$shopToken, $boxCode);
+    $pdfCode = $sticker->printPdf($orderPacked, $shopToken, $boxCode);
     $orderMS = new OrderMS('', $orderPacked);
     $orderDetails = $orderMS->getByName();
     $orderMS->id = $orderDetails['id'];
@@ -222,8 +220,9 @@ function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery
             if (in_array($orderToShipId, $msOrder) == 1) {
 
                 $goods->id = $orderToShipId;
+                $boxCode = $goods->shopID;
 
-                $boxes[] = array('boxIndex' => 1, 'boxCode' => '608*' . $goods->id . '*1');
+                $boxes[] = array('boxIndex' => 1, 'boxCode' => $boxCode . '*' . $goods->id . '*1');
 
 
                 $shippingDate = date('c');
@@ -242,21 +241,18 @@ function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery
 /*ШАГ 6 КОНЕЦ*/
 
 
-
-function processShop($boxID,$token)
+function processShop($boxID, $token)
 {
 
     $ordersMS = new Orders();
 
-    $goods = new Order($boxID,$token);
+    $goods = new Order($boxID, $token);
 
 
     /*ШАГ 1 НАЧАЛО отмененные покупателем - отмена в МС*/
 
     /*№1 получить заказы гудса из МС в статусе Отменен*/
     $ordersMSInCancel = $ordersMS->getInCancel();
-
-
 
 
     /*№2 получить заказы из гудса в статусе Отменен покупателем*/
@@ -290,7 +286,6 @@ function processShop($boxID,$token)
 
     /*№2 получить заказы из гудса в статусе Ожидает подтверждения*/
     $goodsOrdersNew = $goods->getOrdersNew();
-
 
 
     foreach ((array)$goodsOrdersNew as $key => $orderToConfirmId) {
@@ -336,7 +331,7 @@ function processShop($boxID,$token)
     $goodsOrdersPacked = $goods->getOrdersPacked();
 
     foreach ((array)$goodsOrdersPacked as $orderPacked) {
-        uploadSticker($orderPacked,$goods->shopID,$goods->shopToken);
+        uploadSticker($orderPacked, $goods->shopID, $goods->shopToken);
     }
 
     /*ШАГ 4 КОНЕЦ*/
