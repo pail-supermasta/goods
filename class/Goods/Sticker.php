@@ -22,7 +22,7 @@ class Sticker
      * @return bool
      */
 
-    public function printPdf($shipmentId, $boxCode)
+    public function printPdf($shipmentId,$shopToken, $boxCode)
     {
         $toReturn = false;
 //        продавец на проде 608 на тесте 1231
@@ -36,7 +36,7 @@ class Sticker
                     "boxCodes":["' . $boxCode . '*' . $shipmentId . '*1"]
                 }';
         $data = json_decode($data, true);
-        $pdf = Curl::curl('orderService/sticker/print', $data);
+        $pdf = Curl::execute('orderService/sticker/print',$shopToken, $data);
 
 
 

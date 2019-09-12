@@ -20,7 +20,7 @@ use Avaks\Goods\Sticker;
 use Avaks\MS\Orders;
 use Avaks\MS\OrderMS;
 
-define('BOX_CODE_ID', '1231'); //TEST
+//define('BOX_CODE_ID', '1231'); //TEST
 //define('BOX_CODE_ID','608'); //PRODUCTION
 define('ID_REGEXP', '/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/'); // Регулярка для UUID
 
@@ -150,7 +150,7 @@ function setOrderPacking(Order $goods,$toPack)
         $orderToPackDetails = $goods->getOrder($orderToPackId);
 
         $shipment = array();
-        $boxes[] = array('boxIndex' => 1, 'boxCode' => '1231*' . $orderToPackId . '*1');
+        $boxes[] = array('boxIndex' => 1, 'boxCode' => '608*' . $orderToPackId . '*1');
         foreach ($orderToPackDetails['items'] as $item) {
             $shipment[] = array('itemIndex' => (int)$item['itemIndex'],
                 'quantity' => $item['quantity'],
@@ -171,12 +171,12 @@ function setOrderPacking(Order $goods,$toPack)
 
 /*№4 для каждого заказа - печать этикетки и добавление файла в заказ в МС + Отгрузка заказа */
 
-function uploadSticker($orderPacked)
+function uploadSticker($orderPacked,$boxCode,$shopToken)
 {
     $sticker = new Sticker();
 
     /*получить стикер из Гудс для заказа*/
-    $pdfCode = $sticker->printPdf($orderPacked, BOX_CODE_ID);
+    $pdfCode = $sticker->printPdf($orderPacked,$shopToken, $boxCode);
     $orderMS = new OrderMS('', $orderPacked);
     $orderDetails = $orderMS->getByName();
     $orderMS->id = $orderDetails['id'];
@@ -223,7 +223,7 @@ function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery
 
                 $goods->id = $orderToShipId;
 
-                $boxes[] = array('boxIndex' => 1, 'boxCode' => '1231*' . $goods->id . '*1');
+                $boxes[] = array('boxIndex' => 1, 'boxCode' => '608*' . $goods->id . '*1');
 
 
                 $shippingDate = date('c');
@@ -243,25 +243,24 @@ function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery
 
 
 
-function processShop($token)
+function processShop($boxID,$token)
 {
 
     $ordersMS = new Orders();
 
-    $goods = new Order($token);
+    $goods = new Order($boxID,$token);
 
 
     /*ШАГ 1 НАЧАЛО отмененные покупателем - отмена в МС*/
 
     /*№1 получить заказы гудса из МС в статусе Отменен*/
     $ordersMSInCancel = $ordersMS->getInCancel();
-    var_dump('$ordersMS->getInCancel call'.PHP_EOL);
+
 
 
 
     /*№2 получить заказы из гудса в статусе Отменен покупателем*/
     $goodsOrdersUserCanceled = $goods->getOrdersCustomerCanceled();
-    var_dump('$goods->getOrdersCustomerCanceled'.PHP_EOL);
 
 
     foreach ((array)$goodsOrdersUserCanceled as $key => $orderToCancelId) {
@@ -288,11 +287,9 @@ function processShop($token)
 
     /*№1 получить заказы гудса из МС в статусе В работе*/
     $ordersMSInWork = $ordersMS->getInWork();
-    var_dump('$ordersMS->getInWork call'.PHP_EOL);
 
     /*№2 получить заказы из гудса в статусе Ожидает подтверждения*/
     $goodsOrdersNew = $goods->getOrdersNew();
-    var_dump('$goods->getOrdersNew call'.PHP_EOL);
 
 
 
@@ -301,7 +298,6 @@ function processShop($token)
             /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
             if (in_array($orderToConfirmId, $msOrder) == 1) {
                 getOrderDetails($goods, $msOrder);
-                var_dump('getOrderDetails call'.PHP_EOL);
             }
         }
     }
@@ -314,7 +310,6 @@ function processShop($token)
     /*№1 получить заказы гудса в статусе CONFIRMED */
 
     $resOrdersConfirmed = $goods->getOrdersConfirmed();
-    var_dump('$goods->getOrdersConfirmed call'.PHP_EOL);
 
 
     /*Что то в МС делаем если CONFIRMED ?*/
@@ -326,12 +321,11 @@ function processShop($token)
     /*№1 получить заказы гудса в статусе CONFIRMED */
 
     $toPack = $resOrdersConfirmed;
-//$res = $goods->setPacking();
 
     /*№2 для каждого заказа - установить в Гудс заказа скомплектован */
 
     setOrderPacking($goods, $toPack);
-    var_dump('setOrderPacking call'.PHP_EOL);
+
 
     /*ШАГ 4 КОНЕЦ*/
 
@@ -340,11 +334,9 @@ function processShop($token)
 
     /*№3  - получить список упакованных заказов из Гудс*/
     $goodsOrdersPacked = $goods->getOrdersPacked();
-    var_dump('$goods->getOrdersPacked call'.PHP_EOL);
 
     foreach ((array)$goodsOrdersPacked as $orderPacked) {
-        uploadSticker($orderPacked);
-        var_dump('uploadSticker call'.PHP_EOL);
+        uploadSticker($orderPacked,$goods->shopID,$goods->shopToken);
     }
 
     /*ШАГ 4 КОНЕЦ*/
@@ -354,10 +346,8 @@ function processShop($token)
 
     /*№1  - получить список заказов в статусе Доставляется из МС*/
     $ordersMSOnDelivery = $ordersMS->getOnDelivery();
-    var_dump('$ordersMS->getOnDelivery call'.PHP_EOL);
 
     sendOrdersToGoods($goods, $goodsOrdersPacked, $ordersMSOnDelivery);
-    var_dump('sendOrdersToGoods call'.PHP_EOL);
     /*ШАГ 6 КОНЕЦ*/
 
 }

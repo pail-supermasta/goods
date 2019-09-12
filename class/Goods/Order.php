@@ -25,13 +25,14 @@ class Order
      */
 
 
-    public function __construct($token)
+    public function __construct($shopID,$token)
     {
         /*for 3 prev days*/
         $offsetNow = 72 * 60 * 60;
         $now = strtotime(date('c')) - $offsetNow;
         $this->dateFrom = date('c', $now);
         $this->shopToken = $token;
+        $this->shopID = $shopID;
     }
 
 
@@ -287,7 +288,8 @@ class Order
 
         $ThatTime ="14:00:00";
         if (time() >= strtotime($ThatTime)) {
-            echo "order #$orderToShip set to shipped".PHP_EOL;
+            var_dump("order set to shipped".PHP_EOL);
+            var_dump($orderToShip);
             $data = $orderToShip;
 
             $goodsOrderNames = Curl::execute('orderService/order/shipping', $this->shopToken, $data);
@@ -296,8 +298,11 @@ class Order
                 $this->state = 'SHIPPED';
             }
             return $goodsOrderNames;
+            //return true;
         } else{
-            echo 'too early to ship';
+            var_dump("too early to ship this order".PHP_EOL);
+            var_dump($orderToShip);
+
             return false;
         }
 

@@ -20,9 +20,9 @@ class Shop
      * @param $name
      * @param $token
      */
-    public function __construct($name, $token)
+    public function __construct($id, $token)
     {
-        $this->name = $name;
+        $this->id = $id;
         $this->token = $token;
     }
 
