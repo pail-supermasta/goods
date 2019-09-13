@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Avaks\\": "class/",
+      "Avaks\\Goods\\": "class/Goods/",
+      "Avaks\\MS\\": "class/MS/"
+    }
+  },
+  "require": {
+    "php" : "^7.0",
+    "mpdf/mpdf": "^8.0"
+  }
+}
