@@ -25,3 +25,11 @@ Stack trace:
 #1 C:\Users\User\Documents\goods\shops.php(35): processShop('6881430B-882F-4...')
 #2 {main}
   thrown in C:\Users\User\Documents\goods\exFinal.php on line 143
+[16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78

@@ -148,7 +148,7 @@ function setOrderPacking(Order $goods, $toPack)
         $orderToPackDetails = $goods->getOrder($orderToPackId);
         $boxCode = $goods->shopID;
         $shipment = array();
-        $boxes[] = array('boxIndex' => 1, 'boxCode' => $boxCode.'*' . $orderToPackId . '*1');
+        $boxes[] = array('boxIndex' => 1, 'boxCode' => $boxCode . '*' . $orderToPackId . '*1');
         foreach ($orderToPackDetails['items'] as $item) {
             $shipment[] = array('itemIndex' => (int)$item['itemIndex'],
                 'quantity' => $item['quantity'],
@@ -175,6 +175,7 @@ function uploadSticker($orderPacked, $boxCode, $shopToken)
 
     /*получить стикер из Гудс для заказа*/
     $pdfCode = $sticker->printPdf($orderPacked, $shopToken, $boxCode);
+
     $orderMS = new OrderMS('', $orderPacked);
     $orderDetails = $orderMS->getByName();
     $orderMS->id = $orderDetails['id'];
@@ -198,11 +199,11 @@ function uploadSticker($orderPacked, $boxCode, $shopToken)
     $put_data['attributes'][] = $attribute;
 
     $final = json_encode($put_data);
-    $orderMS->setSticker($final);
+    var_dump($orderMS->setSticker($final));
 
 
     /*Отгрузить заказ*/
-    $orderMS->setToPack();
+    var_dump($orderMS->setToPack());
 
 
 }
@@ -239,6 +240,28 @@ function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery
 }
 
 /*ШАГ 6 КОНЕЦ*/
+
+
+// ДОПОЛНИТЕЛЬНЫЕ ПРОВЕРКИ
+
+
+function checkToShipMS($goods,$goodsOrdersPacked, $ordersMSInWork)
+{
+
+
+
+    foreach ((array)$goodsOrdersPacked as $key => $orderId) {
+        foreach ((array)$ordersMSInWork as $msOrder) {
+            /*№1  - проверка что заказы в Ожидает отгрузки из Гудс в МС имеют Лист и стоят в статусе В работе*/
+            if (in_array($orderId, $msOrder) == 1) {
+
+                /*№2  - поставить лист и перевести в Отгрузить в МС*/
+                uploadSticker($orderId, $goods->shopID, $goods->shopToken);
+
+            }
+        }
+    }
+}
 
 
 function processShop($boxID, $token)
@@ -346,19 +369,7 @@ function processShop($boxID, $token)
     /*ШАГ 6 КОНЕЦ*/
 
 
-
-// ДОПОЛНИТЕЛЬНЫЕ ПРОВЕРКИ
-
-    // №1
-    // двойная проверка что заказы в Ожидает отгрузки из Гудс в МС имеют Лист и не стоят в статусе В работе или Новый
-    // иначе поставить лист и перевести в Отгрузить в МС
-    function checkToShipMS($goodsOrdersPacked,$ordersMSInWork){
-
-       var_dump($ordersMSInWork);
-       var_dump($goodsOrdersPacked);
-    }
-
-    checkToShipMS($goodsOrdersPacked,$ordersMSInWork);
+    checkToShipMS($goods,$goodsOrdersPacked, $ordersMSInWork);
 
 }
 
