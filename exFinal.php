@@ -215,7 +215,9 @@ function uploadSticker($orderPacked, $boxCode, $shopToken)
 
 function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery)
 {
+
     foreach ((array)$goodsOrdersPacked as $key => $orderToShipId) {
+
         foreach ((array)$ordersMSOnDelivery as $msOrder) {
             /*№2  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
             if (in_array($orderToShipId, $msOrder) == 1) {

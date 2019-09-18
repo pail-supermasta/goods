@@ -86,11 +86,11 @@ class Order
 
     public function getOrdersPacked()
     {
+
         $result = Curl::execute('orderService/order/search', $this->shopToken, array(
             "statuses" => array(
-                0 => "PACKED",
-            ),
-            "dateFrom" => $this->dateFrom
+                0 => "PACKED"
+            )
         ));
         return $result['data']['shipments'];
     }
