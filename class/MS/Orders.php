@@ -15,6 +15,23 @@ use Avaks\MS\Products;
 
 class Orders
 {
+
+    public function getNew()
+    {
+        /*get orders from MS DB*/
+        $queryOrderByState = "SELECT id,`name`,description  
+                  FROM `ms_customerorder`  
+                  WHERE agent = '64710328-2e6f-11e8-9ff4-34e8000f81c8' 
+                  AND state = '327bfd05-75c5-11e5-7a40-e89700139935' 
+                  AND moment > NOW() - INTERVAL 3 DAY 
+                  AND deleted=''";
+        $ordersNew = AvaksSQL::selectOrdersByState($queryOrderByState);
+
+        return $ordersNew;
+
+    }
+
+
     public function getInWork()
     {
         /*get orders from MS DB*/

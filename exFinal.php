@@ -31,6 +31,8 @@ date_default_timezone_set('Europe/Moscow');
 
 /*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
 
+/*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
+
 /*№4 получить детали по заказам в выборке №1 из Goods API*/
 
 function getOrderDetails(Order $goods, array $orderMSInWork)
@@ -246,7 +248,8 @@ function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery
 
 /*ШАГ 7 НАЧАЛО - отмена заказа с нашей стороны*/
 
-function setCanceledToGoods(){
+function setCanceledToGoods()
+{
 
 }
 
@@ -256,9 +259,8 @@ function setCanceledToGoods(){
 // ДОПОЛНИТЕЛЬНЫЕ ПРОВЕРКИ
 
 
-function checkToShipMS($goods,$goodsOrdersPacked, $ordersMSInWork)
+function checkToShipMS($goods, $goodsOrdersPacked, $ordersMSInWork)
 {
-
 
 
     foreach ((array)$goodsOrdersPacked as $key => $orderId) {
@@ -283,7 +285,7 @@ function processShop($boxID, $token)
     $goods = new Order($boxID, $token);
 
 
-    /*ШАГ 1 НАЧАЛО отмененные покупателем - отмена в МС*/
+    /*ШАГ 0 НАЧАЛО отмененные покупателем - отмена в МС*/
 
     /*№1 получить заказы гудса из МС в статусе Отменен*/
     $ordersMSInCancel = $ordersMS->getInCancel();
@@ -310,7 +312,21 @@ function processShop($boxID, $token)
         }
     }
 
-    /*ШАГ 1 КОНЕЦ отмененные покупателем - отмена в МС*/
+    /*ШАГ 0 КОНЕЦ отмененные покупателем - отмена в МС*/
+
+
+    /*ШАГ 1 НАЧАЛО - перевод всех новых В работу и ставим подпись*/
+
+    $ordersMSNew = $ordersMS->getNew();
+
+    foreach ($ordersMSNew as $orderMSNew) {
+
+        $orderMS = new OrderMS($orderMSNew['id'], $orderMSNew['name'], '');
+        $oldDescription = $orderMSNew['description'];
+        $orderMS->setInWork($oldDescription);
+    }
+
+    /*ШАГ 1 КОНЕЦ*/
 
 
     /*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
@@ -380,7 +396,7 @@ function processShop($boxID, $token)
     /*ШАГ 6 КОНЕЦ*/
 
 
-    checkToShipMS($goods,$goodsOrdersPacked, $ordersMSInWork);
+    checkToShipMS($goods, $goodsOrdersPacked, $ordersMSInWork);
 
 }
 

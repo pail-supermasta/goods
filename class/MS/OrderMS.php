@@ -33,7 +33,7 @@ class OrderMS
     public function getByName()
     {
         $res = CurlMoiSklad::curlMS('/entity/customerorder/?filter=name=' . $this->name);
-        return isset((json_decode($res, true))['rows'][0])? (json_decode($res, true))['rows'][0] : $res;
+        return isset((json_decode($res, true))['rows'][0]) ? (json_decode($res, true))['rows'][0] : $res;
     }
 
     public function setSticker($postdata)
@@ -76,6 +76,24 @@ class OrderMS
         $res = '';
         $res = CurlMoiSklad::curlMS('/entity/customerorder/' . $this->id, $postdata, 'put');
         $this->state = '327c070c-75c5-11e5-7a40-e8970013993b';
+        return $res;
+    }
+
+    public function setInWork($oldDescription)
+    {
+        $postdata = '{
+            "state": {
+                "meta": {
+                    "href": "https://online.moysklad.ru/api/remap/1.1/entity/customerorder/metadata/states/ecf45f89-f518-11e6-7a69-9711000ff0c4",
+                    "type": "state",
+                    "mediaType": "application/json"
+                }
+            },
+            "description": "'.$oldDescription.' GOODS1364895"
+        }';
+        $res = '';
+        $res = CurlMoiSklad::curlMS('/entity/customerorder/' . $this->id, $postdata, 'put');
+        $this->state = 'ecf45f89-f518-11e6-7a69-9711000ff0c4';
         return $res;
     }
 }
