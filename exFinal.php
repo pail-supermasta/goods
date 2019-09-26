@@ -244,6 +244,15 @@ function sendOrdersToGoods(Order $goods, $goodsOrdersPacked, $ordersMSOnDelivery
 /*ШАГ 6 КОНЕЦ*/
 
 
+/*ШАГ 7 НАЧАЛО - отмена заказа с нашей стороны*/
+
+function setCanceledToGoods(){
+
+}
+
+/*ШАГ 7 КОНЕЦ*/
+
+
 // ДОПОЛНИТЕЛЬНЫЕ ПРОВЕРКИ
 
 

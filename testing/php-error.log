@@ -114,3 +114,22 @@ Stack trace:
 [27-Aug-2019 14:50:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 40
 [27-Aug-2019 14:51:23 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 57
 [27-Aug-2019 14:51:23 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\exFinal.php on line 42
+[26-Sep-2019 10:24:41 UTC] PHP Warning:  require_once(Telegram.php): failed to open stream: No such file or directory in C:\Users\User\Documents\goods\testing\printPDF.php on line 20
+[26-Sep-2019 10:24:41 UTC] PHP Fatal error:  require_once(): Failed opening required 'Telegram.php' (include_path='.;C:\php\pear') in C:\Users\User\Documents\goods\testing\printPDF.php on line 20
+[26-Sep-2019 10:25:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Avaks\Goods\Order::getOrdersPackedByShippingDate() in C:\Users\User\Documents\goods\testing\printPDF.php:37
+Stack trace:
+#0 C:\Users\User\Documents\goods\testing\printPDF.php(296): formList(608, '97B1BC55-189D-4...')
+#1 {main}
+  thrown in C:\Users\User\Documents\goods\testing\printPDF.php on line 37
+[26-Sep-2019 10:26:14 UTC] PHP Notice:  Undefined variable: ordersGoods in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:26:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:30:41 UTC] PHP Notice:  Undefined variable: ordersGoods in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:30:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:30:52 UTC] PHP Notice:  Undefined variable: ordersGoods in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:30:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:33:22 UTC] PHP Notice:  Undefined variable: ordersGoods in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:33:22 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:34:57 UTC] PHP Notice:  Undefined variable: ordersGoods in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:34:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:36:21 UTC] PHP Notice:  Undefined variable: ordersGoods in C:\Users\User\Documents\goods\testing\printPDF.php on line 45
+[26-Sep-2019 10:36:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\testing\printPDF.php on line 45

@@ -17,8 +17,6 @@ require_once 'vendor/autoload.php';
 
 use Avaks\Goods\Order;
 
-require_once 'Telegram.php';
-
 $bot = new Telegram('345217125:AAE4o7Bs-QeQnusf3SQ-xSuSBm2RGMVH97w');
 
 function formList($goodsID, $token)
