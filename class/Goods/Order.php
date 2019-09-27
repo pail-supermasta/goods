@@ -35,8 +35,8 @@ class Order
         $this->dateFrom = date('c', $now);
         $this->shopToken = $token;
         $this->shopID = $shopID;
-//        $this->shippingDate = date('c');
-        $this->shippingDate = '2019-09-26T15:25:01+02:00';
+        $this->shippingDate = date('c');
+//        $this->shippingDate = '2019-09-26T15:25:01+02:00';
     }
 
 

@@ -16,6 +16,7 @@ header('Content-Type: application/json');
 require_once 'vendor/autoload.php';
 
 use Avaks\Goods\Order;
+require_once 'class/Telegram.php';
 
 $bot = new Telegram('345217125:AAE4o7Bs-QeQnusf3SQ-xSuSBm2RGMVH97w');
 

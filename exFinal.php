@@ -29,7 +29,6 @@ date_default_timezone_set('Europe/Moscow');
 
 /*FUNCTION INIT BEGINS*/
 
-/*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
 
 /*ШАГ 2 НАЧАЛО из описания - подтверждение или отмена*/
 
@@ -173,14 +172,13 @@ function setOrderPacking(Order $goods, $toPack)
 
 function uploadSticker($orderPacked, $boxCode, $shopToken)
 {
-    $sticker = new Sticker();
 
-    /*получить стикер из Гудс для заказа*/
-    $pdfCode = $sticker->printPdf($orderPacked, $shopToken, $boxCode);
 
     $orderMS = new OrderMS('', $orderPacked);
     $orderDetails = $orderMS->getByName();
     $orderMS->id = $orderDetails['id'];
+
+    $attributes = json_encode($orderDetails['attributes'], JSON_UNESCAPED_UNICODE);
 
     /*получить Статус заказа в МС*/
     preg_match(ID_REGEXP, $orderDetails['state']['meta']['href'], $matches);
@@ -188,20 +186,29 @@ function uploadSticker($orderPacked, $boxCode, $shopToken)
     $orderMS->state = $state_id;
 
 
-    /*записать в заказ МС файл маркировочного листа*/
-    $put_data = array();
-    $attribute = array();
+    if (!strpos($attributes, 'b8a8f6d6-5782-11e8-9ff4-34e800181bf6') > 0) {
+
+
+        /*записать в заказ МС файл маркировочного листа*/
+        $put_data = array();
+        $attribute = array();
+
+        $sticker = new Sticker();
+
+        /*получить стикер из Гудс для заказа*/
+        $pdfCode = $sticker->printPdf($orderPacked, $shopToken, $boxCode);
 
 //    если надо получить из файла
 //    $content = base64_encode(file_get_contents("pdf/sticker-files/Маркировка $orderMS->name.pdf"));
-    $content = base64_encode($pdfCode);
-    $attribute['id'] = 'b8a8f6d6-5782-11e8-9ff4-34e800181bf6';
-    $attribute['file']['filename'] = "Маркировка $orderMS->name.pdf";
-    $attribute['file']['content'] = $content;
-    $put_data['attributes'][] = $attribute;
+        $content = base64_encode($pdfCode);
+        $attribute['id'] = 'b8a8f6d6-5782-11e8-9ff4-34e800181bf6';
+        $attribute['file']['filename'] = "Маркировка $orderMS->name.pdf";
+        $attribute['file']['content'] = $content;
+        $put_data['attributes'][] = $attribute;
 
-    $final = json_encode($put_data);
-    var_dump($orderMS->setSticker($final));
+        $final = json_encode($put_data);
+        var_dump($orderMS->setSticker($final));
+    }
 
 
     /*Отгрузить заказ*/

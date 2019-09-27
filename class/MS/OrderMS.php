@@ -89,7 +89,7 @@ class OrderMS
                     "mediaType": "application/json"
                 }
             },
-            "description": "'.$oldDescription.' GOODS1364895"
+            "description": "' . $oldDescription . ' GOODS1364895"
         }';
         $res = '';
         $res = CurlMoiSklad::curlMS('/entity/customerorder/' . $this->id, $postdata, 'put');
