@@ -16,6 +16,7 @@ header('Content-Type: application/json');
 require_once 'vendor/autoload.php';
 
 use Avaks\Goods\Order;
+
 require_once 'class/Telegram.php';
 
 $bot = new Telegram('345217125:AAE4o7Bs-QeQnusf3SQ-xSuSBm2RGMVH97w');
@@ -28,7 +29,6 @@ function formList($goodsID, $token)
     $goods->shopToken = $token;
     /*получить список упакованных заказов из Гудс с датой отправки Сегодня*/
     $ordersGoods = $goods->getOrdersPackedByShippingDate();
-
 
     /*form html orders table*/
     $ordersTable = '';
@@ -45,6 +45,11 @@ function formList($goodsID, $token)
 
         /*get their positions*/
         foreach ($orderPositionsGoods as $orderPositionGoods) {
+            if ($orderPositionGoods['status'] != 'PACKED') {
+                continue;
+            }
+
+
             $itemsNumber++;
             $productsCost += $orderPositionGoods['price'];
             $productsCostFinal += $orderPositionGoods['finalPrice'];
