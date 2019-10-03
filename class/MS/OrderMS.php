@@ -81,6 +81,7 @@ class OrderMS
 
     public function setInWork($oldDescription)
     {
+        $oldDescription = preg_replace('/\s+/', ' ', trim($oldDescription));
         $postdata = '{
             "state": {
                 "meta": {
@@ -94,6 +95,7 @@ class OrderMS
         $res = '';
         $res = CurlMoiSklad::curlMS('/entity/customerorder/' . $this->id, $postdata, 'put');
         $this->state = 'ecf45f89-f518-11e6-7a69-9711000ff0c4';
+        var_dump($postdata);
         return $res;
     }
 }

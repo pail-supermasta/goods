@@ -33,3 +33,8 @@ Stack trace:
 [16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
 [16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
 [16-Sep-2019 16:06:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[30-Sep-2019 11:04:04 Europe/Moscow] PHP Notice:  Undefined variable: ordersMS in C:\Users\User\Documents\goods\exFinal.php on line 419
+[30-Sep-2019 11:04:04 Europe/Moscow] PHP Fatal error:  Uncaught Error: Call to a member function getNew() on null in C:\Users\User\Documents\goods\exFinal.php:419
+Stack trace:
+#0 {main}
+  thrown in C:\Users\User\Documents\goods\exFinal.php on line 419

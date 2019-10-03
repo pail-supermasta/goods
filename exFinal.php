@@ -326,11 +326,12 @@ function processShop($boxID, $token)
 
     $ordersMSNew = $ordersMS->getNew();
 
+
     foreach ($ordersMSNew as $orderMSNew) {
 
         $orderMS = new OrderMS($orderMSNew['id'], $orderMSNew['name'], '');
         $oldDescription = $orderMSNew['description'];
-        $orderMS->setInWork($oldDescription);
+        var_dump($orderMS->setInWork($oldDescription));
     }
 
     /*ШАГ 1 КОНЕЦ*/
