@@ -20,6 +20,10 @@ use Avaks\Goods\Sticker;
 use Avaks\MS\Orders;
 use Avaks\MS\OrderMS;
 
+
+require_once 'class/Telegram.php';
+
+
 //define('BOX_CODE_ID', '1231'); //TEST
 //define('BOX_CODE_ID','608'); //PRODUCTION
 define('ID_REGEXP', '/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/'); // Регулярка для UUID
@@ -325,13 +329,17 @@ function processShop($boxID, $token)
     /*ШАГ 1 НАЧАЛО - перевод всех новых В работу и ставим подпись*/
 
     $ordersMSNew = $ordersMS->getNew();
+    telegram("new orders " . json_encode($ordersMSNew), '-289839597');
 
 
-    foreach ($ordersMSNew as $orderMSNew) {
+    foreach ((array)$ordersMSNew as $orderMSNew) {
 
         $orderMS = new OrderMS($orderMSNew['id'], $orderMSNew['name'], '');
         $oldDescription = $orderMSNew['description'];
-        var_dump($orderMS->setInWork($oldDescription));
+        $setWork = $orderMS->setInWork($oldDescription);
+        if (strpos($setWork, 'обработка-ошибок') > 0){
+            telegram("error found $setWork", '-289839597');
+        }
     }
 
     /*ШАГ 1 КОНЕЦ*/

@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c897fa2a-f79e-4601-866a-3c4cb7a174ad" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/OrderMS.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/OrderMS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/MS/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/Orders.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exFinal.php" beforeDir="false" afterPath="$PROJECT_DIR$/exFinal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/php-error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printPDF.php" beforeDir="false" afterPath="$PROJECT_DIR$/printPDF.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +39,8 @@
       <file leaf-file-name="exFinal.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exFinal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="335" lean-forward="true" selection-start-line="335" selection-end-line="335" />
+            <state relative-caret-position="122">
+              <caret line="330" column="32" lean-forward="true" selection-start-line="330" selection-start-column="32" selection-end-line="330" selection-end-column="32" />
               <folding>
                 <element signature="e#776#2068#0#PHP" />
                 <element signature="e#2119#4481#0#PHP" />
@@ -50,39 +49,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="printPDF.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/printPDF.php">
+      <file leaf-file-name="Telegram.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class/Telegram.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+            <state relative-caret-position="119">
+              <caret line="589" column="1" selection-start-line="589" selection-start-column="1" selection-end-line="589" selection-end-column="1" />
               <folding>
-                <element signature="e#2331#2598#0#PHP" />
-                <element signature="n#html#0;n#!!top" />
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#Telegram#0;n#!!top" />
+                <element signature="e#111#197#0#PHP" />
+                <element signature="e#226#337#0#PHP" />
+                <element signature="n#__construct#0;n#Telegram#0;n#!!top" />
+                <element signature="e#433#584#0#PHP" />
+                <element signature="n#send#0;n#Telegram#0;n#!!top" />
+                <element signature="e#857#1402#0#PHP" />
+                <element signature="e#880#1401#0#PHP" />
+                <element signature="e#1111#1225#1#PHP" />
+                <element signature="e#1547#2334#0#PHP" />
+                <element signature="n#sendMessage#0;n#Telegram#0;n#!!top" />
+                <element signature="e#2556#2879#0#PHP" />
+                <element signature="n#getUpdates#0;n#Telegram#0;n#!!top" />
+                <element signature="e#3345#3805#0#PHP" />
+                <element signature="e#3525#3549#0#PHP" />
+                <element signature="e#4144#4591#0#PHP" />
+                <element signature="n#sendPhoto#0;n#Telegram#0;n#!!top" />
+                <element signature="e#4711#4845#0#PHP" />
+                <element signature="e#5124#5521#0#PHP" />
+                <element signature="n#sendDocument#0;n#Telegram#0;n#!!top" />
+                <element signature="e#5633#5737#0#PHP" />
+                <element signature="e#6038#6532#0#PHP" />
+                <element signature="n#sendAudio#0;n#Telegram#0;n#!!top" />
+                <element signature="e#6669#6839#0#PHP" />
+                <element signature="e#7118#7569#0#PHP" />
+                <element signature="n#sendVideo#0;n#Telegram#0;n#!!top" />
+                <element signature="e#7689#7823#0#PHP" />
+                <element signature="e#8102#8617#0#PHP" />
+                <element signature="n#sendChatAction#0;n#Telegram#0;n#!!top" />
+                <element signature="e#8710#9362#0#PHP" />
+                <element signature="e#8746#8815#0#PHP" />
+                <element signature="e#8829#8904#0#PHP" />
+                <element signature="e#8918#8993#0#PHP" />
+                <element signature="e#9007#9082#0#PHP" />
+                <element signature="e#9096#9171#0#PHP" />
+                <element signature="e#9185#9260#0#PHP" />
+                <element signature="e#9274#9352#0#PHP" />
+                <element signature="e#9417#9503#0#PHP" />
+                <element signature="e#9788#10199#0#PHP" />
+                <element signature="n#kickChatMember#0;n#Telegram#0;n#!!top" />
+                <element signature="e#10314#10407#0#PHP" />
+                <element signature="e#10689#11107#0#PHP" />
+                <element signature="n#unbanChatMember#0;n#Telegram#0;n#!!top" />
+                <element signature="e#11224#11317#0#PHP" />
+                <element signature="e#11599#12149#0#PHP" />
+                <element signature="n#sendKeyboard#0;n#Telegram#0;n#!!top" />
+                <element signature="e#12277#12434#0#PHP" />
+                <element signature="e#12716#13122#0#PHP" />
+                <element signature="n#hideKeyboard#0;n#Telegram#0;n#!!top" />
+                <element signature="e#13229#13386#0#PHP" />
+                <element signature="e#13668#14032#0#PHP" />
+                <element signature="n#setWebhook#0;n#Telegram#0;n#!!top" />
+                <element signature="e#14230#14601#0#PHP" />
+                <element signature="e#14638#14904#0#PHP" />
+                <element signature="n#delWebhook#0;n#Telegram#0;n#!!top" />
+                <element signature="e#15277#15372#0#PHP" />
+                <element signature="n#curlFile#0;n#Telegram#0;n#!!top" />
+                <element signature="e#15462#15555#0#PHP" />
+                <element signature="n#telegram#0;n#!!top" />
+                <element signature="e#15877#15973#0#PHP" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="33" column="35" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -90,17 +123,17 @@
       <file leaf-file-name="OrderMS.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+            <state relative-caret-position="199">
+              <caret line="87" selection-start-line="87" selection-end-line="89" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Orders.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Orders.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="26" column="32" selection-start-line="21" selection-start-column="30" selection-end-line="26" selection-end-column="32" />
+            <state relative-caret-position="170">
+              <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -109,10 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getById</find>
-      <find>SetImportUse</find>
-      <find>MS</find>
-      <find>processShop</find>
       <find>getOrder</find>
       <find>1</find>
       <find>switch</find>
@@ -139,6 +168,10 @@
       <find>CUSTOMER_CANCELED</find>
       <find>reserve</find>
       <find>нов</find>
+      <find>strpos</find>
+      <find>error fo</find>
+      <find>$bot</find>
+      <find>INTERVAL</find>
     </findStrings>
     <replaceStrings>
       <replace>Curl::curl</replace>
@@ -199,7 +232,6 @@
         <option value="$PROJECT_DIR$/labeling.php" />
         <option value="$PROJECT_DIR$/delivering.php" />
         <option value="$PROJECT_DIR$/class/Goods/Sticker.php" />
-        <option value="$PROJECT_DIR$/shops.php" />
         <option value="$PROJECT_DIR$/class/Goods/Shop.php" />
         <option value="$PROJECT_DIR$/testing/exFinal.php" />
         <option value="$PROJECT_DIR$/class/Goods/Curl.php" />
@@ -209,16 +241,17 @@
         <option value="$PROJECT_DIR$/testing/composer.json" />
         <option value="$PROJECT_DIR$/testing/ex.php" />
         <option value="$PROJECT_DIR$/testing/orderListPdf.html" />
-        <option value="$PROJECT_DIR$/class/Telegram.php" />
         <option value="$PROJECT_DIR$/testing/test-canceled.php" />
         <option value="$PROJECT_DIR$/Telegram.php" />
         <option value="$PROJECT_DIR$/testing/printPDF.php" />
-        <option value="$PROJECT_DIR$/class/MS/Orders.php" />
         <option value="$PROJECT_DIR$/testing/step0.php" />
         <option value="$PROJECT_DIR$/class/Goods/Order.php" />
+        <option value="$PROJECT_DIR$/printPDF.php" />
+        <option value="$PROJECT_DIR$/shops.php" />
+        <option value="$PROJECT_DIR$/class/Telegram.php" />
         <option value="$PROJECT_DIR$/exFinal.php" />
         <option value="$PROJECT_DIR$/class/MS/OrderMS.php" />
-        <option value="$PROJECT_DIR$/printPDF.php" />
+        <option value="$PROJECT_DIR$/class/MS/Orders.php" />
       </list>
     </option>
   </component>
@@ -253,7 +286,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,10 +308,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;ter&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/vendor/mpdf/mpdf/src/Tag/PageFooter.php&#10;setsti&#9;null&#9;null&#10;prin&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/printPDF.php&#10;sti&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Goods/Sticker.php&#10;ex&#9;FILE&#9;file://C:/Users/User/Documents/goods/exFinal.php&#10;Products.php&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/MS/Products.php&#10;goods&#9;FILE&#9;file://C:/Users/User/Documents/goods/goods.php&#10;printPdf&#9;null&#9;null&#10;ыуее&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="teleg&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Telegram.php&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;ter&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/vendor/mpdf/mpdf/src/Tag/PageFooter.php&#10;setsti&#9;null&#9;null&#10;prin&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/printPDF.php&#10;sti&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Goods/Sticker.php&#10;ex&#9;FILE&#9;file://C:/Users/User/Documents/goods/exFinal.php&#10;Products.php&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/MS/Products.php&#10;goods&#9;FILE&#9;file://C:/Users/User/Documents/goods/goods.php&#10;printPdf&#9;null&#9;null&#10;ыуее&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/phptrace-master" />
@@ -313,26 +346,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.exFinal.php">
+  <component name="RunManager" selected="PHP Script.shops.php">
     <configuration name="OrderMS.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/class/MS/OrderMS.php" />
     <configuration name="exFinal.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/exFinal.php" />
     <configuration name="printPDF.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/testing/printPDF.php" />
+    <configuration name="shops.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/shops.php" />
     <configuration name="step0.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/testing/step0.php" />
-    <configuration name="test-canceled.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/testing/test-canceled.php" />
     <list>
       <item itemvalue="PHP Script.printPDF.php" />
-      <item itemvalue="PHP Script.test-canceled.php" />
       <item itemvalue="PHP Script.step0.php" />
       <item itemvalue="PHP Script.OrderMS.php" />
       <item itemvalue="PHP Script.exFinal.php" />
+      <item itemvalue="PHP Script.shops.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.shops.php" />
         <item itemvalue="PHP Script.exFinal.php" />
         <item itemvalue="PHP Script.OrderMS.php" />
         <item itemvalue="PHP Script.step0.php" />
         <item itemvalue="PHP Script.printPDF.php" />
-        <item itemvalue="PHP Script.test-canceled.php" />
       </list>
     </recent_temporary>
   </component>
@@ -391,29 +424,30 @@
       <workItem from="1569842331351" duration="10000" />
       <workItem from="1569849194977" duration="379000" />
       <workItem from="1569942988304" duration="1480000" />
-      <workItem from="1570100644281" duration="823000" />
+      <workItem from="1570100644281" duration="1461000" />
+      <workItem from="1570431746424" duration="2247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271884000" />
+    <option name="totallyTimeSpent" value="274769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="182" y="79" width="1693" height="915" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17054264" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17054264" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" weight="0.3295362" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.235" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -427,12 +461,12 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2371476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Inspection Results" order="12" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -440,7 +474,7 @@
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.235" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -657,20 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/Telegram.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="208" column="36" selection-start-line="208" selection-start-column="29" selection-end-line="208" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shops.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="15" selection-start-line="15" selection-end-line="39" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testing/step0.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -694,29 +714,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="454">
           <caret line="33" column="35" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
+    <entry file="file://$PROJECT_DIR$/shops.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="32" selection-start-line="21" selection-start-column="30" selection-end-line="26" selection-end-column="32" />
+        <state relative-caret-position="454">
+          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
+    <entry file="file://$PROJECT_DIR$/printPDF.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+        <state relative-caret-position="257">
+          <caret line="291" column="4" lean-forward="true" selection-start-line="291" selection-start-column="4" selection-end-line="291" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exFinal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="335" lean-forward="true" selection-start-line="335" selection-end-line="335" />
+        <state relative-caret-position="122">
+          <caret line="330" column="32" lean-forward="true" selection-start-line="330" selection-start-column="32" selection-end-line="330" selection-end-column="32" />
           <folding>
             <element signature="e#776#2068#0#PHP" />
             <element signature="e#2119#4481#0#PHP" />
@@ -724,29 +744,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/printPDF.php">
+    <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+        <state relative-caret-position="199">
+          <caret line="87" selection-start-line="87" selection-end-line="89" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Telegram.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="589" column="1" selection-start-line="589" selection-start-column="1" selection-end-line="589" selection-end-column="1" />
           <folding>
-            <element signature="e#2331#2598#0#PHP" />
-            <element signature="n#html#0;n#!!top" />
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#Telegram#0;n#!!top" />
+            <element signature="e#111#197#0#PHP" />
+            <element signature="e#226#337#0#PHP" />
+            <element signature="n#__construct#0;n#Telegram#0;n#!!top" />
+            <element signature="e#433#584#0#PHP" />
+            <element signature="n#send#0;n#Telegram#0;n#!!top" />
+            <element signature="e#857#1402#0#PHP" />
+            <element signature="e#880#1401#0#PHP" />
+            <element signature="e#1111#1225#1#PHP" />
+            <element signature="e#1547#2334#0#PHP" />
+            <element signature="n#sendMessage#0;n#Telegram#0;n#!!top" />
+            <element signature="e#2556#2879#0#PHP" />
+            <element signature="n#getUpdates#0;n#Telegram#0;n#!!top" />
+            <element signature="e#3345#3805#0#PHP" />
+            <element signature="e#3525#3549#0#PHP" />
+            <element signature="e#4144#4591#0#PHP" />
+            <element signature="n#sendPhoto#0;n#Telegram#0;n#!!top" />
+            <element signature="e#4711#4845#0#PHP" />
+            <element signature="e#5124#5521#0#PHP" />
+            <element signature="n#sendDocument#0;n#Telegram#0;n#!!top" />
+            <element signature="e#5633#5737#0#PHP" />
+            <element signature="e#6038#6532#0#PHP" />
+            <element signature="n#sendAudio#0;n#Telegram#0;n#!!top" />
+            <element signature="e#6669#6839#0#PHP" />
+            <element signature="e#7118#7569#0#PHP" />
+            <element signature="n#sendVideo#0;n#Telegram#0;n#!!top" />
+            <element signature="e#7689#7823#0#PHP" />
+            <element signature="e#8102#8617#0#PHP" />
+            <element signature="n#sendChatAction#0;n#Telegram#0;n#!!top" />
+            <element signature="e#8710#9362#0#PHP" />
+            <element signature="e#8746#8815#0#PHP" />
+            <element signature="e#8829#8904#0#PHP" />
+            <element signature="e#8918#8993#0#PHP" />
+            <element signature="e#9007#9082#0#PHP" />
+            <element signature="e#9096#9171#0#PHP" />
+            <element signature="e#9185#9260#0#PHP" />
+            <element signature="e#9274#9352#0#PHP" />
+            <element signature="e#9417#9503#0#PHP" />
+            <element signature="e#9788#10199#0#PHP" />
+            <element signature="n#kickChatMember#0;n#Telegram#0;n#!!top" />
+            <element signature="e#10314#10407#0#PHP" />
+            <element signature="e#10689#11107#0#PHP" />
+            <element signature="n#unbanChatMember#0;n#Telegram#0;n#!!top" />
+            <element signature="e#11224#11317#0#PHP" />
+            <element signature="e#11599#12149#0#PHP" />
+            <element signature="n#sendKeyboard#0;n#Telegram#0;n#!!top" />
+            <element signature="e#12277#12434#0#PHP" />
+            <element signature="e#12716#13122#0#PHP" />
+            <element signature="n#hideKeyboard#0;n#Telegram#0;n#!!top" />
+            <element signature="e#13229#13386#0#PHP" />
+            <element signature="e#13668#14032#0#PHP" />
+            <element signature="n#setWebhook#0;n#Telegram#0;n#!!top" />
+            <element signature="e#14230#14601#0#PHP" />
+            <element signature="e#14638#14904#0#PHP" />
+            <element signature="n#delWebhook#0;n#Telegram#0;n#!!top" />
+            <element signature="e#15277#15372#0#PHP" />
+            <element signature="n#curlFile#0;n#Telegram#0;n#!!top" />
+            <element signature="e#15462#15555#0#PHP" />
+            <element signature="n#telegram#0;n#!!top" />
+            <element signature="e#15877#15973#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
         </state>
       </provider>
     </entry>

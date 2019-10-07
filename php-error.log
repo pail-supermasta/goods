@@ -38,3 +38,13 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\Users\User\Documents\goods\exFinal.php on line 419
+[07-Oct-2019 10:07:19 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-Oct-2019 10:08:21 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-Oct-2019 10:11:06 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-Oct-2019 10:11:48 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-Oct-2019 10:13:02 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-Oct-2019 10:14:03 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-Oct-2019 10:17:26 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-Oct-2019 10:18:09 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-Oct-2019 10:18:24 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-Oct-2019 10:25:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
