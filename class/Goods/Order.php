@@ -19,6 +19,7 @@ class Order
     public $dateFrom;
     public $shopID;
     public $shippingDate;
+    public $deliveredRange;
 
     /**
      * GETTERS
@@ -33,6 +34,12 @@ class Order
         $offsetNow = 72 * 60 * 60;
         $now = strtotime(date('c')) - $offsetNow;
         $this->dateFrom = date('c', $now);
+
+        /*for 32 prev days*/
+        $offsetDays = 768 * 60 * 60;
+        $daysAgo = strtotime(date('c')) - $offsetDays;
+        $this->deliveredRange = date('c', $daysAgo);
+
         $this->shopToken = $token;
         $this->shopID = $shopID;
         $this->shippingDate = date('c');
@@ -47,7 +54,7 @@ class Order
                 0 => $id,
             )
         ));
-        return $result['data']['shipments'][0];
+        return $result['data']['shipments'][0] ?? null;
     }
 
 
@@ -59,7 +66,7 @@ class Order
             ),
             "dateFrom" => $this->dateFrom
         ));
-        return $result['data']['shipments'];
+        return $result['data']['shipments'] ?? null;
     }
 
     public function getOrdersCustomerCanceled()
@@ -72,7 +79,7 @@ class Order
             "dateFrom" => $this->dateFrom
         ));
 
-        return $result['data']['shipments'];
+        return $result['data']['shipments'] ?? null;
     }
 
     public function getOrdersConfirmed()
@@ -83,7 +90,7 @@ class Order
             ),
             "dateFrom" => $this->dateFrom
         ));
-        return $result['data']['shipments'];
+        return $result['data']['shipments'] ?? null;
     }
 
 
@@ -95,7 +102,7 @@ class Order
                 0 => "PACKED"
             )
         ));
-        return $result['data']['shipments'];
+        return $result['data']['shipments'] ?? null;
     }
 
     public function getOrdersPackedByShippingDate()
@@ -107,8 +114,22 @@ class Order
             ),
             "shippingDate" => $this->shippingDate
         ));
-        return $result['data']['shipments'];
+        return $result['data']['shipments'] ?? null;
     }
+
+    public function getOrdersDelivered()
+    {
+
+        $result = Curl::execute('orderService/order/search', $this->shopToken, array(
+            "statuses" => array(
+                0 => "DELIVERED"
+            ),
+            "dateFrom" => $this->deliveredRange
+        ));
+        return $result['data']['shipments'] ?? null;
+    }
+
+
 
 
     /**

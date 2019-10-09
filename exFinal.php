@@ -329,18 +329,20 @@ function processShop($boxID, $token)
     /*ШАГ 1 НАЧАЛО - перевод всех новых В работу и ставим подпись*/
 
     $ordersMSNew = $ordersMS->getNew();
-    telegram("new orders " . json_encode($ordersMSNew), '-289839597');
+    if (is_array($ordersMSNew)) {
+        telegram("new orders " . json_encode($ordersMSNew), '-289839597');
+        foreach ($ordersMSNew as $orderMSNew) {
 
 
-    foreach ((array)$ordersMSNew as $orderMSNew) {
-
-        $orderMS = new OrderMS($orderMSNew['id'], $orderMSNew['name'], '');
-        $oldDescription = $orderMSNew['description'];
-        $setWork = $orderMS->setInWork($oldDescription);
-        if (strpos($setWork, 'обработка-ошибок') > 0){
-            telegram("error found $setWork", '-289839597');
+            $orderMS = new OrderMS($orderMSNew['id'], $orderMSNew['name'], '');
+            $oldDescription = $orderMSNew['description'];
+            $setWork = $orderMS->setInWork($oldDescription);
+            if (strpos($setWork, 'обработка-ошибок') > 0) {
+                telegram("error found $setWork", '-289839597');
+            }
         }
     }
+
 
     /*ШАГ 1 КОНЕЦ*/
 
@@ -354,11 +356,13 @@ function processShop($boxID, $token)
     $goodsOrdersNew = $goods->getOrdersNew();
 
 
-    foreach ((array)$goodsOrdersNew as $key => $orderToConfirmId) {
-        foreach ((array)$ordersMSInWork as $msOrder) {
-            /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
-            if (in_array($orderToConfirmId, $msOrder) == 1) {
-                getOrderDetails($goods, $msOrder);
+    if (is_array($goodsOrdersNew)) {
+        foreach ($goodsOrdersNew as $key => $orderToConfirmId) {
+            foreach ((array)$ordersMSInWork as $msOrder) {
+                /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
+                if (in_array($orderToConfirmId, $msOrder) == 1) {
+                    getOrderDetails($goods, $msOrder);
+                }
             }
         }
     }
