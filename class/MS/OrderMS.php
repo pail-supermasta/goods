@@ -98,7 +98,13 @@ class OrderMS
 
     public function setInWork($oldDescription)
     {
+
+        /*удалить двойные ковычки*/
+        $oldDescription = str_replace('"', '', $oldDescription);
+
+        /*удалить новую строку*/
         $oldDescription = preg_replace('/\s+/', ' ', trim($oldDescription));
+
         $postdata = '{
             "state": {
                 "meta": {
