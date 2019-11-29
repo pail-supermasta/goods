@@ -70,3 +70,6 @@ Stack trace:
 [09-Oct-2019 08:31:40 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
 [09-Oct-2019 09:45:21 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
 [09-Oct-2019 09:45:21 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[27-Nov-2019 09:22:19 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[27-Nov-2019 11:54:46 UTC] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[27-Nov-2019 11:54:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\Users\User\Documents\goods\printPDFTest.php on line 38

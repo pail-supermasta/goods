@@ -9,7 +9,7 @@
 
 namespace Avaks\Goods;
 
-class Order
+class OrderTest
 {
 //    private $token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
 //    private $api_url = "https://partner.goods.ru/api/market/v1/";
@@ -42,8 +42,8 @@ class Order
 
         $this->shopToken = $token;
         $this->shopID = $shopID;
-        $this->shippingDate = date('c');
-//        $this->shippingDate = '2019-11-26T00:00:00+03:00';
+//        $this->shippingDate = date('c');
+        $this->shippingDate = '2019-11-27T00:00:00+03:00';
     }
 
 
@@ -109,9 +109,9 @@ class Order
     {
 
         $result = Curl::execute('orderService/order/search', $this->shopToken, array(
-            "statuses" => array(
-                0 => "PACKED"
-            ),
+//            "statuses" => array(
+//                0 => "PACKED"
+//            ),
             "shippingDate" => $this->shippingDate
         ));
         return $result['data']['shipments'] ?? null;

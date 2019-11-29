@@ -11,7 +11,7 @@ namespace Avaks\Goods;
 
 use Mpdf\MpdfException;
 
-class Sticker
+class StickerTest
 {
     private $state = false;
 
@@ -37,7 +37,9 @@ class Sticker
                 }';
         $data = json_decode($data, true);
         $pdf = Curl::execute('orderService/sticker/print',$shopToken, $data);
-
+//
+        echo  $pdf['data'];
+        die();
 
 
         if ($pdf) {
@@ -67,13 +69,13 @@ class Sticker
 
             try {
 //                если надо сохранить в файл
-                /*if ($mpdf->Output('pdf/sticker-files/Маркировка ' . $shipmentId . '.pdf', \Mpdf\Output\Destination::FILE)) {
+                if ($mpdf->Output('Маркировка ' . $shipmentId . '.pdf', \Mpdf\Output\Destination::FILE)) {
                     $toReturn = true;
                 } else {
                     $toReturn = false;
-                }*/
+                }
 //                вернуть строкой
-                return $mpdf->Output(null, \Mpdf\Output\Destination::STRING_RETURN);
+//                return $mpdf->Output(null, \Mpdf\Output\Destination::STRING_RETURN);
             } catch (MpdfException $e) {
                 error_log($e . " \n", 3, "printPdf_errors.log");
             }
