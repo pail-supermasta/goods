@@ -35,6 +35,10 @@ function formList($goodsID, $token)
     $itemsNumber = 0;
     $productsCost = 0;
     $productsCostFinal = 0;
+    $positionQ = 0;
+    $positionFP = 0;
+    $finalProductQuantity=0;
+
     foreach ($ordersGoods as $orderGoods) {
 
         $orderDetailsGoods = $goods->getOrder($orderGoods);
@@ -42,18 +46,58 @@ function formList($goodsID, $token)
         $shipmentId = $orderDetailsGoods['shipmentId'];
         $orderCode = $orderDetailsGoods['orderCode'];
         $orderPositionsGoods = $orderDetailsGoods['items'];
+        $productsQuantity = sizeof($orderPositionsGoods);
+        $finalProductQuantity +=$productsQuantity;
 
-        /*get their positions*/
-        foreach ($orderPositionsGoods as $orderPositionGoods) {
+        if ($productsQuantity > 1) {
+
+
+
+            $itemsNumber++;
+
+            $positionP = $orderPositionsGoods[0]['price'];
+            $positionBoxIndex = $orderPositionsGoods[0]['boxIndex'];
+            foreach ($orderPositionsGoods as $key => $value) {
+            if ($value['status'] != 'PACKED') {
+                continue;
+            }
+                $productsCost += $value['price'];
+                $productsCostFinal += $value['finalPrice'];
+                $positionQ += $value['quantity'];
+                $positionFP += $value['finalPrice'];
+            }
+
+
+            $orderRow = '<tr class="positions">
+                            <td>' . $itemsNumber . '</td>
+                            <td>' . $deliveryId . '</td>
+                            <td>' . $shipmentId . '</td>
+                            <td>' . $orderCode . '</td>
+                            <td>' . $goodsID . '*' . $shipmentId . '*' . $positionBoxIndex . '</td>
+                            <td>' . $positionQ . '</td>
+                        <td>' . $positionP . '</td>
+                        <td>' . $positionFP . '</td>
+                            
+                           
+                            
+                          </tr>
+                          
+                          ';
+
+            $ordersTable .= $orderRow;
+        } else {
+
+            /*get their positions*/
+            foreach ($orderPositionsGoods as $orderPositionGoods) {
             if ($orderPositionGoods['status'] != 'PACKED') {
                 continue;
             }
 
 
-            $itemsNumber++;
-            $productsCost += $orderPositionGoods['price'];
-            $productsCostFinal += $orderPositionGoods['finalPrice'];
-            $orderRow = '<tr class="positions">
+                $itemsNumber++;
+                $productsCost += $orderPositionGoods['price'];
+                $productsCostFinal += $orderPositionGoods['finalPrice'];
+                $orderRow = '<tr class="positions">
                         <td>' . $itemsNumber . '</td>
                         <td>' . $deliveryId . '</td>
                         <td>' . $shipmentId . '</td>
@@ -63,8 +107,11 @@ function formList($goodsID, $token)
                         <td>' . $orderPositionGoods['price'] . '</td>
                         <td>' . $orderPositionGoods['finalPrice'] . '</td>
                     </tr>';
-            $ordersTable .= $orderRow;
+                $ordersTable .= $orderRow;
+            }
         }
+
+
     }
 
 
@@ -195,7 +242,7 @@ function formList($goodsID, $token)
                 <tr class="total">
                     <td colspan="4">Итого</td>
                     <td>' . $boxTotal . '</td>
-                    <td>' . $productsTotal . '</td>
+                    <td>' . $finalProductQuantity . '</td>
                     <td>' . $productsCost . '</td>
                     <td>' . $productsCostFinal . '</td>
                 </tr>

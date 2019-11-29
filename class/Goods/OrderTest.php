@@ -42,8 +42,8 @@ class OrderTest
 
         $this->shopToken = $token;
         $this->shopID = $shopID;
-//        $this->shippingDate = date('c');
-        $this->shippingDate = '2019-11-27T00:00:00+03:00';
+        $this->shippingDate = date('c');
+//        $this->shippingDate = '2019-11-27T00:00:00+03:00';
     }
 
 
