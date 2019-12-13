@@ -121,4 +121,30 @@ class OrderMS
         var_dump($postdata);
         return $res;
     }
+
+    public function setDSHSum($DSHSumNum)
+    {
+
+        /*удалить двойные ковычки*/
+//        $oldDescription = str_replace('"', '', $oldDescription);
+
+        /*удалить новую строку*/
+//        $oldDescription = preg_replace('/\s+/', ' ', trim($oldDescription));
+
+
+        $put_data = array();
+        $attribute = array();
+
+        $attribute['id'] = '547ffc2a-ef8e-11e6-7a31-d0fd0021d141';
+        $attribute['value'] = $DSHSumNum;
+        $put_data['attributes'][] = $attribute;
+//        $put_data['description'] = $oldDescription .' '.$DSHSumComment;
+
+        $postdata = json_encode($put_data,JSON_UNESCAPED_UNICODE);
+
+        $res = '';
+        $res = CurlMoiSklad::curlMS('/entity/customerorder/' . $this->id, $postdata, 'put');
+        return $res;
+        
+    }
 }
