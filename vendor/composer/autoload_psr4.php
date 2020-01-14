@@ -11,6 +11,7 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'PhpOffice\\PhpSpreadsheet\\' => array($vendorDir . '/phpoffice/phpspreadsheet/src/PhpSpreadsheet'),
     'Mpdf\\' => array($vendorDir . '/mpdf/mpdf/src'),
+    'MongoDB\\' => array($vendorDir . '/mongodb/mongodb/src'),
     'Matrix\\' => array($vendorDir . '/markbaker/matrix/classes/src'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Complex\\' => array($vendorDir . '/markbaker/complex/classes/src'),

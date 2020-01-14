@@ -66,6 +66,7 @@ class ComposerStaticInita1fe871463a9109bb17cdc9d3b61b1da
         'aa53dcba601214d17ad405b7c291b7e8' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/operations/multiply.php',
         '75c79eb1b25749b05a47976f32b0d8a2' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/operations/divideby.php',
         '6ab8ad87a734f276a6bcd5a0fe1289be' => __DIR__ . '/..' . '/markbaker/matrix/classes/src/operations/divideinto.php',
+        '3a37ebac017bc098e9a86b35401e7a68' => __DIR__ . '/..' . '/mongodb/mongodb/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -82,6 +83,7 @@ class ComposerStaticInita1fe871463a9109bb17cdc9d3b61b1da
         'M' => 
         array (
             'Mpdf\\' => 5,
+            'MongoDB\\' => 8,
             'Matrix\\' => 7,
         ),
         'D' => 
@@ -120,6 +122,10 @@ class ComposerStaticInita1fe871463a9109bb17cdc9d3b61b1da
         'Mpdf\\' => 
         array (
             0 => __DIR__ . '/..' . '/mpdf/mpdf/src',
+        ),
+        'MongoDB\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mongodb/mongodb/src',
         ),
         'Matrix\\' => 
         array (
