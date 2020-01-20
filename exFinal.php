@@ -307,20 +307,34 @@ function processShop($boxID, $token)
 
 
     foreach ((array)$goodsOrdersUserCanceled as $key => $orderToCancelId) {
-        foreach ((array)$ordersMSInCancel as $msOrder) {
-            /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
-            if (in_array($orderToCancelId, $msOrder) != 1) {
-                $orderMS = new OrderMS('', $orderToCancelId, '');
-                $orderMSDetails = $orderMS->getByName();
-                if (isset($orderMSDetails['id'])) {
-                    $orderMS->id = $orderMSDetails['id'];
-                    $orderMS->setCanceled();
-                    $message = "Заказ №$orderToCancelId ОТМЕНЕН покупателем";
-                    echo $message;
-                }
 
+        echo 'ОТМЕНЕН ' . $orderToCancelId . PHP_EOL;
+        if (sizeof($ordersMSInCancel) == 0) {
+            $orderMS = new OrderMS('', $orderToCancelId, '');
+            $orderMSDetails = $orderMS->getByName();
+            if (isset($orderMSDetails['id'])) {
+                $orderMS->id = $orderMSDetails['id'];
+                $orderMS->setCanceled();
+                $message = "Заказ №$orderToCancelId ОТМЕНЕН покупателем";
+                echo $message;
+            }
+        } else {
+            foreach ((array)$ordersMSInCancel as $msOrder) {
+                /*№3  - проверить если заказ из ГУДС в статусе Packed в МС Доставляется*/
+                if (in_array($orderToCancelId, $msOrder) != 1) {
+                    $orderMS = new OrderMS('', $orderToCancelId, '');
+                    $orderMSDetails = $orderMS->getByName();
+                    if (isset($orderMSDetails['id'])) {
+                        $orderMS->id = $orderMSDetails['id'];
+                        $orderMS->setCanceled();
+                        $message = "Заказ №$orderToCancelId ОТМЕНЕН покупателем";
+                        echo $message;
+                    }
+
+                }
             }
         }
+
     }
 
     /*ШАГ 0 КОНЕЦ отмененные покупателем - отмена в МС*/
@@ -329,7 +343,7 @@ function processShop($boxID, $token)
     /*ШАГ 1 НАЧАЛО - перевод всех новых В работу и ставим подпись*/
 
     $ordersMSNew = $ordersMS->getNew();
-    if (is_array($ordersMSNew)) {
+    if (is_array($ordersMSNew) && sizeof($ordersMSNew) > 0) {
         telegram("new orders " . json_encode($ordersMSNew), '-289839597');
         foreach ($ordersMSNew as $orderMSNew) {
 
