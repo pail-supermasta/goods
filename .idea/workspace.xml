@@ -4,12 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c897fa2a-f79e-4601-866a-3c4cb7a174ad" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/Orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/Orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exFinal.php" beforeDir="false" afterPath="$PROJECT_DIR$/exFinal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting/files/old/goods-комиссии-2019-12-01-2019-12-31.xlsx" beforeDir="false" />
-    </list>
+    <list default="true" id="c897fa2a-f79e-4601-866a-3c4cb7a174ad" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Orders.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Orders.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
+            <state relative-caret-position="419">
               <caret line="72" column="14" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="14" />
               <folding>
                 <element signature="e#110#133#0#PHP" expanded="true" />
@@ -57,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderMS.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderMS.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="136" selection-start-line="136" selection-end-line="136" />
+            <state relative-caret-position="612">
+              <caret line="131" column="78" lean-forward="true" selection-start-line="131" selection-start-column="78" selection-end-line="131" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -452,12 +447,12 @@
       <workItem from="1580365753326" duration="5258000" />
       <workItem from="1580717698609" duration="1620000" />
       <workItem from="1580731507455" duration="2000" />
-      <workItem from="1580806579843" duration="1277000" />
+      <workItem from="1580806579843" duration="1550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="416310000" />
+    <option name="totallyTimeSpent" value="416583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1899" y="0" width="1905" height="894" extended-state="0" />
@@ -724,16 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="72" column="14" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="14" />
-          <folding>
-            <element signature="e#110#133#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/class/SQL/AvaksSQL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -743,8 +728,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="612">
+          <caret line="131" column="78" lean-forward="true" selection-start-line="131" selection-start-column="78" selection-end-line="131" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="72" column="14" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="14" />
+          <folding>
+            <element signature="e#110#133#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
