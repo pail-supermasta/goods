@@ -153,6 +153,7 @@ function setOrderPacking(Order $goods, $toPack)
         $orderToPackDetails = $goods->getOrder($orderToPackId);
         $boxCode = $goods->shopID;
         $shipment = array();
+        $boxes = null;
         $boxes[] = array('boxIndex' => 1, 'boxCode' => $boxCode . '*' . $orderToPackId . '*1');
         foreach ($orderToPackDetails['items'] as $item) {
             $shipment[] = array('itemIndex' => (int)$item['itemIndex'],

@@ -46,7 +46,7 @@ class Orders
         $cursor = $collection->find([
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => '327bfd05-75c5-11e5-7a40-e89700139935',
-//            'deleted' => null,
+            'deleted' => null,
 //            'moment' => [
 //                '$gte' => $dateMore,
 //                '$lte' => $dateLess
