@@ -15,7 +15,7 @@ class Products
 {
     public $orderPositionsRaw;
 
-    public function __construct($orderPositions)
+    public function __construct($orderPositions = false)
     {
         $this->orderPositionsRaw = $orderPositions;
     }
@@ -34,5 +34,14 @@ class Products
             $products[] = AvaksSQL::selectProductById($position);
         }
         return $products;
+    }
+
+    public function getMassProducts()
+    {
+        $collection = (new MSSync())->MSSync;
+
+        $filter = ['_attributes.Отгружается в опт' => true];
+        $productCursor = $collection->product->find($filter)->toArray();
+        return $productCursor;
     }
 }

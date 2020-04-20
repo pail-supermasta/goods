@@ -65,4 +65,24 @@ class AvaksSQL
             return false;
         }
     }
+
+    public static function selectAllAssoc($selectQuery)
+    {
+
+        $sql = new \mysqli(MS_HOST, MS_USER, MS_PASS, MS_DB);
+
+        $query = $selectQuery;
+
+        $result = $sql->query($query);
+        $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        if ($result->num_rows > 0) {
+
+            $sql->close();
+            return $rows;
+        } else {
+            $sql->close();
+            return false;
+        }
+    }
 }

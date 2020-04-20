@@ -345,7 +345,7 @@ function processShop($boxID, $token)
 
     $ordersMSNew = $ordersMS->getNew();
     if (is_array($ordersMSNew) && sizeof($ordersMSNew) > 0) {
-        telegram("new orders " . json_encode($ordersMSNew), '-289839597');
+//        telegram("new orders " . json_encode($ordersMSNew), '-289839597');
         foreach ($ordersMSNew as $orderMSNew) {
 
 
