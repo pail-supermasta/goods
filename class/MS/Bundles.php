@@ -18,7 +18,7 @@ class Bundles
         $collection = (new MSSync())->MSSync;
 
         $filter = ['_attributes.Отгружается в опт' => true];
-        $bundlesCursor = $collection->bundles->find($filter)->toArray();
+        $bundlesCursor = $collection->bundle->find($filter)->toArray();
         return $bundlesCursor;
     }
     

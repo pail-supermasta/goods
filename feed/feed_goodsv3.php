@@ -1,9 +1,15 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-ini_set("display_errors", 1);
+ini_set("error_log", "php-error.log");
+
 ini_set('memory_limit', '1024M');
 
 require_once '../vendor/autoload.php';
+require_once '../class/Telegram.php';
+
 
 use Avaks\SQL\AvaksSQL;
 use Avaks\MS\MSSync;
@@ -28,14 +34,14 @@ $bundlesMS = new Bundles();
 $bundlesMongo = $bundlesMS->getMassBundles();
 
 
-//нет на монге
+//нет на монге - бренд
 $rows = AvaksSQL::selectAllAssoc("SELECT *  FROM `ms_customEntities`");
 //$rows = sql->query("SELECT *  FROM `ms_customEntities`")->rows;
 foreach ($rows as $key => $row) {
-    $customEntities[$row['id']] = $row;
+    $customEntities[$row['name']] = $row;
 }
 
-//нет на монге
+//нет на монге - категория
 $categories = array();
 $rows = AvaksSQL::selectAllAssoc("SELECT *  FROM `ms_customEntities` WHERE `customEntityMeta` = '55bae67d-0103-11e8-7a34-5acf000aab6a'");
 //$rows = $sql->query("SELECT *  FROM `ms_customEntities` WHERE `customEntityMeta` = '55bae67d-0103-11e8-7a34-5acf000aab6a'")->rows;
@@ -93,17 +99,17 @@ foreach ($productsMongo as $key => $row) {
     if ($product['stock'] < 0) $product['stock'] = 0;
     $product['barcode'] = $row['code'];
 
-    if (isset($row['attributes']['f3f556dc-afe9-11e7-7a6c-d2a900036ddd'])) {
-        $product['vendor'] = $customEntities[$row['attributes']['f3f556dc-afe9-11e7-7a6c-d2a900036ddd']]['name'];
+    if (isset($row['_attributes']['Бренд'])) {
+        $product['vendor'] = $customEntities[$row['_attributes']['Бренд']]['name'];
     } else {
         $product['vendor'] = false;
     }
 
-    echo $row['name'] . '<br>';
+//    echo $row['name'] . '<br>';
     flush();
     @ob_flush();
 
-    $product['model'] = $row['attributes']['0df1fcd2-42e3-11e8-9109-f8fc000411c7'] ?? false;
+    $product['model'] = $row['_attributes']['Индекс / модель товара'] ?? false;
 
     $categories[$row['_attributes']['Предмет WB']]['products_count']++;
 
@@ -111,17 +117,16 @@ foreach ($productsMongo as $key => $row) {
 
 }
 
-
+$offerId = sizeof($products);
 //$rows = AvaksSQL::selectAllAssoc("SELECT * FROM `ms_bundle` WHERE `name` like '%GD' and  `deleted` = '' AND `attributes` LIKE '%7dec0412-3fed-11e9-9109-f8fc00040f83\":true%' ");
 //$rows = $sql->query("SELECT * FROM `ms_bundle` WHERE `name` like '%GD' and  `deleted` = '' AND `attributes` LIKE '%7dec0412-3fed-11e9-9109-f8fc00040f83\":true%' ")->rows; //LIMIT 100
-
 foreach ($bundlesMongo as $key => $row) {
 //    $row['meta'] = json_decode($row['meta'], true);
 //    $row['attributes'] = json_decode($row['attributes'], true);
 //    $row['salePrices'] = json_decode($row['salePrices'], true);
 //    $row['barcodes'] = json_decode($row['barcodes'], true);
     $bundle = array();
-    $bundle['index'] = $key;
+    $bundle['index'] = $offerId + $key;
     $bundle['available'] = 'available';
     $bundle['name'] = preg_replace('/[^0-9a-zа-я _-]/ui', '', $row['name']);
     if (isset($row['attributes']['a4e869cf-8dc0-11e9-9ff4-31500015e1ea'])) {
@@ -160,26 +165,22 @@ foreach ($bundlesMongo as $key => $row) {
     if ($bundle['stock'] < 0) $bundle['stock'] = 0;
     $bundle['barcode'] = $row['code'];
 
-    if (isset($row['attributes']['f3f556dc-afe9-11e7-7a6c-d2a900036ddd'])) {
-        $bundle['vendor'] = $customEntities[$row['attributes']['f3f556dc-afe9-11e7-7a6c-d2a900036ddd']]['name'];
+    if (isset($row['_attributes']['Бренд'])) {
+        $bundle['vendor'] = $customEntities[$row['_attributes']['Бренд']]['name'];
     } else {
         $bundle['vendor'] = false;
     }
 
-    echo $row['name'] . '<br>';
-    flush();
-    @ob_flush();
+//    echo $row['name'] . '<br>';
 
-    $bundle['model'] = $row['attributes']['0df1fcd2-42e3-11e8-9109-f8fc000411c7'] ?? false;
+    $bundle['model'] = $row['_attributes']['Индекс / модель товара'] ?? false;
 
     $categories[$row['_attributes']['Предмет WB']]['products_count']++;
 
     $products[] = $bundle;
 
 }
-
 ob_start(); ?>
-
 <yml_catalog date="<?= date('Y-m-d H:i'); ?>">
     <shop>
         <name>Удивительный интернет-магазин</name>
@@ -225,7 +226,7 @@ ob_start(); ?>
 $xml = ob_get_contents();
 ob_end_clean();
 
-file_put_contents('amaze_feed_goodsv3.xml', '<?phpxml version="1.0" encoding="utf-8"?>' . $xml);
+file_put_contents('amaze_feed_goodsv3.xml', '<?xml version="1.0" encoding="utf-8"?>' . $xml);
 
 
 ob_start(); ?>
@@ -274,8 +275,7 @@ ob_start(); ?>
 $xml = ob_get_contents();
 ob_end_clean();
 
-file_put_contents('nz_feed_goodsv3.xml', '<?phpxml version="1.0" encoding="utf-8"?>' . $xml);
-
+file_put_contents('nz_feed_goodsv3.xml', '<?xml version="1.0" encoding="utf-8"?>' . $xml);
 
 
 if ($errors) {
