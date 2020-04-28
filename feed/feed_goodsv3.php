@@ -17,6 +17,8 @@ use Avaks\MS\Stocks;
 use Avaks\MS\Products;
 use Avaks\MS\Bundles;
 
+// new product db new stocks - no usage
+
 
 $products = array();
 $errors = 0;
@@ -63,13 +65,15 @@ foreach ($productsMongo as $key => $row) {
     $product['index'] = $key;
     $product['available'] = 'available';
     $product['name'] = preg_replace('/[^0-9a-zа-я _-]/ui', '', $row['name']);
-    if (isset($row['attributes']['a4e869cf-8dc0-11e9-9ff4-31500015e1ea'])) {
-        $product['price'] = $row['attributes']['a4e869cf-8dc0-11e9-9ff4-31500015e1ea'];
-    } else {
+    if (isset($row['_attributes']['Цена Goods.ru'])) {
+        $product['price'] = $row['_attributes']['Цена Goods.ru'];
+    } elseif (isset($row['salePrices'][0]['value'])) {
         $product['price'] = $row['salePrices'][0]['value'] / 100;
+    } else {
+        $product['price'] = false;
     }
 
-    if ($product['price'] < 100) {
+    if ($product['price'] == false || !isset($product['price'])) {
         echo '<a class="btn btn-outline-danger mb-3" href="' . $row['meta']['uuidHref'] . '" target="_blank">Не указана цена (РРЦ) для «' . $row['name'] . '»</a><br>';
         $errors++;
         flush();
@@ -129,13 +133,15 @@ foreach ($bundlesMongo as $key => $row) {
     $bundle['index'] = $offerId + $key;
     $bundle['available'] = 'available';
     $bundle['name'] = preg_replace('/[^0-9a-zа-я _-]/ui', '', $row['name']);
-    if (isset($row['attributes']['a4e869cf-8dc0-11e9-9ff4-31500015e1ea'])) {
-        $bundle['price'] = $row['attributes']['a4e869cf-8dc0-11e9-9ff4-31500015e1ea'];
-    } else {
+    if (isset($row['_attributes']['Цена Goods.ru'])) {
+        $bundle['price'] = $row['_attributes']['Цена Goods.ru'];
+    } elseif (isset($row['salePrices'][0]['value'])) {
         $bundle['price'] = $row['salePrices'][0]['value'] / 100;
+    } else {
+        $bundle['price'] = false;
     }
 
-    if ($bundle['price'] < 100) {
+    if ($bundle['price'] == false || !isset($bundle['price'])) {
         echo '<a class="btn btn-outline-danger mb-3" href="' . $row['meta']['uuidHref'] . '" target="_blank">Не указана цена (РРЦ) для «' . $row['name'] . '»</a><br>';
         $errors++;
         flush();
@@ -203,7 +209,7 @@ ob_start(); ?>
         </shipment-options>
         <offers>
             <?php foreach ($products as $key => $product) { ?>
-                <offer id="<?= $product['index']; ?>" available="<?= $product['stock'] ? 'true' : 'false'; ?>">
+                <offer id="<?= $product['barcode']; ?>" available="<?= $product['stock'] ? 'true' : 'false'; ?>">
                     <name><?= $product['name']; ?></name>
                     <price><?= $product['price']; ?></price>
                     <currencyId>RUR</currencyId>
@@ -227,7 +233,12 @@ $xml = ob_get_contents();
 ob_end_clean();
 
 file_put_contents('amaze_feed_goodsv3.xml', '<?xml version="1.0" encoding="utf-8"?>' . $xml);
-
+if ($errors) {
+    telegram('В выгрузке GOODS amaze_feed_goodsv3 найдены ошибки (' . $errors . ') <a href="http://goods.ltplk.ru/feed/feed_goodsv3.php">Посмотреть</a>', '-289839597');
+}
+else{
+    telegram('Обновление amaze_feed_goodsv3.xml без ошибок.<a href="http://goods.ltplk.ru/feed/amaze_feed_goodsv3.xml">Посмотреть</a>', '-289839597');
+}
 
 ob_start(); ?>
 
@@ -252,7 +263,7 @@ ob_start(); ?>
         </shipment-options>
         <offers>
             <?php foreach ($products as $key => $product) { ?>
-                <offer id="<?= $product['index']; ?>" available="<?= $product['stock'] ? 'true' : 'false'; ?>">
+                <offer id="<?= $product['barcode']; ?>" available="<?= $product['stock'] ? 'true' : 'false'; ?>">
                     <name><?= $product['name']; ?></name>
                     <price><?= $product['price']; ?></price>
                     <currencyId>RUR</currencyId>
@@ -272,6 +283,7 @@ ob_start(); ?>
     </shop>
 </yml_catalog>
 <?php
+echo 'Обновление nz_feed_goodsv3.xml без ошибок.';
 $xml = ob_get_contents();
 ob_end_clean();
 
@@ -279,7 +291,10 @@ file_put_contents('nz_feed_goodsv3.xml', '<?xml version="1.0" encoding="utf-8"?>
 
 
 if ($errors) {
-    telegram('В выгрузке GOODS найдены ошибки (' . $errors . ') <a href="http://goods.ltplk.ru/feed/feed_goodsv3.php">Посмотреть</a>', '-289839597');
+    telegram('В выгрузке GOODS nz_feed_goodsv3 найдены ошибки (' . $errors . ') <a href="http://goods.ltplk.ru/feed/feed_goodsv3.php">Посмотреть</a>', '-289839597');
+}
+else{
+    telegram('Обновление nz_feed_goodsv3.xml без ошибок.<a href="http://goods.ltplk.ru/feed/nz_feed_goodsv3.xml">Посмотреть</a>', '-289839597');
 }
 
 ?>
@@ -288,3 +303,4 @@ if ($errors) {
         opacity: 0.5;
     }
 </style>
+

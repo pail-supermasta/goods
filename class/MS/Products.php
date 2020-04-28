@@ -40,7 +40,10 @@ class Products
     {
         $collection = (new MSSync())->MSSync;
 
-        $filter = ['_attributes.Отгружается в опт' => true];
+        $filter = [
+            '_attributes.Отгружается в опт' => true,
+            'archived'=> false
+            ];
         $productCursor = $collection->product->find($filter)->toArray();
         return $productCursor;
     }

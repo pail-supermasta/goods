@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c897fa2a-f79e-4601-866a-3c4cb7a174ad" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/feed/feed_goodsv4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class/MS/Bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/Bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/MS/MSSync.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/MSSync.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/MS/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/Products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/amaze_feed_goodsv3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feed/amaze_feed_goodsv3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/feed_goodsv3.php" beforeDir="false" afterPath="$PROJECT_DIR$/feed/feed_goodsv3.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/nz_feed_goodsv3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feed/nz_feed_goodsv3.xml" afterDir="false" />
@@ -37,79 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="exFinal.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exFinal.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" selection-start-line="23" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feed_goodsv3.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="feed_goodsv3.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/feed/feed_goodsv3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nz_feed_goodsv3.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feed/nz_feed_goodsv3.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250138">
-              <caret line="14714" column="43" selection-start-line="14714" selection-start-column="28" selection-end-line="14714" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Telegram.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/Telegram.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9809">
-              <caret line="582" column="9" selection-start-line="582" selection-start-column="9" selection-end-line="582" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="asdsd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asdsd">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="Products.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/MS/Products.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="42" column="49" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bundles.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/MS/Bundles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stocks.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/MS/Stocks.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MSSync.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/class/MS/MSSync.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="79" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="79" />
+            <state relative-caret-position="104">
+              <caret line="293" column="46" selection-start-line="293" selection-start-column="46" selection-end-line="293" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -118,23 +53,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getMsStock($row['id'], $stores)</find>
-      <find>barcodes</find>
-      <find>name</find>
-      <find>meta</find>
-      <find>attributes</find>
-      <find>031b1310-0106-11e8-7a6c-d2a9000c0ea7</find>
-      <find>categoryId</find>
-      <find>$categories</find>
-      <find>$product['index']</find>
-      <find>Предмет WB</find>
-      <find>$row['attributes']['031b1310-0106-11e8-7a6c-d2a9000c0ea7']</find>
-      <find>product</find>
-      <find>$product</find>
-      <find>$category['products_count']</find>
       <find>289839597</find>
       <find>$category</find>
-      <find>feed_goodsv2</find>
       <find>feed_goodsv4</find>
       <find>ltplk</find>
       <find>$product['model']</find>
@@ -143,15 +63,28 @@
       <find>row['attributes']['0df1fcd2-42e3-11e8-9109-f8fc000411c7']</find>
       <find>&lt;?phpxml</find>
       <find>[&quot;model&quot;]</find>
-      <find>index</find>
       <find>&lt;offer id=&quot;1&quot;</find>
       <find>&lt;offer id=&quot;979&quot;</find>
       <find>saleP</find>
       <find>Внимание! Ошибка</find>
+      <find>true</find>
+      <find>index</find>
+      <find>$stockMS</find>
+      <find>stock</find>
+      <find>getMsStock</find>
+      <find>dump</find>
+      <find>feed_</find>
+      <find>feed_goodsv2</find>
+      <find>file_put_contents</find>
+      <find>old</find>
+      <find>barcodes</find>
+      <find>barcode</find>
+      <find>$row['_attributes']['Цена Goods.ru']</find>
+      <find>$row['attributes']['a4e869cf-8dc0-11e9-9ff4-31500015e1ea']</find>
+      <find>не указан</find>
+      <find>$errors</find>
     </findStrings>
     <replaceStrings>
-      <replace>1231</replace>
-      <replace>selectOrderByState</replace>
       <replace>goodsOrderNames</replace>
       <replace>$goodsOrderNames</replace>
       <replace>['</replace>
@@ -180,6 +113,8 @@
       <replace>$row['_attributes']['Бренд']</replace>
       <replace>row['_attributes']['Индекс / модель товара']</replace>
       <replace>&lt;?xml</replace>
+      <replace>$row['attributes']['a4e869cf-8dc0-11e9-9ff4-31500015e1ea']</replace>
+      <replace>$row['_attributes']['Цена Goods.ru']</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\User\Documents\goods\reporting\files</dir>
@@ -194,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ex.php" />
         <option value="$PROJECT_DIR$/class/SQL/MyDBInMemory.php" />
         <option value="$PROJECT_DIR$/class/MS/Product.php" />
         <option value="$PROJECT_DIR$/class/Customs.php" />
@@ -226,7 +160,6 @@
         <option value="$PROJECT_DIR$/class/Goods/StickerTest.php" />
         <option value="$PROJECT_DIR$/class/Goods/Sticker.php" />
         <option value="$PROJECT_DIR$/printPDFTest.php" />
-        <option value="$PROJECT_DIR$/printPDF.php" />
         <option value="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" />
         <option value="$PROJECT_DIR$/reporting/php-error.log" />
         <option value="$PROJECT_DIR$/class/MS/OrderMS.php" />
@@ -240,10 +173,12 @@
         <option value="$PROJECT_DIR$/class/MS/Orders.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/class/SQL/AvaksSQL.php" />
-        <option value="$PROJECT_DIR$/class/MS/Products.php" />
         <option value="$PROJECT_DIR$/exFinal.php" />
-        <option value="$PROJECT_DIR$/class/MS/Bundles.php" />
         <option value="$PROJECT_DIR$/asdsd" />
+        <option value="$PROJECT_DIR$/printPDF.php" />
+        <option value="$PROJECT_DIR$/feed/feed_goodsv4.php" />
+        <option value="$PROJECT_DIR$/class/MS/Bundles.php" />
+        <option value="$PROJECT_DIR$/class/MS/Products.php" />
         <option value="$PROJECT_DIR$/feed/feed_goodsv3.php" />
       </list>
     </option>
@@ -273,49 +208,20 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="307" />
-    <option name="y" value="116" />
-    <option name="width" value="1038" />
-    <option name="height" value="702" />
+    <option name="x" value="130" />
+    <option name="y" value="178" />
+    <option name="width" value="1582" />
+    <option name="height" value="654" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="goods" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goods" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
-              <item name="class" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goods" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
-              <item name="class" type="462c0819:PsiDirectoryNode" />
-              <item name="SQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goods" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="pa&#9;FILE&#9;file://C:/Users/User/Documents/goods/reporting/parseExcel.php&#10;Cal&#9;null&#9;null&#10;sh&#9;FILE&#9;file://C:/Users/User/Documents/goods/shops.php&#10;order&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Goods/Order.php&#10;Find.php&#9;FILE&#9;file://C:/Users/User/Documents/goods/vendor/mongodb/mongodb/src/Operation/Find.php&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;test-can&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/test-canceled.php&#10;teleg&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Telegram.php&#10;setsti&#9;null&#9;null&#10;prin&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/printPDF.php&#10;sti&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Goods/Sticker.php&#10;ex&#9;FILE&#9;file://C:/Users/User/Documents/goods/exFinal.php&#10;Products.php&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/MS/Products.php&#10;goods&#9;FILE&#9;file://C:/Users/User/Documents/goods/goods.php&#10;printPdf&#9;null&#9;null&#10;ыуее&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="feed&#9;FILE&#9;file://C:/Users/User/Documents/goods/feed/feed_goodsv3.php&#10;зкште&#9;FILE&#9;file://C:/Users/User/Documents/goods/printPDF.php&#10;pa&#9;FILE&#9;file://C:/Users/User/Documents/goods/reporting/parseExcel.php&#10;Cal&#9;null&#9;null&#10;sh&#9;FILE&#9;file://C:/Users/User/Documents/goods/shops.php&#10;order&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Goods/Order.php&#10;Find.php&#9;FILE&#9;file://C:/Users/User/Documents/goods/vendor/mongodb/mongodb/src/Operation/Find.php&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;test-can&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/test-canceled.php&#10;teleg&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Telegram.php&#10;setsti&#9;null&#9;null&#10;prin&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/printPDF.php&#10;sti&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Goods/Sticker.php&#10;ex&#9;FILE&#9;file://C:/Users/User/Documents/goods/exFinal.php&#10;Products.php&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/MS/Products.php&#10;goods&#9;FILE&#9;file://C:/Users/User/Documents/goods/goods.php&#10;printPdf&#9;null&#9;null&#10;ыуее&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -325,19 +231,19 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Documents\goods\class\MS" />
-      <recent name="C:\Users\User\Documents\goods\feed" />
-      <recent name="C:\Users\User\Documents\goods\test" />
-      <recent name="C:\Users\User\Documents\goods\class\Goods" />
-      <recent name="C:\Users\User\Documents\goods" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Documents\goods\reporting\files\old" />
       <recent name="C:\Users\User\Documents\goods\reporting\files" />
       <recent name="C:\Users\User\Documents\goods\reporting\new" />
       <recent name="C:\Users\User\Documents\goods" />
       <recent name="C:\Users\User\Documents\goods\class\Goods" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\goods\feed" />
+      <recent name="C:\Users\User\Documents\goods\class\MS" />
+      <recent name="C:\Users\User\Documents\goods\test" />
+      <recent name="C:\Users\User\Documents\goods\class\Goods" />
+      <recent name="C:\Users\User\Documents\goods" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -357,21 +263,21 @@
     <configuration name="MyDBInMemory.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/class/SQL/MyDBInMemory.php" />
     <configuration name="feed_goodsv3.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/feed/feed_goodsv3.php" />
     <configuration name="parseExcel.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/reporting/parseExcel.php" />
-    <configuration name="shops.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/shops.php" />
+    <configuration name="printPDF.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/printPDF.php" />
     <list>
       <item itemvalue="PHP Script.parseExcel.php" />
-      <item itemvalue="PHP Script.shops.php" />
       <item itemvalue="PHP Script.MyDBInMemory.php" />
       <item itemvalue="PHP Script.feed_goodsv3.php" />
       <item itemvalue="JavaScript Debug.feed_goodsv3.php" />
+      <item itemvalue="PHP Script.printPDF.php" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHP Script.feed_goodsv3.php" />
+        <item itemvalue="PHP Script.printPDF.php" />
         <item itemvalue="JavaScript Debug.feed_goodsv3.php" />
         <item itemvalue="PHP Script.parseExcel.php" />
         <item itemvalue="PHP Script.MyDBInMemory.php" />
-        <item itemvalue="PHP Script.shops.php" />
       </list>
     </recent_temporary>
   </component>
@@ -553,28 +459,35 @@
       <workItem from="1587467662980" duration="242000" />
       <workItem from="1587487652204" duration="1370000" />
       <workItem from="1587537683365" duration="50000" />
+      <workItem from="1587550893222" duration="1631000" />
+      <workItem from="1587562057576" duration="2617000" />
+      <workItem from="1587644726845" duration="923000" />
+      <workItem from="1587711486945" duration="620000" />
+      <workItem from="1587967469396" duration="3244000" />
+      <workItem from="1588071717876" duration="2463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="481535000" />
+    <option name="totallyTimeSpent" value="493033000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="307" y="116" width="1038" height="702" extended-state="0" />
+    <frame x="130" y="178" width="1582" height="654" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.28834355" />
       <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" weight="0.3295362" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="right" x="-1208" y="69" width="522" height="756" id="Run" order="5" visible="true" weight="0.47503287" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="right" x="-1208" y="69" width="522" height="756" id="Run" order="5" weight="0.22690909" />
-      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Terminal" order="2" weight="0.26909092" />
-      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="4" weight="0.29551452" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3295362" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
@@ -583,7 +496,6 @@
       <window_info anchor="bottom" id="Inspection Results" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -616,11 +528,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="21" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testing/vendor/mpdf/mpdf/src/Tag/PageFooter.php" />
     <entry file="file://$PROJECT_DIR$/testing/vendor/composer/autoload_psr4.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/curl/curl.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -674,13 +585,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reporting/php-error.log" />
-    <entry file="file://$PROJECT_DIR$/printPDF.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="155" column="12" lean-forward="true" selection-start-line="155" selection-start-column="12" selection-end-line="155" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -707,13 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="271" column="25" selection-start-line="271" selection-start-column="25" selection-end-line="271" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -787,20 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/Goods/Curl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="128" column="60" selection-start-line="128" selection-start-column="60" selection-end-line="128" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/class/MS/CurlMoiSklad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -826,24 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="68" column="27" lean-forward="true" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="55" />
-          <folding>
-            <element signature="e#278#310#0#PHP" />
-            <element signature="e#315#798#0#PHP" />
-            <element signature="e#484#792#0#PHP" />
-            <element signature="e#588#679#0#PHP" />
-            <element signature="e#723#792#0#PHP" />
-            <element signature="e#805#839#0#PHP" />
-            <element signature="e#844#1277#0#PHP" />
-            <element signature="e#1083#1271#0#PHP" />
-            <element signature="e#1202#1271#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/Products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="42" column="49" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -854,10 +719,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/Bundles.php">
+    <entry file="file://$PROJECT_DIR$/class/MS/MSSync.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        <state relative-caret-position="68">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -866,43 +731,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/class/Telegram.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9809">
+        <state relative-caret-position="482">
           <caret line="582" column="9" selection-start-line="582" selection-start-column="9" selection-end-line="582" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exFinal.php">
+    <entry file="file://$PROJECT_DIR$/class/Goods/Curl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" selection-start-line="23" selection-end-line="24" />
+        <state relative-caret-position="172">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printPDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/feed/nz_feed_goodsv3.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250138">
+        <state relative-caret-position="17">
           <caret line="14714" column="43" selection-start-line="14714" selection-start-column="28" selection-end-line="14714" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feed/feed_goodsv3.php">
+    <entry file="file://$PROJECT_DIR$/feed/feed_goodsv4.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="187">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exFinal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="353" column="40" selection-start-line="353" selection-start-column="40" selection-end-line="353" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/MS/Bundles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class/MS/Stocks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="255">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/MSSync.php">
+    <entry file="file://$PROJECT_DIR$/class/MS/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="79" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="79" />
+        <state relative-caret-position="227">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed/feed_goodsv3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="293" column="46" selection-start-line="293" selection-start-column="46" selection-end-line="293" selection-end-column="46" />
         </state>
       </provider>
     </entry>
