@@ -135,7 +135,7 @@ class OrderMS
         $put_data = array();
         $attribute = array();
 
-        $attribute['id'] = '547ffc2a-ef8e-11e6-7a31-d0fd0021d141';
+        $attribute['id'] = '535dd809-1db1-11ea-0a80-04c00009d6bf';
         $attribute['value'] = $DSHSumNum;
         $put_data['attributes'][] = $attribute;
 //        $put_data['description'] = $oldDescription .' '.$DSHSumComment;

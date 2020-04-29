@@ -34,7 +34,7 @@ class AvaksSQL
             $sql->close();
             $ordersAssoc = array();
             while ($row = $result->fetch_assoc()) {
-                $ordersAssoc[]= $row;
+                $ordersAssoc[] = $row;
             }
             return $ordersAssoc;
         } else {
@@ -52,17 +52,26 @@ class AvaksSQL
 
         $sql = new \mysqli(MS_HOST, MS_USER, MS_PASS, MS_DB);
 
-        $query = "SELECT `index` FROM ms_product WHERE id='$id'";
-
+        $query = "SELECT `code` FROM ms_product WHERE id='$id'";
         $result = $sql->query($query);
 
         if ($result->num_rows > 0) {
 
             $sql->close();
-            return $result->fetch_assoc()['index'];
+            return $result->fetch_assoc()['code'];
+
         } else {
-            $sql->close();
-            return false;
+            $query = "SELECT `code` FROM ms_bundle WHERE id='$id'";
+            $result = $sql->query($query);
+
+            if ($result->num_rows > 0) {
+                $sql->close();
+                return $result->fetch_assoc()['code'];
+            } else {
+                $sql->close();
+                return false;
+            }
+
         }
     }
 
