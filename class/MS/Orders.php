@@ -10,15 +10,14 @@ namespace Avaks\MS;
 
 
 use Avaks\SQL\AvaksSQL;
-//use Avaks\MS\OrderMS;
 use Avaks\MS\Products;
+use Avaks\MS\MSSync;
 
 
 use MongoDB\BSON\UTCDateTime;
 use MongoDB\BSON\Regex;
 use MongoDB\Client;
 
-//require_once "vendor/autoload.php";
 
 
 class Orders
@@ -26,36 +25,21 @@ class Orders
     public function getNew()
     {
 
-        $collection = (new Client('mongodb://admin:kmNqjyDM8o7U@62.109.5.225/mysales?authSource=admin'))->mysales->customerorders;
+        $collection = (new MSSync())->MSSync;
 
-        date_default_timezone_set('Europe/Moscow');
-        $epochNow = round(microtime(true) * 1000);
 
-        $offsetNow = (168 + 3) * 60 * 60;
-        $now = strtotime(gmdate("Y-m-d")) - $offsetNow;
-        $sevenDaysAgo = $now * 1000;
-
-        // less than
-        $dateLess = new UTCDateTime($epochNow);
-
-        //more than
-        $dateMore = new UTCDatetime($sevenDaysAgo);
 
         echo 'getNew' . PHP_EOL;
 
-        $cursor = $collection->find([
+        $cursor = $collection->customerorder->find([
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => '327bfd05-75c5-11e5-7a40-e89700139935',
-            'deleted' => null,
-//            'moment' => [
-//                '$gte' => $dateMore,
-//                '$lte' => $dateLess
-//            ]
+            'deleted' => null
         ]);
 
         $ordersNew = array();
         foreach ($cursor as $document) {
-            $orderNew['id'] = $document['uuid'];
+            $orderNew['id'] = $document['id'];
             $orderNew['name'] = $document['name'];
             $orderNew['description'] = $document['description'];
             $ordersNew[] = $orderNew;
@@ -68,7 +52,8 @@ class Orders
 
     public function getInWork()
     {
-        $collection = (new Client('mongodb://admin:kmNqjyDM8o7U@62.109.5.225/mysales?authSource=admin'))->mysales->customerorders;
+
+        $collection = (new MSSync())->MSSync;
 
         $regex = new Regex("GOODS1364895");
 
@@ -88,7 +73,7 @@ class Orders
 
         echo 'getInWork' . PHP_EOL;
 
-        $cursor = $collection->find([
+        $cursor = $collection->customerorder->find([
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => 'ecf45f89-f518-11e6-7a69-9711000ff0c4',
             'deleted' => null,
@@ -118,7 +103,7 @@ class Orders
     public function getOnDelivery()
     {
 
-        $collection = (new Client('mongodb://admin:kmNqjyDM8o7U@62.109.5.225/mysales?authSource=admin'))->mysales->customerorders;
+        $collection = (new MSSync())->MSSync;;
 
         $regex = new Regex("GOODS1364895");
 
@@ -139,7 +124,7 @@ class Orders
         echo 'getOnDelivery' . PHP_EOL;
 
 
-        $cursor = $collection->find([
+        $cursor = $collection->customerorder->find([
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => '327c03c6-75c5-11e5-7a40-e89700139938',
             'deleted' => null,
@@ -172,10 +157,56 @@ class Orders
         return $ordersDelivery;
     }
 
+    public function getDeliveringMonth($organization){
+
+        $collection = (new MSSync())->MSSync;
+
+        $regex = new Regex("GOODS1364895");
+
+
+        date_default_timezone_set('Europe/Moscow');
+        /*14 days*/
+        $offsetNow = 768 * 60 * 60;
+        $monthAgo = strtotime(gmdate("Y-m-d")) - $offsetNow;
+        $monthAgo = date("Y-m-d H:i:s", $monthAgo);
+        echo $monthAgo;
+
+
+        $todayDay = strtotime(gmdate("Y-m-d")) + 1;
+        $todayDay = date("Y-m-d H:i:s", $todayDay);
+        echo $todayDay;
+
+
+        $cursor = $collection->customerorder->find([
+            '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
+            '_state' => '327c03c6-75c5-11e5-7a40-e89700139938',
+            '_organization' => "$organization",
+            'deleted' => null,
+            'description' => $regex,
+            'moment' => [
+                '$gte' => $monthAgo,
+                '$lte' => $todayDay
+            ]
+        ]);
+
+        $ordersDeliveringMonth = array();
+        foreach ($cursor as $document) {
+            $orderDelivering['id'] = $document['_id'];
+            $orderDelivering['name'] = $document['name'];
+            $orderDelivering['moment'] = $document['moment'];
+            $ordersDeliveringMonth[] = $orderDelivering;
+        }
+//        var_dump($ordersDeliveringMonth);
+
+
+
+        return $ordersDeliveringMonth;
+    }
+
     public function getInCancel()
     {
 
-        $collection = (new Client('mongodb://admin:kmNqjyDM8o7U@62.109.5.225/mysales?authSource=admin'))->mysales->customerorders;
+        $collection = (new MSSync())->MSSync;
 
         $regex = new Regex("GOODS1364895");
 
@@ -193,7 +224,7 @@ class Orders
         //more than
         $dateMore = new UTCDatetime($sevenDaysAgo);
 
-        $cursor = $collection->find([
+        $cursor = $collection->customerorder->find([
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => '327c070c-75c5-11e5-7a40-e8970013993b',
             'deleted' => null,

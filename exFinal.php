@@ -354,6 +354,7 @@ function processShop($boxID, $token)
             $setWork = $orderMS->setInWork($oldDescription);
             if (strpos($setWork, 'обработка-ошибок') > 0) {
                 telegram("error found $setWork", '-289839597');
+                var_dump($setWork);
             }
         }
     }

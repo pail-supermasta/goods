@@ -17,14 +17,12 @@ use Avaks\MS\Stocks;
 use Avaks\MS\Products;
 use Avaks\MS\Bundles;
 
-// new product db new stocks - no usage
 
 
 $products = array();
 $errors = 0;
 
 
-//report_stock_all
 $stocks = new Stocks();
 $stockMS = $stocks->getAll();
 
@@ -38,7 +36,6 @@ $bundlesMongo = $bundlesMS->getMassBundles();
 
 //нет на монге - бренд
 $rows = AvaksSQL::selectAllAssoc("SELECT *  FROM `ms_customEntities`");
-//$rows = sql->query("SELECT *  FROM `ms_customEntities`")->rows;
 foreach ($rows as $key => $row) {
     $customEntities[$row['name']] = $row;
 }
@@ -46,7 +43,6 @@ foreach ($rows as $key => $row) {
 //нет на монге - категория
 $categories = array();
 $rows = AvaksSQL::selectAllAssoc("SELECT *  FROM `ms_customEntities` WHERE `customEntityMeta` = '55bae67d-0103-11e8-7a34-5acf000aab6a'");
-//$rows = $sql->query("SELECT *  FROM `ms_customEntities` WHERE `customEntityMeta` = '55bae67d-0103-11e8-7a34-5acf000aab6a'")->rows;
 foreach ($rows as $key => $row) {
     $row['index'] = $key + 1;
     $row['products_count'] = 0;
@@ -54,13 +50,10 @@ foreach ($rows as $key => $row) {
 }
 
 
-//$rows = AvaksSQL::selectAllAssoc("SELECT * FROM `ms_product` WHERE `deleted` = '' AND `attributes` LIKE '%7dec0412-3fed-11e9-9109-f8fc00040f83\":true%' ");
-//$rows = $sql->query("SELECT * FROM `ms_product` WHERE `deleted` = '' AND `attributes` LIKE '%7dec0412-3fed-11e9-9109-f8fc00040f83\":true%' ")->rows; //LIMIT 100
 foreach ($productsMongo as $key => $row) {
 //    $row['meta'] = json_decode($row['meta'], true);
 //    $row['attributes'] = json_decode($row['attributes'], true);
 //    $row['salePrices'] = json_decode($row['salePrices'], true);
-//    $row['barcodes'] = json_decode($row['barcodes'], true);
     $product = array();
     $product['index'] = $key;
     $product['available'] = 'available';
@@ -81,13 +74,7 @@ foreach ($productsMongo as $key => $row) {
         continue;
     }
 
-    /*if (!isset($row['attributes']['031b1310-0106-11e8-7a6c-d2a9000c0ea7'])) {
-        echo '<a class="btn btn-outline-danger mb-3" href="' . $row['meta']['uuidHref'] . '" target="_blank">Не указана категория (Предмет WB) для «' . $row['name'] . '»</a><br>';
-        $errors++;
-        flush();
-        @ob_flush();
-        continue;
-    }*/
+
     if (!isset($row['_attributes']['Предмет WB'])) {
         echo '<a class="btn btn-outline-danger mb-3" href="' . $row['meta']['uuidHref'] . '" target="_blank">Не указана категория (Предмет WB) для «' . $row['name'] . '»</a><br>';
         $errors++;
@@ -109,7 +96,6 @@ foreach ($productsMongo as $key => $row) {
         $product['vendor'] = false;
     }
 
-//    echo $row['name'] . '<br>';
     flush();
     @ob_flush();
 
@@ -122,13 +108,10 @@ foreach ($productsMongo as $key => $row) {
 }
 
 $offerId = sizeof($products);
-//$rows = AvaksSQL::selectAllAssoc("SELECT * FROM `ms_bundle` WHERE `name` like '%GD' and  `deleted` = '' AND `attributes` LIKE '%7dec0412-3fed-11e9-9109-f8fc00040f83\":true%' ");
-//$rows = $sql->query("SELECT * FROM `ms_bundle` WHERE `name` like '%GD' and  `deleted` = '' AND `attributes` LIKE '%7dec0412-3fed-11e9-9109-f8fc00040f83\":true%' ")->rows; //LIMIT 100
 foreach ($bundlesMongo as $key => $row) {
 //    $row['meta'] = json_decode($row['meta'], true);
 //    $row['attributes'] = json_decode($row['attributes'], true);
 //    $row['salePrices'] = json_decode($row['salePrices'], true);
-//    $row['barcodes'] = json_decode($row['barcodes'], true);
     $bundle = array();
     $bundle['index'] = $offerId + $key;
     $bundle['available'] = 'available';
@@ -177,7 +160,6 @@ foreach ($bundlesMongo as $key => $row) {
         $bundle['vendor'] = false;
     }
 
-//    echo $row['name'] . '<br>';
 
     $bundle['model'] = $row['_attributes']['Индекс / модель товара'] ?? false;
 
