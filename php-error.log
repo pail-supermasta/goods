@@ -105,3 +105,40 @@ Stack trace:
 [07-May-2020 14:47:19 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
 [07-May-2020 14:48:02 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
 [07-May-2020 14:49:28 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 18:43:03 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 18:43:19 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 18:43:58 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 18:44:10 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 18:44:25 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 18:45:03 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 18:46:13 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:46:13 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:09 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 18:48:10 Europe/Moscow] PHP Warning:  json_decode() expects parameter 1 to be string, object given in C:\Users\User\Documents\goods\class\MS\Orders.php on line 77
+[07-May-2020 20:33:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 20:33:51 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[07-May-2020 20:34:09 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78

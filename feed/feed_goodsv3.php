@@ -91,7 +91,7 @@ foreach ($productsMongo as $key => $row) {
     $product['barcode'] = $row['code'];
 
     if (isset($row['_attributes']['Бренд'])) {
-        $product['vendor'] = $customEntities[$row['_attributes']['Бренд']]['name'];
+        $product['vendor'] = $row['_attributes']['Бренд'];
     } else {
         $product['vendor'] = false;
     }

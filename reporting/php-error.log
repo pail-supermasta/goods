@@ -1,2 +1,12 @@
 [23-Jan-2020 17:04:20 Europe/Moscow] PHP Parse error:  syntax error, unexpected '=' in /var/www/user/data/www/goods.ltplk.ru/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/Calculation.php on line 2460
 [23-Jan-2020 17:19:53 Europe/Moscow] PHP Parse error:  syntax error, unexpected '=' in /var/www/user/data/www/goods.ltplk.ru/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/Calculation.php on line 2460
+[25-May-2020 09:10:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function telegram() in C:\Users\User\Documents\goods\reporting\parseExcel.php:80
+Stack trace:
+#0 C:\Users\User\Documents\goods\reporting\parseExcel.php(28): getDSH('goods-\xD0\xBA\xD0\xBE\xD0\xBC\xD0\xB8\xD1...')
+#1 {main}
+  thrown in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 80
+[25-May-2020 09:11:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function telegram() in C:\Users\User\Documents\goods\reporting\parseExcel.php:80
+Stack trace:
+#0 C:\Users\User\Documents\goods\reporting\parseExcel.php(28): getDSH('goods-\xD0\xBA\xD0\xBE\xD0\xBC\xD0\xB8\xD1...')
+#1 {main}
+  thrown in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 80

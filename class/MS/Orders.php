@@ -19,14 +19,12 @@ use MongoDB\BSON\Regex;
 use MongoDB\Client;
 
 
-
 class Orders
 {
     public function getNew()
     {
 
         $collection = (new MSSync())->MSSync;
-
 
 
         echo 'getNew' . PHP_EOL;
@@ -58,30 +56,13 @@ class Orders
         $regex = new Regex("GOODS1364895");
 
 
-        date_default_timezone_set('Europe/Moscow');
-        $epochNow = round(microtime(true) * 1000);
-
-        $offsetNow = (168 + 3) * 60 * 60;
-        $now = strtotime(gmdate("Y-m-d")) - $offsetNow;
-        $sevenDaysAgo = $now * 1000;
-
-        // less than
-        $dateLess = new UTCDateTime($epochNow);
-
-        //more than
-        $dateMore = new UTCDatetime($sevenDaysAgo);
-
         echo 'getInWork' . PHP_EOL;
 
         $cursor = $collection->customerorder->find([
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => 'ecf45f89-f518-11e6-7a69-9711000ff0c4',
             'deleted' => null,
-            'description' => $regex,
-            'moment' => [
-                '$gte' => $dateMore,
-                '$lte' => $dateLess
-            ]
+            'description' => $regex
         ]);
 
         $ordersWork = array();
@@ -89,14 +70,12 @@ class Orders
         foreach ($cursor as $item) {
             $orderByState['name'] = $item['name'];
             $products = array();
-            foreach ($item['positions'] as $position) {
-                $position = json_decode($position, true);
+            foreach ($item['_positions'] as $position) {
                 $products[] = AvaksSQL::selectProductById($position['id']);
             }
             $orderByState['positions'] = $products;
             $ordersWork[] = $orderByState;
         }
-        var_dump($ordersWork);
         return $ordersWork;
     }
 
@@ -144,8 +123,7 @@ class Orders
 
             $products = array();
 
-            foreach ($item['positions'] as $position) {
-                $position = json_decode($position, true);
+            foreach ($item['_positions'] as $position) {
                 $products[] = AvaksSQL::selectProductById($position['id']);
             }
             $orderByState['positions'] = $products;
@@ -157,7 +135,8 @@ class Orders
         return $ordersDelivery;
     }
 
-    public function getDeliveringMonth($organization){
+    public function getDeliveringMonth($organization)
+    {
 
         $collection = (new MSSync())->MSSync;
 
@@ -197,7 +176,6 @@ class Orders
             $ordersDeliveringMonth[] = $orderDelivering;
         }
 //        var_dump($ordersDeliveringMonth);
-
 
 
         return $ordersDeliveringMonth;

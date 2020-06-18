@@ -14,6 +14,8 @@ ini_set("error_log", "php-error.log");
 header('Content-Type: application/json');
 
 require_once '../vendor/autoload.php';
+require_once '../class/Telegram.php';
+
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -38,7 +40,7 @@ function addDSH($orderData)
 
     $ordername = $orderData[0];
     $DSHSumm = str_replace('t', "", $orderData[6]);
-    $DSHSumNum = (int)$DSHSumm;
+    $DSHSumNum = (float)$DSHSumm;
 //    $DSHSumComment = " ДШ Сумма: $DSHSumm";
 
     $orderMS = new OrderMS('', $ordername);
