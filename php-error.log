@@ -142,3 +142,4 @@ Stack trace:
 [07-May-2020 20:33:11 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
 [07-May-2020 20:33:51 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
 [07-May-2020 20:34:09 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods\class\Goods\Curl.php on line 78
+[23-Jun-2020 13:44:03 Europe/Moscow] PHP Notice:  Undefined index: request_header in C:\Users\User\Documents\goods.ltplk.ru\class\Goods\Curl.php on line 78

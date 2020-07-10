@@ -30,8 +30,8 @@ class Order
 
     public function __construct($shopID = false, $token= false)
     {
-        /*for 3 prev days*/
-        $offsetNow = 72 * 60 * 60;
+        /*for 5 prev days*/
+        $offsetNow = 168 * 60 * 60;
         $now = strtotime(date('c')) - $offsetNow;
         $this->dateFrom = date('c', $now);
 

@@ -305,6 +305,8 @@ function processShop($boxID, $token)
 
     /*№2 получить заказы из гудса в статусе Отменен покупателем*/
     $goodsOrdersUserCanceled = $goods->getOrdersCustomerCanceled();
+    echo 'getOrdersCustomerCanceled';
+    var_dump($goodsOrdersUserCanceled);
 
 
     foreach ((array)$goodsOrdersUserCanceled as $key => $orderToCancelId) {
