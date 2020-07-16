@@ -10,3 +10,20 @@ Stack trace:
 #0 C:\Users\User\Documents\goods\reporting\parseExcel.php(28): getDSH('goods-\xD0\xBA\xD0\xBE\xD0\xBC\xD0\xB8\xD1...')
 #1 {main}
   thrown in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 80
+[10-Jul-2020 13:16:54 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:55 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:55 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:55 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:56 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:56 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:56 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:57 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:57 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:57 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:57 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:58 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:58 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:58 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:59 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:59 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48
+[10-Jul-2020 13:16:59 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods.ltplk.ru\reporting\parseExcel.php on line 48

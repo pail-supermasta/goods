@@ -16,7 +16,7 @@ use Avaks\MS\MSSync;
 use Avaks\MS\Stocks;
 use Avaks\MS\Products;
 use Avaks\MS\Bundles;
-
+use Avaks\MS\Category;
 
 
 $products = array();
@@ -35,18 +35,50 @@ $bundlesMongo = $bundlesMS->getMassBundles();
 
 
 //нет на монге - бренд
-$rows = AvaksSQL::selectAllAssoc("SELECT *  FROM `ms_customEntities`");
+/*$rows = AvaksSQL::selectAllAssoc("SELECT *  FROM `ms_customEntities`");
 foreach ($rows as $key => $row) {
     $customEntities[$row['name']] = $row;
-}
+}*/
 
-//нет на монге - категория
+/*["Фильтры для пылесосов"]=>
+  array(8) {
+    ["_id"]=>
+    string(5) "47715"
+    ["id"]=>
+    string(36) "e70b71d7-98d4-11ea-0a80-0292000eeea4"
+    ["update_datetime"]=>
+    string(19) "2020-05-28 08:17:24"
+    ["deleted"]=>
+    string(0) ""
+    ["name"]=>
+    string(40) "Фильтры для пылесосов"
+    ["customEntityMeta"]=>
+    string(36) "55bae67d-0103-11e8-7a34-5acf000aab6a"
+    ["index"]=>
+    int(164)
+    ["products_count"]=>
+    int(0)
+  }*/
+
+
+//оставляем чтобы в фиде были старые id - если новые то надо будет перепривывать товары в гудсе
 $categories = array();
 $rows = AvaksSQL::selectAllAssoc("SELECT *  FROM `ms_customEntities` WHERE `customEntityMeta` = '55bae67d-0103-11e8-7a34-5acf000aab6a'");
 foreach ($rows as $key => $row) {
     $row['index'] = $key + 1;
     $row['products_count'] = 0;
-    $categories[$row['name']] = $row;
+    $categoriesSQL[$row['name']] = $row;
+}
+
+$categoryMS = new Category();
+$categoryMongo = $categoryMS->getAll();
+foreach ($categoryMongo as $key => $row) {
+    $row['index'] = sizeof($categoriesSQL) + 1 + $key;
+    $row['products_count'] = 0;
+    $categoriesMongo[$row['name']] = $row;
+    if (!isset($categoriesSQL[$row['name']])) {
+        $categoriesSQL[$row['name']] = $row;
+    }
 }
 
 
@@ -83,7 +115,8 @@ foreach ($productsMongo as $key => $row) {
         continue;
     }
 
-    $product['categoryId'] = $categories[$row['_attributes']['Предмет WB']]['index'];
+    $product['categoryId'] = $categoriesSQL[$row['_attributes']['Предмет WB']]['index'];
+
     $product['outlets'] = 'outlets';
     $product['stock'] = $stockMS[$row['id']]['available'];
     if ($product['stock'] > 10) $product['stock'] = 10;
@@ -101,7 +134,7 @@ foreach ($productsMongo as $key => $row) {
 
     $product['model'] = $row['_attributes']['Индекс / модель товара'] ?? false;
 
-    $categories[$row['_attributes']['Предмет WB']]['products_count']++;
+    $categoriesSQL[$row['_attributes']['Предмет WB']]['products_count']++;
 
     $products[] = $product;
 
@@ -147,7 +180,7 @@ foreach ($bundlesMongo as $key => $row) {
         continue;
     }
 
-    $bundle['categoryId'] = $categories[$row['_attributes']['Предмет WB']]['index'];
+    $bundle['categoryId'] = $categoriesSQL[$row['_attributes']['Предмет WB']]['index'];
     $bundle['outlets'] = 'outlets';
     $bundle['stock'] = $stockMS[$row['id']]['available'];
     if ($bundle['stock'] > 10) $bundle['stock'] = 10;
@@ -155,7 +188,7 @@ foreach ($bundlesMongo as $key => $row) {
     $bundle['barcode'] = $row['code'];
 
     if (isset($row['_attributes']['Бренд'])) {
-        $bundle['vendor'] = $customEntities[$row['_attributes']['Бренд']]['name'];
+        $bundle['vendor'] = $row['_attributes']['Бренд'];
     } else {
         $bundle['vendor'] = false;
     }
@@ -163,7 +196,7 @@ foreach ($bundlesMongo as $key => $row) {
 
     $bundle['model'] = $row['_attributes']['Индекс / модель товара'] ?? false;
 
-    $categories[$row['_attributes']['Предмет WB']]['products_count']++;
+    $categoriesSQL[$row['_attributes']['Предмет WB']]['products_count']++;
 
     $products[] = $bundle;
 
@@ -178,7 +211,7 @@ ob_start(); ?>
             <currency id="RUR" rate="1"/>
         </currencies>
         <categories>
-            <?php foreach ($categories as $key => $category) {
+            <?php foreach ($categoriesSQL as $key => $category) {
                 if ($category['products_count'] == 0) continue;
                 if (isset($category['index']) && isset($category['name'])) {
                     echo '<category id="' . $category['index'] . '">' . $category['name'] . '</category>';
@@ -217,8 +250,7 @@ ob_end_clean();
 file_put_contents('amaze_feed_goodsv3.xml', '<?xml version="1.0" encoding="utf-8"?>' . $xml);
 if ($errors) {
     telegram('В выгрузке GOODS amaze_feed_goodsv3 найдены ошибки (' . $errors . ') <a href="http://goods.ltplk.ru/feed/feed_goodsv3.php">Посмотреть</a>', '-289839597');
-}
-else{
+} else {
     telegram('Обновление amaze_feed_goodsv3.xml без ошибок.<a href="http://goods.ltplk.ru/feed/amaze_feed_goodsv3.xml">Посмотреть</a>', '-289839597');
 }
 
@@ -232,7 +264,7 @@ ob_start(); ?>
             <currency id="RUR" rate="1"/>
         </currencies>
         <categories>
-            <?php foreach ($categories as $key => $category) {
+            <?php foreach ($categoriesSQL as $key => $category) {
                 if ($category['products_count'] == 0) continue;
                 if (isset($category['index']) && isset($category['name'])) {
                     echo '<category id="' . $category['index'] . '">' . $category['name'] . '</category>';
@@ -274,8 +306,7 @@ file_put_contents('nz_feed_goodsv3.xml', '<?xml version="1.0" encoding="utf-8"?>
 
 if ($errors) {
     telegram('В выгрузке GOODS nz_feed_goodsv3 найдены ошибки (' . $errors . ') <a href="http://goods.ltplk.ru/feed/feed_goodsv3.php">Посмотреть</a>', '-289839597');
-}
-else{
+} else {
     telegram('Обновление nz_feed_goodsv3.xml без ошибок.<a href="http://goods.ltplk.ru/feed/nz_feed_goodsv3.xml">Посмотреть</a>', '-289839597');
 }
 
