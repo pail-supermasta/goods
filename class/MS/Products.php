@@ -14,6 +14,8 @@ use Avaks\SQL\AvaksSQL;
 class Products
 {
     public $orderPositionsRaw;
+    public $code;
+    public $id;
 
     public function __construct($orderPositions = false)
     {
@@ -46,5 +48,15 @@ class Products
             ];
         $productCursor = $collection->product->find($filter)->toArray();
         return $productCursor;
+    }
+
+
+    public function getOne()
+    {
+        $collection = (new MSSync())->MSSync;
+        $filter = ['code' => $this->code];
+
+        $productCursor = $collection->product->findOne($filter);
+        return $productCursor ?? null;
     }
 }

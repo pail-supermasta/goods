@@ -24,6 +24,5 @@ class Bundles
         $bundlesCursor = $collection->bundle->find($filter)->toArray();
         return $bundlesCursor;
     }
-    
 
 }
