@@ -1,7 +1,11 @@
 <?php
-ini_set('error_reporting', -1);
-ini_set('display_errors', 'E_ALL');
-date_default_timezone_set('UTC');
+//date_default_timezone_set('UTC');
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
+//ini_set("error_log", "php-error.log");
+//
+//ini_set('memory_limit', '1024M');
 
 $start = microtime(true);
 // Settings get token
@@ -46,10 +50,12 @@ $products = getData($urlProduct, $data, $token);
 
 // Create new SimpleXMLElement object
 $dt = new DateTime();
-$dt->modify("3 hour");
+#$dt->modify("3 hour");
 $dateTime = $dt->format('Y-m-d H:i');
 
+
 $itemsXml = new SimpleXMLElement("<yml_catalog date='$dateTime'></yml_catalog>");
+
 $shop = $itemsXml->addChild('shop');
 
 $name = $shop->addChild('name', 'Удивительный интернет-магазин');
@@ -147,7 +153,7 @@ header('Content-Type: text/xml; charset=utf-8');
 echo $itemsXml->asXML();
 
 // Create a new DOMDocument object
-$doc = new DOMDocument('1.0');
+$doc = new DOMDocument('1.0', 'utf-8');
 $doc->formatOutput = true;
 $domnode = dom_import_simplexml($itemsXml);
 $domnode->preserveWhiteSpace = false;
@@ -162,7 +168,8 @@ $doc->save("/var/www/user/data/www/goods.ltplk.ru/goods_feed.xml");
 header('HTTP/1.1 200 OK');
 header("Pragma: no-cache");
 header('Cache-Control: no-cache, no-store, max-age=0, must-revalidate');
-header('Content-type', 'text/xml');
+#header('Content-type', 'text/xml');
+header('Content-Type: text/xml; charset=utf-8');
 
 
 
