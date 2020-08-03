@@ -38,6 +38,7 @@ $data['project'] = json_encode(array(
         'name' => true,
         '_attributes' => true,
         'barcodes' => true,
+        'code' => true,
         'article' => true
     )
 );
@@ -120,10 +121,18 @@ foreach ($products['rows'] as $k => $v) {
     $outlet->addAttribute('instock', $inStock);
     $offer->addChild('model', $v['article']);
 
+    /*
     foreach ($v['barcodes'][0] as $f => $t) {
         $offer->addAttribute('id', $t);
         $barcodes = $offer->addChild('barcodes', $t);
     }
+    */
+
+    $offer->addAttribute('id', $v['code']);
+    $barcodes = $offer->addChild('barcodes', $v['code']);
+
+
+
 
     foreach ($v['_attributes'] as $key => $value) {
         if ($key == 'Бренд') {
