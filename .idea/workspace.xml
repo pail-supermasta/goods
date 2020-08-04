@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c897fa2a-f79e-4601-866a-3c4cb7a174ad" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/goods_bot_new_orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/Bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/Bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/MS/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/MS/Products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/php-error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting/php-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/reporting/php-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods_bot_new_orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/goods_bot_new_orders.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,8 +36,8 @@
       <file leaf-file-name="goods_bot_new_orders.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/goods_bot_new_orders.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+            <state relative-caret-position="438">
+              <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
               <folding>
                 <element signature="e#301#323#0#PHP" expanded="true" />
               </folding>
@@ -50,95 +45,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Products.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/MS/Products.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+            <state relative-caret-position="551">
+              <caret line="60" column="32" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Orders.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
+      <file leaf-file-name="Telegram.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class/Telegram.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-103">
-              <caret line="26" column="33" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="33" />
-              <folding>
-                <element signature="e#110#133#0#PHP" expanded="true" />
-                <element signature="e#1835#3259#0#PHP" />
-              </folding>
+            <state relative-caret-position="646">
+              <caret line="581" lean-forward="true" selection-start-line="581" selection-end-line="581" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderMS.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
+      <file leaf-file-name="Products.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class/MS/Products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exFinal.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exFinal.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-              <folding>
-                <element signature="e#299#321#0#PHP" expanded="true" />
-                <element signature="e#2473#2614#0#PHP" />
-                <element signature="e#2920#3367#0#PHP" />
-                <element signature="e#3016#3160#0#PHP" />
-                <element signature="e#3495#4495#0#PHP" />
-                <element signature="e#3616#3757#0#PHP" />
-                <element signature="e#3941#4085#0#PHP" />
-                <element signature="e#4661#4709#0#PHP" />
-                <element signature="e#4710#5536#0#PHP" />
-                <element signature="e#4764#5534#0#PHP" />
-                <element signature="e#5109#5325#0#PHP" />
-                <element signature="e#5185#5314#0#PHP" />
-                <element signature="e#5364#5478#0#PHP" />
-                <element signature="e#5706#7096#0#PHP" />
-                <element signature="e#6165#7029#0#PHP" />
-                <element signature="e#7146#8072#0#PHP" />
-                <element signature="e#7235#8070#0#PHP" />
-                <element signature="e#7308#8064#0#PHP" />
-                <element signature="e#7457#8054#0#PHP" />
-                <element signature="e#7786#7932#0#PHP" />
-                <element signature="e#8142#8176#0#PHP" />
-                <element signature="e#8301#8756#0#PHP" />
-                <element signature="e#8367#8750#0#PHP" />
-                <element signature="e#8538#8740#0#PHP" />
-                <element signature="e#9820#10526#0#PHP" />
-                <element signature="e#9839#10516#0#PHP" />
-                <element signature="e#9994#10502#0#PHP" />
-                <element signature="e#10194#10483#0#PHP" />
-                <element signature="e#10707#11280#0#PHP" />
-                <element signature="e#10850#11274#0#PHP" />
-                <element signature="e#11103#11264#0#PHP" />
-                <element signature="e#11854#11976#0#PHP" />
-                <element signature="e#12749#12880#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shops.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shops.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="27" column="51" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="51" />
+            <state relative-caret-position="470">
+              <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -147,7 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>while</find>
       <find>addDSH</find>
       <find>vendor</find>
       <find>8682035081074</find>
@@ -161,7 +89,6 @@
       <find>e70b71d7-98d4-11ea-0a80-0292000eeea4</find>
       <find>products_count</find>
       <find>$categories</find>
-      <find>die</find>
       <find>862</find>
       <find>Month</find>
       <find>dateFrom</find>
@@ -169,14 +96,16 @@
       <find>addCustomerorder</find>
       <find>$order['shipmentId']</find>
       <find>new</find>
-      <find>shipmentDateFrom</find>
       <find>positions</find>
-      <find>mongo</find>
       <find>offer</find>
       <find>bundle</find>
-      <find>MSSync</find>
       <find>$product['id']</find>
       <find>$product['name']</find>
+      <find>mongo</find>
+      <find>shipmentDateFrom</find>
+      <find>MSSync</find>
+      <find>die</find>
+      <find>974625486</find>
     </findStrings>
     <replaceStrings>
       <replace>execute</replace>
@@ -302,9 +231,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="315" />
-    <option name="y" value="256" />
-    <option name="width" value="1582" />
+    <option name="x" value="-7" />
+    <option name="y" value="103" />
+    <option name="width" value="1038" />
     <option name="height" value="702" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -619,12 +548,12 @@
       <workItem from="1594392595258" duration="8096000" />
       <workItem from="1594714219646" duration="66000" />
       <workItem from="1595279364961" duration="632000" />
-      <workItem from="1596450962657" duration="11041000" />
+      <workItem from="1596450962657" duration="13741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="564157000" />
+    <option name="totallyTimeSpent" value="566857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2064" height="1056" extended-state="6" />
@@ -790,13 +719,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/feed/feed_goodsv4.php" />
     <entry file="file://$PROJECT_DIR$/processDelivered.php" />
-    <entry file="file://$PROJECT_DIR$/class/Telegram.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9809">
-          <caret line="582" column="9" selection-start-line="582" selection-start-column="9" selection-end-line="582" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goods_order_cancel.php" />
     <entry file="file://$PROJECT_DIR$/composer.json" />
     <entry file="file://$PROJECT_DIR$/class/MS/MSSync.php">
@@ -861,35 +783,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/class/MS/Bundles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reporting/parseExcel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed_goods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="84" column="1" lean-forward="true" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/shops.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="27" column="51" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-103">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="33" />
-          <folding>
-            <element signature="e#110#133#0#PHP" expanded="true" />
-            <element signature="e#1835#3259#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -935,38 +853,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/MS/Bundles.php">
+    <entry file="file://$PROJECT_DIR$/class/MS/OrderMS.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="391">
+          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reporting/parseExcel.php">
+    <entry file="file://$PROJECT_DIR$/class/MS/Orders.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed_goods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="84" column="1" lean-forward="true" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+        <state relative-caret-position="-103">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="e#110#133#0#PHP" expanded="true" />
+            <element signature="e#1835#3259#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class/MS/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+        <state relative-caret-position="470">
+          <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Telegram.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="581" lean-forward="true" selection-start-line="581" selection-end-line="581" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goods_bot_new_orders.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        <state relative-caret-position="438">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
           <folding>
             <element signature="e#301#323#0#PHP" expanded="true" />
           </folding>

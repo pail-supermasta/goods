@@ -18,7 +18,6 @@ define('MS_PATH', 'https://online.moysklad.ru/api/remap/1.1');
 require_once 'vendor/autoload.php';
 
 use Avaks\Goods\Order;
-use Avaks\MS\Orders;
 use Avaks\MS\OrderMS;
 
 
@@ -110,20 +109,17 @@ function addCustomerorder($order, $organization)
 
     }
 
-    var_dump($put_data);
-    die();
 
     $result = \Avaks\MS\CurlMoiSklad::curlMS('/entity/customerorder', $put_data, 'post');
-    var_dump($result);
 
 
-    /*    if (isset($result['errors'])){
+        if (isset($result['errors'])){
             foreach ($result['errors'] as $key => $error) {
                 telegram("<b>\xE2\x9A\xA0 GOODS:</b> Ошибка при обработке заказа №".$order['shipmentId']."\n".$error['error'], '-336297687');
             }
         } else {
             telegram("<b>\xE2\x9A\xA0 GOODS:</b> Добавлен заказ <a href=\"".$result['meta']['uuidHref']."\">№".$order['shipmentId']."</a>", '-336297687');
-        }*/
+        }
 
     return $result;
 
@@ -136,27 +132,25 @@ $orderMS = new OrderMS();
 
 $goods = new Order('608', '97B1BC55-189D-4EB4-91AF-4B9E9A985B3D');
 
-$goodsOrdersNew = $goods->getOrdersPacked();
+$goodsOrdersNew = $goods->getOrdersNew();
 
 if (is_array($goodsOrdersNew)) {
     $message = "Goods.ru (" . count($goodsOrdersNew) . ")\n";
 
     foreach ($goodsOrdersNew as $key => $orderToCreate) {
-        if ($orderToCreate == '974625486') $orderToCreate = '9746254834';
         $orderMS->name = $orderToCreate;
         $customerorder = $orderMS->getByName();
         if (isset($customerorder['id'])) {
             $message .= 'Заказ №' . $customerorder['name'] . " уже существует в МС\n";
         } else {
-            $goodsOrderDetails = $goods->getOrder('974625486');
+            $goodsOrderDetails = $goods->getOrder($orderToCreate);
             $customerorder = addCustomerorder($goodsOrderDetails, "07bbe005-8b17-11e7-7a34-5acf0019232a");
 
 
             $message .= 'Заказ №' . $orderMS->name . " создан\n";
-//            $message .= 'Заказ №' . $goods_order_name . " создан\n";
         }
     }
     echo $message;
-//    telegram($message);
+    telegram($message,'-336297687');
 }
 
