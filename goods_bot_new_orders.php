@@ -110,7 +110,7 @@ function addCustomerorder($order, $organization)
     }
 
 
-    $result = \Avaks\MS\CurlMoiSklad::curlMS('/entity/customerorder', $put_data, 'post');
+    $result = \Avaks\MS\CurlMoiSklad::curlMS('/entity/customerorder', json_encode($put_data,JSON_UNESCAPED_UNICODE), 'post');
 
 
         if (isset($result['errors'])){
