@@ -169,7 +169,7 @@ $domnode = $doc->importNode($domnode, true);
 $domnode = $doc->appendChild($domnode);
 
 // save in file at file system
-$doc->save("/var/www/user/data/www/goods.ltplk.ru/goods_feed.xml");
+$doc->save("/home/goods-service/public_html/goods_feed.xml");
 
 #echo 'Время генерации: ' . ( microtime(true) - $start ) . ' сек.';
 
