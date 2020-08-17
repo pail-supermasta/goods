@@ -151,6 +151,6 @@ if (is_array($goodsOrdersNew)) {
         }
     }
     echo $message;
-    telegram($message,'-336297687');
+    telegram($message,'-1001247438671');
 }
 
