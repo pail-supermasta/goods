@@ -1,21 +1,17 @@
 <?php
-//date_default_timezone_set('UTC');
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
-//ini_set("error_log", "php-error.log");
-//
-//ini_set('memory_limit', '1024M');
+ini_set('error_reporting', -1);
+ini_set('display_errors', 'E_ALL');
+date_default_timezone_set('UTC');
 
 $start = microtime(true);
 // Settings get token
-$urlLogin = 'https://62.109.13.151:3000/api/v1/auth/login';
+$urlLogin = 'https://api.backendserver.ru/api/v1/auth/login';
 $userData = array("username" => "mongodb@техтрэнд", "password" => "!!@th9247t924");
 
 // Settings get product list
-$urlProduct = 'https://62.109.13.151:3000/api/v1/product';
-$urlCategory = 'https://62.109.13.151:3000/api/v1/customentitydata';
-$urlStock = 'https://62.109.13.151:3000/api/v1/report_stock_all';
+$urlProduct = 'https://api.backendserver.ru/api/v1/product';
+$urlCategory = 'https://api.backendserver.ru/api/v1/customentitydata';
+$urlStock = 'https://api.backendserver.ru/api/v1/report_stock_all';
 
 // get Token
 $token = getToken($urlLogin, $userData);
@@ -51,12 +47,14 @@ $products = getData($urlProduct, $data, $token);
 
 // Create new SimpleXMLElement object
 $dt = new DateTime();
-#$dt->modify("3 hour");
+$dt->modify("3 hour");
 $dateTime = $dt->format('Y-m-d H:i');
 
+#$root = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8" >');
+
+#$itemsXml = $root->addChild("<yml_catalog date='$dateTime'></yml_catalog>");
 
 $itemsXml = new SimpleXMLElement("<yml_catalog date='$dateTime'></yml_catalog>");
-
 $shop = $itemsXml->addChild('shop');
 
 $name = $shop->addChild('name', 'Удивительный интернет-магазин');
@@ -121,17 +119,15 @@ foreach ($products['rows'] as $k => $v) {
     $outlet->addAttribute('instock', $inStock);
     $offer->addChild('model', $v['article']);
 
-    /*
-    foreach ($v['barcodes'][0] as $f => $t) {
-        $offer->addAttribute('id', $t);
-        $barcodes = $offer->addChild('barcodes', $t);
-    }
-    */
+//    foreach ($v['barcodes'][0] as $f => $t) {
+//        $offer->addAttribute('id', $t);
+//        $barcodes = $offer->addChild('barcodes', $t);
+//    }
 
     $offer->addAttribute('id', $v['code']);
-    $barcodes = $offer->addChild('barcodes', $v['code']);
+    $code = $offer->addChild('code', $v['code']);
 
-
+    #print_r($v['code']);
 
 
     foreach ($v['_attributes'] as $key => $value) {
@@ -162,7 +158,10 @@ header('Content-Type: text/xml; charset=utf-8');
 echo $itemsXml->asXML();
 
 // Create a new DOMDocument object
-$doc = new DOMDocument('1.0', 'utf-8');
+$doc = new DOMDocument('1.0',  'UTF-8');
+
+
+$doc->encoding = 'UTF-8';
 $doc->formatOutput = true;
 $domnode = dom_import_simplexml($itemsXml);
 $domnode->preserveWhiteSpace = false;
@@ -170,15 +169,14 @@ $domnode = $doc->importNode($domnode, true);
 $domnode = $doc->appendChild($domnode);
 
 // save in file at file system
-$doc->save("/var/www/user/data/www/goods.ltplk.ru/goods_feed.xml");
+$doc->save("/home/goods-service/public_html/goods_feed.xml");
 
 #echo 'Время генерации: ' . ( microtime(true) - $start ) . ' сек.';
 
 header('HTTP/1.1 200 OK');
 header("Pragma: no-cache");
 header('Cache-Control: no-cache, no-store, max-age=0, must-revalidate');
-#header('Content-type', 'text/xml');
-header('Content-Type: text/xml; charset=utf-8');
+header('Content-type', 'text/xml');
 
 
 

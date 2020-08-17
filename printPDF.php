@@ -37,7 +37,7 @@ function formList($goodsID, $token)
     $productsCostFinal = 0;
     $positionQ = 0;
     $positionFP = 0;
-    $finalProductQuantity=0;
+    $finalProductQuantity = 0;
 
     foreach ($ordersGoods as $orderGoods) {
 
@@ -47,10 +47,9 @@ function formList($goodsID, $token)
         $orderCode = $orderDetailsGoods['orderCode'];
         $orderPositionsGoods = $orderDetailsGoods['items'];
         $productsQuantity = sizeof($orderPositionsGoods);
-        $finalProductQuantity +=$productsQuantity;
+        $finalProductQuantity += $productsQuantity;
 
         if ($productsQuantity > 1) {
-
 
 
             $itemsNumber++;
@@ -58,9 +57,9 @@ function formList($goodsID, $token)
             $positionP = $orderPositionsGoods[0]['price'];
             $positionBoxIndex = $orderPositionsGoods[0]['boxIndex'];
             foreach ($orderPositionsGoods as $key => $value) {
-            if ($value['status'] != 'PACKED') {
-                continue;
-            }
+                if ($value['status'] != 'PACKED') {
+                    continue;
+                }
                 $productsCost += $value['price'];
                 $productsCostFinal += $value['finalPrice'];
                 $positionQ += $value['quantity'];
@@ -89,9 +88,9 @@ function formList($goodsID, $token)
 
             /*get their positions*/
             foreach ($orderPositionsGoods as $orderPositionGoods) {
-            if ($orderPositionGoods['status'] != 'PACKED') {
-                continue;
-            }
+                if ($orderPositionGoods['status'] != 'PACKED') {
+                    continue;
+                }
 
 
                 $itemsNumber++;
@@ -319,7 +318,8 @@ function formList($goodsID, $token)
 
 
     $mpdf->WriteHTML($html);
-    $newFileName = 'Реестр отгрузки ' . $shopName . ' от ' . $date . '.pdf';
+    $location = '/home/goods-service/public_html/';
+    $newFileName = $location . 'Реестр отгрузки ' . $shopName . ' от ' . $date . '.pdf';
     $mpdf->Output($newFileName, \Mpdf\Output\Destination::FILE);
 
     return $newFileName;

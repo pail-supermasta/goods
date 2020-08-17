@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c897fa2a-f79e-4601-866a-3c4cb7a174ad" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods_bot_new_orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/goods_bot_new_orders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed_goods.php" beforeDir="false" afterPath="$PROJECT_DIR$/feed_goods.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods_feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/goods_feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printPDF.php" beforeDir="false" afterPath="$PROJECT_DIR$/printPDF.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,32 +36,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="goods_bot_new_orders.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/goods_bot_new_orders.php">
+      <file leaf-file-name="feed_goods.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/feed_goods.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="154" column="1" lean-forward="true" selection-start-line="154" selection-start-column="1" selection-end-line="154" selection-end-column="1" />
+            <state relative-caret-position="326">
+              <caret line="167" column="44" lean-forward="true" selection-start-line="167" selection-start-column="44" selection-end-line="167" selection-end-column="44" />
               <folding>
-                <element signature="e#301#323#0#PHP" expanded="true" />
+                <element signature="n#getQuantity#0;n#!!top" />
+                <element signature="e#5335#5519#0#PHP" />
+                <element signature="e#5347#5513#1#PHP" />
+                <element signature="e#5632#5755#0#PHP" />
+                <element signature="n#findValueByKey#0;n#!!top" />
+                <element signature="e#6338#6628#0#PHP" />
+                <element signature="e#6390#6622#0#PHP" />
+                <element signature="e#6453#6622#0#PHP" />
+                <element signature="e#6548#6612#0#PHP" />
+                <element signature="n#getData#0;n#!!top" />
+                <element signature="e#6713#6836#0#PHP" />
+                <element signature="n#getToken#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CurlMoiSklad.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/MS/CurlMoiSklad.php">
+      <file leaf-file-name="printPDF.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/printPDF.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="60" column="32" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="32" />
+            <state relative-caret-position="393">
+              <caret line="320" column="49" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="49" />
+              <folding>
+                <element signature="e#869#3721#0#PHP" />
+                <element signature="e#1314#3713#0#PHP" />
+                <element signature="e#1515#1880#0#PHP" />
+                <element signature="e#1578#1653#0#PHP" />
+                <element signature="e#2644#3713#0#PHP" />
+                <element signature="e#2700#3703#0#PHP" />
+                <element signature="e#2768#2856#0#PHP" />
+                <element signature="e#4004#4271#0#PHP" />
+                <element signature="e#4032#4142#0#PHP" />
+                <element signature="e#4151#4265#0#PHP" />
+                <element signature="n#html#0;n#!!top" />
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="e#255#368#0" />
+                <element signature="e#393#574#0" />
+                <element signature="e#586#636#0" />
+                <element signature="e#653#705#0" />
+                <element signature="e#727#766#0" />
+                <element signature="e#790#833#0" />
+                <element signature="e#856#893#0" />
+                <element signature="e#913#956#0" />
+                <element signature="e#974#1149#0" />
+                <element signature="e#1169#1305#0" />
+                <element signature="e#1323#1460#0" />
+                <element signature="n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#0;n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#5;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#4;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#5;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,17 +126,17 @@
       <file leaf-file-name="Telegram.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class/Telegram.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="581" lean-forward="true" selection-start-line="581" selection-end-line="581" />
+            <state relative-caret-position="861">
+              <caret line="196" column="20" selection-start-line="196" selection-start-column="20" selection-end-line="196" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Products.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/class/MS/Products.php">
+      <file leaf-file-name="Mpdf.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/mpdf/mpdf/src/Mpdf.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+            <state relative-caret-position="265">
+              <caret line="9467" column="4" lean-forward="true" selection-start-line="9467" selection-start-column="4" selection-end-line="9467" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -86,17 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addDSH</find>
-      <find>vendor</find>
-      <find>8682035081074</find>
-      <find>1oOfSOh3mTbYhLPx8ypJtx</find>
-      <find>getOrdersCustomerCanceled</find>
-      <find>d</find>
-      <find>.done</find>
-      <find>$customEntities</find>
-      <find>Бренд</find>
-      <find>bundles</find>
-      <find>e70b71d7-98d4-11ea-0a80-0292000eeea4</find>
       <find>products_count</find>
       <find>$categories</find>
       <find>862</find>
@@ -116,6 +164,17 @@
       <find>MSSync</find>
       <find>die</find>
       <find>974625486</find>
+      <find>sql</find>
+      <find>localho</find>
+      <find>реестр</find>
+      <find>$newFileName</find>
+      <find>telegram</find>
+      <find>_attributes</find>
+      <find>curl_init</find>
+      <find>62</find>
+      <find>.xml</find>
+      <find>fopen(</find>
+      <find>/var/www/user/data/www/goods.ltplk.ru/</find>
     </findStrings>
     <replaceStrings>
       <replace>execute</replace>
@@ -162,7 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/exMS.php" />
         <option value="$PROJECT_DIR$/confirmation.php" />
         <option value="$PROJECT_DIR$/packing.php" />
         <option value="$PROJECT_DIR$/labeling.php" />
@@ -193,7 +251,6 @@
         <option value="$PROJECT_DIR$/class/Goods/Curl.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/asdsd" />
-        <option value="$PROJECT_DIR$/printPDF.php" />
         <option value="$PROJECT_DIR$/feed/feed_goodsv4.php" />
         <option value="$PROJECT_DIR$/class/SQL/AvaksSQL.php" />
         <option value="$PROJECT_DIR$/class/MS/Stocks.php" />
@@ -213,6 +270,8 @@
         <option value="$PROJECT_DIR$/class/MS/Products.php" />
         <option value="$PROJECT_DIR$/class/MS/CurlMoiSklad.php" />
         <option value="$PROJECT_DIR$/goods_bot_new_orders.php" />
+        <option value="$PROJECT_DIR$/printPDF.php" />
+        <option value="$PROJECT_DIR$/feed_goods.php" />
       </list>
     </option>
   </component>
@@ -242,9 +301,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="y" value="103" />
-    <option name="width" value="1038" />
-    <option name="height" value="702" />
+    <option name="width" value="1036" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -262,24 +320,7 @@
             <path>
               <item name="goods" type="b2602c69:ProjectViewProjectNode" />
               <item name="goods" type="462c0819:PsiDirectoryNode" />
-              <item name="class" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goods" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
-              <item name="class" type="462c0819:PsiDirectoryNode" />
-              <item name="MS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goods" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
-              <item name="reporting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goods" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
-              <item name="reporting" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -289,7 +330,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="feed&#9;FILE&#9;file://C:/Users/User/Documents/goods/feed_goods.php&#10;зкште&#9;FILE&#9;file://C:/Users/User/Documents/goods/printPDF.php&#10;pa&#9;FILE&#9;file://C:/Users/User/Documents/goods/reporting/parseExcel.php&#10;Cal&#9;null&#9;null&#10;sh&#9;FILE&#9;file://C:/Users/User/Documents/goods/shops.php&#10;order&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Goods/Order.php&#10;Find.php&#9;FILE&#9;file://C:/Users/User/Documents/goods/vendor/mongodb/mongodb/src/Operation/Find.php&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;test-can&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/test-canceled.php&#10;teleg&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Telegram.php&#10;setsti&#9;null&#9;null&#10;prin&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/printPDF.php&#10;sti&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Goods/Sticker.php&#10;ex&#9;FILE&#9;file://C:/Users/User/Documents/goods/exFinal.php&#10;Products.php&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/MS/Products.php&#10;goods&#9;FILE&#9;file://C:/Users/User/Documents/goods/goods.php&#10;printPdf&#9;null&#9;null&#10;ыуее&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="printPDF&#9;FILE&#9;file://C:/Users/User/Documents/goods/printPDF.php&#10;feed&#9;FILE&#9;file://C:/Users/User/Documents/goods/feed_goods.php&#10;зкште&#9;FILE&#9;file://C:/Users/User/Documents/goods/printPDF.php&#10;pa&#9;FILE&#9;file://C:/Users/User/Documents/goods/reporting/parseExcel.php&#10;Cal&#9;null&#9;null&#10;sh&#9;FILE&#9;file://C:/Users/User/Documents/goods/shops.php&#10;order&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Goods/Order.php&#10;Find.php&#9;FILE&#9;file://C:/Users/User/Documents/goods/vendor/mongodb/mongodb/src/Operation/Find.php&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;test-can&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/test-canceled.php&#10;teleg&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Telegram.php&#10;setsti&#9;null&#9;null&#10;prin&#9;FILE&#9;file://C:/Users/User/Documents/goods/testing/printPDF.php&#10;sti&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/Goods/Sticker.php&#10;ex&#9;FILE&#9;file://C:/Users/User/Documents/goods/exFinal.php&#10;Products.php&#9;FILE&#9;file://C:/Users/User/Documents/goods/class/MS/Products.php&#10;goods&#9;FILE&#9;file://C:/Users/User/Documents/goods/goods.php&#10;printPdf&#9;null&#9;null&#10;ыуее&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../beru" />
@@ -299,18 +340,18 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\goods\reporting\files\new" />
+      <recent name="C:\Users\User\Documents\goods.ltplk.ru\class\MS" />
+      <recent name="C:\Users\User\Documents\goods\feed" />
+      <recent name="C:\Users\User\Documents\goods\class\MS" />
+      <recent name="C:\Users\User\Documents\goods\test" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Documents\goods\reporting\files\old" />
       <recent name="C:\Users\User\Documents\goods\reporting\files" />
       <recent name="C:\Users\User\Documents\goods\reporting\new" />
       <recent name="C:\Users\User\Documents\goods" />
-      <recent name="C:\Users\User\Documents\goods\class\Goods" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Documents\goods.ltplk.ru\class\MS" />
-      <recent name="C:\Users\User\Documents\goods\feed" />
-      <recent name="C:\Users\User\Documents\goods\class\MS" />
-      <recent name="C:\Users\User\Documents\goods\test" />
       <recent name="C:\Users\User\Documents\goods\class\Goods" />
     </key>
   </component>
@@ -326,26 +367,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.parseExcel.php">
+  <component name="RunManager" selected="PHP Script.printPDF.php">
     <configuration name="feed_goodsv3.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/goods.ltplk.ru/feed/feed_goodsv3.php" />
     <configuration name="feed_goodsv3.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/feed/feed_goodsv3.php" />
     <configuration name="goods_bot_new_orders.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/goods_bot_new_orders.php" />
     <configuration name="parseExcel.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/reporting/parseExcel.php" />
-    <configuration name="shops.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/shops.php" />
+    <configuration name="printPDF.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/printPDF.php" />
     <list>
-      <item itemvalue="PHP Script.shops.php" />
       <item itemvalue="PHP Script.feed_goodsv3.php" />
       <item itemvalue="PHP Script.parseExcel.php" />
       <item itemvalue="JavaScript Debug.feed_goodsv3.php" />
       <item itemvalue="PHP Script.goods_bot_new_orders.php" />
+      <item itemvalue="PHP Script.printPDF.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.printPDF.php" />
         <item itemvalue="PHP Script.parseExcel.php" />
         <item itemvalue="PHP Script.goods_bot_new_orders.php" />
         <item itemvalue="PHP Script.feed_goodsv3.php" />
         <item itemvalue="JavaScript Debug.feed_goodsv3.php" />
-        <item itemvalue="PHP Script.shops.php" />
       </list>
     </recent_temporary>
   </component>
@@ -558,12 +599,18 @@
       <workItem from="1594392595258" duration="8096000" />
       <workItem from="1594714219646" duration="66000" />
       <workItem from="1595279364961" duration="632000" />
-      <workItem from="1596450962657" duration="14524000" />
+      <workItem from="1596450962657" duration="18399000" />
+      <workItem from="1596704549087" duration="5089000" />
+      <workItem from="1597076856082" duration="2727000" />
+      <workItem from="1597142305731" duration="1057000" />
+      <workItem from="1597239312866" duration="14000" />
+      <workItem from="1597244895488" duration="1813000" />
+      <workItem from="1597652647412" duration="5027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="567640000" />
+    <option name="totallyTimeSpent" value="587242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2064" height="1056" extended-state="6" />
@@ -575,7 +622,7 @@
       <window_info anchor="right" x="-1208" y="69" width="522" height="756" id="Run" order="5" weight="0.4740519" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Terminal" order="2" weight="0.26909092" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.16367266" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.16666667" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.3295362" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -604,17 +651,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testing/test-canceled.php" />
     <entry file="file://$PROJECT_DIR$/testing/printPDF.php" />
     <entry file="file://$PROJECT_DIR$/test/GoodsTest/Curl.php" />
     <entry file="file://$PROJECT_DIR$/printTestSticker.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/mpdf/mpdf/src/Mpdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="998" column="20" selection-start-line="998" selection-start-column="20" selection-end-line="998" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/printPDFTest.php" />
     <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Worksheet/Worksheet.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -712,7 +751,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/asdsd" />
-    <entry file="file://$PROJECT_DIR$/printPDF.php" />
     <entry file="file://$PROJECT_DIR$/feed/nz_feed_goodsv3.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -721,7 +759,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/feed/feed_goodsv4.php" />
-    <entry file="file://$PROJECT_DIR$/processDelivered.php" />
     <entry file="file://$PROJECT_DIR$/goods_order_cancel.php" />
     <entry file="file://$PROJECT_DIR$/composer.json" />
     <entry file="file://$PROJECT_DIR$/class/MS/MSSync.php">
@@ -738,13 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/SQL/AvaksSQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="77" column="27" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feed/amaze_feed_goodsv3.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
@@ -756,9 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1072">
           <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
-          <folding>
-            <element signature="e#253#276#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -793,20 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reporting/parseExcel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feed_goods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="84" column="1" lean-forward="true" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shops.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -818,41 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-          <folding>
-            <element signature="e#299#321#0#PHP" expanded="true" />
-            <element signature="e#2473#2614#0#PHP" />
-            <element signature="e#2920#3367#0#PHP" />
-            <element signature="e#3016#3160#0#PHP" />
-            <element signature="e#3495#4495#0#PHP" />
-            <element signature="e#3616#3757#0#PHP" />
-            <element signature="e#3941#4085#0#PHP" />
-            <element signature="e#4661#4709#0#PHP" />
-            <element signature="e#4710#5536#0#PHP" />
-            <element signature="e#4764#5534#0#PHP" />
-            <element signature="e#5109#5325#0#PHP" />
-            <element signature="e#5185#5314#0#PHP" />
-            <element signature="e#5364#5478#0#PHP" />
-            <element signature="e#5706#7096#0#PHP" />
-            <element signature="e#6165#7029#0#PHP" />
-            <element signature="e#7146#8072#0#PHP" />
-            <element signature="e#7235#8070#0#PHP" />
-            <element signature="e#7308#8064#0#PHP" />
-            <element signature="e#7457#8054#0#PHP" />
-            <element signature="e#7786#7932#0#PHP" />
-            <element signature="e#8142#8176#0#PHP" />
-            <element signature="e#8301#8756#0#PHP" />
-            <element signature="e#8367#8750#0#PHP" />
-            <element signature="e#8538#8740#0#PHP" />
-            <element signature="e#9820#10526#0#PHP" />
-            <element signature="e#9839#10516#0#PHP" />
-            <element signature="e#9994#10502#0#PHP" />
-            <element signature="e#10194#10483#0#PHP" />
-            <element signature="e#10707#11280#0#PHP" />
-            <element signature="e#10850#11274#0#PHP" />
-            <element signature="e#11103#11264#0#PHP" />
-            <element signature="e#11854#11976#0#PHP" />
-            <element signature="e#12749#12880#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,30 +845,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-103">
           <caret line="26" column="33" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="33" />
-          <folding>
-            <element signature="e#110#133#0#PHP" expanded="true" />
-            <element signature="e#1835#3259#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class/MS/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class/Telegram.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="581" lean-forward="true" selection-start-line="581" selection-end-line="581" />
+        <state relative-caret-position="576">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class/Goods/Order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
+        <state relative-caret-position="880">
           <caret line="60" column="32" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="32" />
         </state>
       </provider>
@@ -904,10 +871,135 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/goods_bot_new_orders.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="154" column="1" lean-forward="true" selection-start-line="154" selection-start-column="1" selection-end-line="154" selection-end-column="1" />
+        <state relative-caret-position="1872">
+          <caret line="123" column="19" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/SQL/AvaksSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processDelivered.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reporting/parseExcel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
-            <element signature="e#301#323#0#PHP" expanded="true" />
+            <element signature="n#addDSH#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Telegram.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="196" column="20" selection-start-line="196" selection-start-column="20" selection-end-line="196" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mpdf/mpdf/src/Mpdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="9467" column="4" lean-forward="true" selection-start-line="9467" selection-start-column="4" selection-end-line="9467" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mpdf/mpdf/src/Output/Destination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/printPDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="320" column="49" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="49" />
+          <folding>
+            <element signature="e#869#3721#0#PHP" />
+            <element signature="e#1314#3713#0#PHP" />
+            <element signature="e#1515#1880#0#PHP" />
+            <element signature="e#1578#1653#0#PHP" />
+            <element signature="e#2644#3713#0#PHP" />
+            <element signature="e#2700#3703#0#PHP" />
+            <element signature="e#2768#2856#0#PHP" />
+            <element signature="e#4004#4271#0#PHP" />
+            <element signature="e#4032#4142#0#PHP" />
+            <element signature="e#4151#4265#0#PHP" />
+            <element signature="n#html#0;n#!!top" />
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="e#255#368#0" />
+            <element signature="e#393#574#0" />
+            <element signature="e#586#636#0" />
+            <element signature="e#653#705#0" />
+            <element signature="e#727#766#0" />
+            <element signature="e#790#833#0" />
+            <element signature="e#856#893#0" />
+            <element signature="e#913#956#0" />
+            <element signature="e#974#1149#0" />
+            <element signature="e#1169#1305#0" />
+            <element signature="e#1323#1460#0" />
+            <element signature="n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#table#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#0;n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed_goods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="167" column="44" lean-forward="true" selection-start-line="167" selection-start-column="44" selection-end-line="167" selection-end-column="44" />
+          <folding>
+            <element signature="n#getQuantity#0;n#!!top" />
+            <element signature="e#5335#5519#0#PHP" />
+            <element signature="e#5347#5513#1#PHP" />
+            <element signature="e#5632#5755#0#PHP" />
+            <element signature="n#findValueByKey#0;n#!!top" />
+            <element signature="e#6338#6628#0#PHP" />
+            <element signature="e#6390#6622#0#PHP" />
+            <element signature="e#6453#6622#0#PHP" />
+            <element signature="e#6548#6612#0#PHP" />
+            <element signature="n#getData#0;n#!!top" />
+            <element signature="e#6713#6836#0#PHP" />
+            <element signature="n#getToken#0;n#!!top" />
           </folding>
         </state>
       </provider>
