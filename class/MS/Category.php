@@ -13,17 +13,7 @@ use  Avaks\MS\MSSync;
 class Category
 {
 
-    public function getAll()
-    {
-        $collection = (new MSSync())->MSSync;
 
-        /*$filter = [
-            '_attributes.Отгружается в опт' => true,
-            'archived'=> false
-        ];*/
-        $categoriesCursor = $collection->customentitydata->find()->toArray();
-        return $categoriesCursor;
-    }
     
 
 }

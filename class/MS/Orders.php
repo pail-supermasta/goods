@@ -9,14 +9,10 @@
 namespace Avaks\MS;
 
 
-use Avaks\SQL\AvaksSQL;
-use Avaks\MS\Products;
-use Avaks\MS\MSSync;
+use Avaks\BackendAPI;
 
 
 use MongoDB\BSON\UTCDateTime;
-use MongoDB\BSON\Regex;
-use MongoDB\Client;
 
 
 class Orders
@@ -24,16 +20,20 @@ class Orders
     public function getNew()
     {
 
-        $collection = (new MSSync())->MSSync;
-
-
         echo 'getNew' . PHP_EOL;
 
-        $cursor = $collection->customerorder->find([
+
+        $backendAPI = new BackendAPI();
+        $filter = array(
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => '327bfd05-75c5-11e5-7a40-e89700139935',
             'deleted' => null
-        ]);
+        );
+        $data['filter'] = json_encode($filter);
+        $data['limit'] = 9999;
+        $data['offset'] = 0;
+        $orderCursor = $backendAPI->getData($backendAPI->urlOrder, $data);
+        $cursor = $orderCursor['rows'];
 
         $ordersNew = array();
         foreach ($cursor as $document) {
@@ -50,28 +50,38 @@ class Orders
 
     public function getInWork()
     {
-
-        $collection = (new MSSync())->MSSync;
-
-        $regex = new Regex("GOODS1364895");
-
-
         echo 'getInWork' . PHP_EOL;
 
-        $cursor = $collection->customerorder->find([
+        $regex = array('$regex' => "GOODS1364895");
+        $backendAPI = new BackendAPI();
+        $filter = array(
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => 'ecf45f89-f518-11e6-7a69-9711000ff0c4',
-            'deleted' => null,
+            'applicable'=> true,
             'description' => $regex
-        ]);
+        );
+        $data['project'] = json_encode(array(
+                'name' => true,
+                '_positions.id' => true,
+                '_positions.type' => true
+            )
+        );
+        $data['filter'] = json_encode($filter);
+        $data['limit'] = 9999;
+        $data['offset'] = 0;
+        $orderCursor = $backendAPI->getData($backendAPI->urlOrder, $data);
+        $cursor = $orderCursor['rows'];
 
         $ordersWork = array();
+        $assortment = new Assortment();
 
         foreach ($cursor as $item) {
             $orderByState['name'] = $item['name'];
             $products = array();
             foreach ($item['_positions'] as $position) {
-                $products[] = AvaksSQL::selectProductById($position['id']);
+                $assortment->id = $position['id'];
+                $assortment->type = $position['type'];
+                $products[] = $assortment->findPosition()['rows'][0]['code'];
             }
             $orderByState['positions'] = $products;
             $ordersWork[] = $orderByState;
@@ -82,40 +92,52 @@ class Orders
     public function getOnDelivery()
     {
 
-        $collection = (new MSSync())->MSSync;;
 
-        $regex = new Regex("GOODS1364895");
 
 
         date_default_timezone_set('Europe/Moscow');
-        $epochNow = round(microtime(true) * 1000);
+        $plusDay = 24 * 60 * 60;
+        $tomorrow = strtotime(date("Y-m-d")) + $plusDay;
 
         $offsetNow = (168 + 3) * 60 * 60;
-        $now = strtotime(gmdate("Y-m-d")) - $offsetNow;
-        $sevenDaysAgo = $now * 1000;
+        $sevenDaysAgo = strtotime(gmdate("Y-m-d")) - $offsetNow;
 
         // less than
-        $dateLess = new UTCDateTime($epochNow);
+//        $dateLess = new UTCDateTime($epochNow);
 
         //more than
-        $dateMore = new UTCDatetime($sevenDaysAgo);
+//        $dateMore = new UTCDatetime($sevenDaysAgo);
 
         echo 'getOnDelivery' . PHP_EOL;
 
 
-        $cursor = $collection->customerorder->find([
+
+
+        $regex = array('$regex' => "GOODS1364895");
+        $backendAPI = new BackendAPI();
+        $filter = array(
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => '327c03c6-75c5-11e5-7a40-e89700139938',
-            'deleted' => null,
+            'applicable'=> true,
             'description' => $regex,
             'moment' => [
-                '$gte' => $dateMore,
-                '$lte' => $dateLess
+                '$gte' => date("yy-m-d", $sevenDaysAgo),
+                '$lte' => date("yy-m-d", $tomorrow),
             ]
-        ]);
-
+        );
+        $data['project'] = json_encode(array(
+                'name' => true,
+                '_positions' => true
+            )
+        );
+        $data['filter'] = json_encode($filter);
+        $data['limit'] = 9999;
+        $data['offset'] = 0;
+        $orderCursor = $backendAPI->getData($backendAPI->urlOrder, $data);
+        $cursor = $orderCursor['rows'];
 
         $ordersDelivery = array();
+        $assortment = new Assortment();
 
         foreach ($cursor as $item) {
             $orderByState['name'] = $item['name'];
@@ -124,7 +146,9 @@ class Orders
             $products = array();
 
             foreach ($item['_positions'] as $position) {
-                $products[] = AvaksSQL::selectProductById($position['id']);
+                $assortment->id = $position['id'];
+                $assortment->type = $position['type'];
+                $products[] = $assortment->findPosition()['rows'][0]['code'];
             }
             $orderByState['positions'] = $products;
 
@@ -138,9 +162,7 @@ class Orders
     public function getDeliveringMonth($organization)
     {
 
-        $collection = (new MSSync())->MSSync;
 
-        $regex = new Regex("GOODS1364895");
 
 
         date_default_timezone_set('Europe/Moscow');
@@ -156,17 +178,26 @@ class Orders
         echo $todayDay;
 
 
-        $cursor = $collection->customerorder->find([
+
+
+        $regex = array('$regex' => "GOODS1364895");
+        $backendAPI = new BackendAPI();
+        $filter = array(
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => '327c03c6-75c5-11e5-7a40-e89700139938',
             '_organization' => "$organization",
-            'deleted' => null,
+            'applicable'=> true,
             'description' => $regex,
             'moment' => [
                 '$gte' => $monthAgo,
                 '$lte' => $todayDay
             ]
-        ]);
+        );
+        $data['filter'] = json_encode($filter);
+        $data['limit'] = 9999;
+        $data['offset'] = 0;
+        $orderCursor = $backendAPI->getData($backendAPI->urlOrder, $data);
+        $cursor = $orderCursor['rows'];
 
         $ordersDeliveringMonth = array();
         foreach ($cursor as $document) {
@@ -184,34 +215,44 @@ class Orders
     public function getInCancel()
     {
 
-        $collection = (new MSSync())->MSSync;
 
-        $regex = new Regex("GOODS1364895");
 
 
         date_default_timezone_set('Europe/Moscow');
-        $epochNow = round(microtime(true) * 1000);
+        $plusDay = 24 * 60 * 60;
+        $tomorrow = strtotime(date("Y-m-d")) + $plusDay;
 
         $offsetNow = (168 + 3) * 60 * 60;
-        $now = strtotime(gmdate("Y-m-d")) - $offsetNow;
-        $sevenDaysAgo = $now * 1000;
+        $sevenDaysAgo = strtotime(date("Y-m-d")) - $offsetNow;
 
         // less than
-        $dateLess = new UTCDateTime($epochNow);
+        $dateLess = new UTCDateTime($tomorrow);
 
         //more than
         $dateMore = new UTCDatetime($sevenDaysAgo);
 
-        $cursor = $collection->customerorder->find([
+
+        $regex = array('$regex' => "GOODS1364895");
+        $backendAPI = new BackendAPI();
+        $filter = array(
             '_agent' => '64710328-2e6f-11e8-9ff4-34e8000f81c8',
             '_state' => '327c070c-75c5-11e5-7a40-e8970013993b',
-            'deleted' => null,
+            'applicable'=> true,
             'description' => $regex,
             'moment' => [
-                '$gte' => $dateMore,
-                '$lte' => $dateLess
+                '$gte' => date("yy-m-d", $sevenDaysAgo),
+                '$lte' => date("yy-m-d", $tomorrow),
             ]
-        ]);
+        );
+        $data['project'] = json_encode(array(
+                'name' => true
+            )
+        );
+        $data['filter'] = json_encode($filter);
+        $data['limit'] = 9999;
+        $data['offset'] = 0;
+        $orderCursor = $backendAPI->getData($backendAPI->urlOrder, $data);
+        $cursor = $orderCursor['rows'];
 
 
         $ordersCancel = array();

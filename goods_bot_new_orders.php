@@ -76,8 +76,8 @@ function addCustomerorder($order, $organization)
     foreach ($order['items'] as $key => $item) {
         $product = new \Avaks\MS\Products();
         $product->code = $item['offerId'];
-        $productMongo = $product->getOne();
-        $product->id = $productMongo->_id;
+        $productApi = $product->getOne();
+        $product->id = $productApi['rows'][0]['_id'];
         if ($product->id == null) {
             $put_data['description'] .= "Внимание! Ошибка при сопоставлении товара! Проверьте заказ вручную!\n";
             continue;

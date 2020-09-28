@@ -1,0 +1,7 @@
+AuthName "goods-service.a3w.ru statistics"
+AuthType Basic
+AuthUserFile /home/goods-service/.stats-htpasswd
+require valid-user
+<Files .stats-htpasswd>
+deny from all
+</Files>

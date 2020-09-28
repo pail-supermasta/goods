@@ -8,6 +8,7 @@
 
 namespace Avaks\MS;
 
+use Avaks\BackendAPI;
 use Avaks\Customs;
 use Avaks\SQL\AvaksSQL;
 
@@ -38,25 +39,26 @@ class Products
         return $products;
     }
 
-    public function getMassProducts()
-    {
-        $collection = (new MSSync())->MSSync;
 
-        $filter = [
-            '_attributes.Отгружается в опт' => true,
-            'archived'=> false
-            ];
-        $productCursor = $collection->product->find($filter)->toArray();
-        return $productCursor;
-    }
 
 
     public function getOne()
     {
-        $collection = (new MSSync())->MSSync;
+        /*$collection = (new MSSync())->MSSync;
         $filter = ['code' => $this->code];
 
-        $productCursor = $collection->product->findOne($filter);
+        $productCursor = $collection->product->findOne($filter);*/
+        $backendAPI = new BackendAPI();
+        $filter = array(
+            'code'=> $this->code,
+        );
+        $data['project'] = json_encode(array(
+                'name' => true
+            )
+        );
+        $data['filter'] = json_encode($filter);
+        $data['offset'] = 0;
+        $productCursor = $backendAPI->getData($backendAPI->urlProduct, $data);
         return $productCursor ?? null;
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2020-08-17 12:30">
+<yml_catalog date="2020-09-28 17:30">
   <shop>
     <name>Удивительный интернет-магазин</name>
     <company>ООО «Новинки»</company>
@@ -191,10 +191,10 @@
       <option days="0" order-before="9"/>
     </shipment-options>
     <offers>
-      <offer available="false" id="852208006113">
+      <offer available="true" id="852208006113">
         <name>CreoPop Чернила Чувствительные к температуре SKU011 (Brown=&gt;Transparent)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>SKU011</model>
         <code>852208006113</code>
@@ -260,7 +260,7 @@
       <offer available="true" id="4603741880908">
         <name>Ivideon Умная Wi-Fi камера Ivideon Cute (I880908), цвет белый</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>I880908</model>
         <code>4603741880908</code>
@@ -293,7 +293,7 @@
       <offer available="true" id="6925108701106">
         <name>Знаток Электронный звуковой плакат "English" 70110</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>70110</model>
         <code>6925108701106</code>
@@ -337,7 +337,7 @@
       <offer available="true" id="5011832059062">
         <name>Morphy Richards Электрический чайник Jug Kettle 102777EE</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>102777EE</model>
         <code>5011832059062</code>
@@ -365,12 +365,12 @@
         <code>4660042111315</code>
         <categoryId>126</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>8990.00</price>
+        <price>7159.00</price>
       </offer>
       <offer available="true" id="011120232448">
-        <name>Bissell Аксесс.Фильтры для воды для 17132 (1866F)</name>
+        <name>Bissell Аксесс.Фильтры для воды для 17132/ 2223N/ 2582N (1866F)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>1866F</model>
         <code>011120232448</code>
@@ -381,7 +381,7 @@
       <offer available="true" id="9785424400650">
         <name>ЗНАТОК Комплект звуковых книг "500 фраз и 1000 слов" 1 и 2 часть. Курс изучения английского языка. ZP-40064/ZP-40065</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>ZP-40064/ZP-40065</model>
         <code>9785424400650</code>
@@ -436,7 +436,7 @@
       <offer available="true" id="6925108700062">
         <name>Знаток Электронный конструктор "999 схем+Школа" 70006</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="5"/>
         </outlets>
         <model>70006</model>
         <code>6925108700062</code>
@@ -497,7 +497,18 @@
         <code>4660042111452</code>
         <categoryId>126</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>10990.00</price>
+        <price>9173.00</price>
+      </offer>
+      <offer available="false" id="5011832055804">
+        <name>Morphy Richards Утюг Turbosteam Pro 303125</name>
+        <outlets>
+          <outlet id="0" instock="-1"/>
+        </outlets>
+        <model>303125</model>
+        <code>5011832055804</code>
+        <categoryId>172</categoryId>
+        <vendor>Morphy Richards</vendor>
+        <price>6790.00</price>
       </offer>
       <offer available="true" id="4650100440273">
         <name>Hoverbot Электросамокат TT-03 HVBTT3</name>
@@ -508,7 +519,7 @@
         <code>4650100440273</code>
         <categoryId>24</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>36990.00</price>
+        <price>38101.00</price>
       </offer>
       <offer available="true" id="6970754370602">
         <name>Noerden гибридные смарт-часы LIFE2+ PNW-0501, цвет серый, миланский ремешок</name>
@@ -554,10 +565,10 @@
         <vendor>Hoverbot</vendor>
         <price>10990.00</price>
       </offer>
-      <offer available="true" id="0852225007056">
+      <offer available="false" id="0852225007056">
         <name>Audioengine Активные настольные акустические системы HD3 (HD3-BLK), пара, цвет черный</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>HD3-BLK</model>
         <code>0852225007056</code>
@@ -642,10 +653,10 @@
         <vendor>Cleopatra for trading and international marketing</vendor>
         <price>14894.00</price>
       </offer>
-      <offer available="true" id="7332543670567">
+      <offer available="false" id="7332543670567">
         <name>Electrolux Пылесос с контейнером для пыли Pure C9 PC91-H6STM</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>PC91-H6STM</model>
         <code>7332543670567</code>
@@ -697,10 +708,10 @@
         <vendor>Morphy Richards</vendor>
         <price>7450.00</price>
       </offer>
-      <offer available="false" id="5011832061720">
+      <offer available="true" id="5011832061720">
         <name>Morphy Richards Хлебопечка Homebake 502001</name>
         <outlets>
-          <outlet id="0" instock="-5"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>502001</model>
         <code>5011832061720</code>
@@ -818,10 +829,10 @@
         <vendor>Healbe</vendor>
         <price>899.00</price>
       </offer>
-      <offer available="false" id="5011832057983">
+      <offer available="true" id="5011832057983">
         <name>Morphy Richards Тостер 4 slices Accents Rose Gold and Brushed 242105</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>242105</model>
         <code>5011832057983</code>
@@ -832,7 +843,7 @@
       <offer available="true" id="WBB0008340002">
         <name>Dolce bambino Кокон-матрас Dolce Cocon для новорожденных AV80205, синий</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>AV80205</model>
         <code>WBB0008340002</code>
@@ -1148,10 +1159,10 @@
         <vendor>Знаток</vendor>
         <price>290.00</price>
       </offer>
-      <offer available="true" id="4606085600065">
+      <offer available="false" id="4606085600065">
         <name>Кошкин секрет Наполнитель гигиенический комкующийся Премиум NEW 5л, 00-00000456</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>00-00000456</model>
         <code>4606085600065</code>
@@ -1217,7 +1228,7 @@
       <offer available="true" id="6925108700857">
         <name>Знаток Электронный конструктор "180 схем" 70085</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>70085</model>
         <code>6925108700857</code>
@@ -1272,7 +1283,7 @@
       <offer available="true" id="4606085600126">
         <name>Кошкин секрет Наполнитель гигиенический для длинношерстных кошек Премиум 5л, 00-00001179</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>00-00001179</model>
         <code>4606085600126</code>
@@ -1302,10 +1313,10 @@
         <vendor>Знаток</vendor>
         <price>922.00</price>
       </offer>
-      <offer available="true" id="2000000042282">
+      <offer available="false" id="2000000042282">
         <name>Lolidream Маска защитная Claws</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>MASK71108</model>
         <code>2000000042282</code>
@@ -1349,7 +1360,7 @@
       <offer available="true" id="4716873840136">
         <name>Hobot Робот мойщик полов Legee-688</name>
         <outlets>
-          <outlet id="0" instock="10"/>
+          <outlet id="0" instock="19"/>
         </outlets>
         <model>Legee-688</model>
         <code>4716873840136</code>
@@ -1379,10 +1390,10 @@
         <vendor>Audioengine</vendor>
         <price>32990.00</price>
       </offer>
-      <offer available="false" id="2405100137331">
+      <offer available="true" id="2405100137331">
         <name>Bissell Пылесос беспроводной 2582N моющий (Cordless Crosswave)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>2582N</model>
         <code>2405100137331</code>
@@ -1390,10 +1401,10 @@
         <vendor>Bissell</vendor>
         <price>44990.00</price>
       </offer>
-      <offer available="false" id="2002049330054">
+      <offer available="true" id="2002049330054">
         <name>Текс-Дизайн Комплект постельного белья 2-спальный Ореховая роща, перкаль 1743210 (пудровый)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>1743210</model>
         <code>2002049330054</code>
@@ -1404,7 +1415,7 @@
       <offer available="true" id="9785424400315">
         <name>ЗНАТОК "Курс английского языка для маленьких детей" (часть 4) Для говорящей ручки "ЗНАТОК" ZP-40031</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>ZP-40031</model>
         <code>9785424400315</code>
@@ -1415,7 +1426,7 @@
       <offer available="true" id="6924917717124">
         <name>Picooc Умные диагностические весы Mini White 6924917717124, белые</name>
         <outlets>
-          <outlet id="0" instock="6"/>
+          <outlet id="0" instock="5"/>
         </outlets>
         <model>AV90201</model>
         <code>6924917717124</code>
@@ -1437,7 +1448,7 @@
       <offer available="true" id="6924917717131">
         <name>Picooc Умные диагностические весы Picooc Mini Black 6924917717131, черные</name>
         <outlets>
-          <outlet id="0" instock="4"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>AV90202</model>
         <code>6924917717131</code>
@@ -1481,7 +1492,7 @@
       <offer available="true" id="5011832061843">
         <name>Morphy Richards Парогенератор Speed Intellitemp 333301</name>
         <outlets>
-          <outlet id="0" instock="4"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>333301</model>
         <code>5011832061843</code>
@@ -1492,7 +1503,7 @@
       <offer available="true" id="9785424400841">
         <name>ЗНАТОК Английский АЛФАВИТ. Книга для говорящей ручки "ЗНАТОК" ZP-40084</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>ZP-40084</model>
         <code>9785424400841</code>
@@ -1522,10 +1533,10 @@
         <vendor>IKOO</vendor>
         <price>1650.00</price>
       </offer>
-      <offer available="false" id="5011832059345">
+      <offer available="true" id="5011832059345">
         <name>Morphy Richards Электрический чайник Evoke Steel Blue Jug 104402EE</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>104402EE</model>
         <code>5011832059345</code>
@@ -1547,7 +1558,7 @@
       <offer available="true" id="4627159472050">
         <name>CreoPop. Книга трафаретов для 3D ручки CreoPop AV81208, (9 уроков)</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>AV81208</model>
         <code>4627159472050</code>
@@ -1635,7 +1646,7 @@
       <offer available="true" id="7090024927417">
         <name>Exentri кошелек City EX C 741 Black Cube</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>EXC741</model>
         <code>7090024927417</code>
@@ -1863,10 +1874,10 @@
         <vendor>Exentri</vendor>
         <price>4390.00</price>
       </offer>
-      <offer available="true" id="7090024923419">
+      <offer available="false" id="7090024923419">
         <name>Exentri кошелек Wallet EX D 341 Black Cube</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>EXD341</model>
         <code>7090024923419</code>
@@ -1883,7 +1894,7 @@
         <code>4260376292140</code>
         <categoryId>110</categoryId>
         <vendor>IKOO</vendor>
-        <price>9900.00</price>
+        <price>7990.00</price>
       </offer>
       <offer available="true" id="110026513580">
         <name>Маска медицинская МКБК 1шт GD</name>
@@ -1931,7 +1942,7 @@
       <offer available="true" id="2000000042275">
         <name>Lolidream Маска защитная Tiger</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="7"/>
         </outlets>
         <model>MASK71107</model>
         <code>2000000042275</code>
@@ -1964,7 +1975,7 @@
       <offer available="false" id="5011832059390">
         <name>(EOL) Morphy Richards Тостер Evoke 2 Slice Bronze 224401EE</name>
         <outlets>
-          <outlet id="0" instock="-2"/>
+          <outlet id="0" instock="-5"/>
         </outlets>
         <model>224401EE</model>
         <code>5011832059390</code>
@@ -2060,16 +2071,16 @@
         <vendor>IKOO</vendor>
         <price>9900.00</price>
       </offer>
-      <offer available="true" id="4260376292157">
+      <offer available="false" id="4260376292157">
         <name>IKOO Стайлер для волос e-styler fireball 292157</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>292157</model>
         <code>4260376292157</code>
         <categoryId>110</categoryId>
         <vendor>IKOO</vendor>
-        <price>9900.00</price>
+        <price>7990.00</price>
       </offer>
       <offer available="true" id="4260376292119">
         <name>IKOO Стайлер для волос e-styler beluga black 292119</name>
@@ -2080,7 +2091,7 @@
         <code>4260376292119</code>
         <categoryId>110</categoryId>
         <vendor>IKOO</vendor>
-        <price>9900.00</price>
+        <price>7990.00</price>
       </offer>
       <offer available="false" id="4260376292515">
         <name>IKOO Стайлер для волос e-styler jet beluga black 292515</name>
@@ -2102,7 +2113,7 @@
         <code>4260376292614</code>
         <categoryId>110</categoryId>
         <vendor>IKOO</vendor>
-        <price>9490.00</price>
+        <price>7990.00</price>
       </offer>
       <offer available="true" id="4260376292591">
         <name>IKOO Стайлер для волос e-styler jet lavender macaron 292591</name>
@@ -2113,18 +2124,18 @@
         <code>4260376292591</code>
         <categoryId>110</categoryId>
         <vendor>IKOO</vendor>
-        <price>9490.00</price>
+        <price>7990.00</price>
       </offer>
-      <offer available="true" id="4260376292430">
+      <offer available="false" id="4260376292430">
         <name>IKOO Стайлер для волос e-styler pro beluga black 292430</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>292430</model>
         <code>4260376292430</code>
         <categoryId>110</categoryId>
         <vendor>IKOO</vendor>
-        <price>14990.00</price>
+        <price>10900.00</price>
       </offer>
       <offer available="true" id="4260376292447">
         <name>IKOO Стайлер для волос e-styler pro white platina 292447</name>
@@ -2135,7 +2146,7 @@
         <code>4260376292447</code>
         <categoryId>110</categoryId>
         <vendor>IKOO</vendor>
-        <price>14990.00</price>
+        <price>10900.00</price>
       </offer>
       <offer available="false" id="6943757613144">
         <name>(EOL) Ecovacs Робот-пылесос Deebot OZMO 902 (DN5G.02) 595952443849, (белый)</name>
@@ -2270,9 +2281,9 @@
         <price>2390.00</price>
       </offer>
       <offer available="true" id="0011120232721">
-        <name>Bissell Чистящее средство 1789L для пылесоса 17132</name>
+        <name>Bissell Чистящее средство 1789L универсальное</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="6"/>
         </outlets>
         <model>1789L</model>
         <code>0011120232721</code>
@@ -2280,10 +2291,10 @@
         <vendor>Bissell</vendor>
         <price>990.00</price>
       </offer>
-      <offer available="false" id="4716873840129">
+      <offer available="true" id="4716873840129">
         <name>Hobot Робот мойщик окон Hobot-298</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="27"/>
         </outlets>
         <model>HOBOT-298</model>
         <code>4716873840129</code>
@@ -2294,7 +2305,7 @@
       <offer available="false" id="8435484054652">
         <name>Cecotec Вертикальный пылесос Conga Rockstar 300 X-Treme ErgoWet (05465) моющий, циклон, турбо всасывание, 430 Вт</name>
         <outlets>
-          <outlet id="0" instock="-2"/>
+          <outlet id="0" instock="-1"/>
         </outlets>
         <model>5465</model>
         <code>8435484054652</code>
@@ -2316,7 +2327,7 @@
       <offer available="true" id="5011832059697">
         <name>Morphy Richards Тостер Accents Rose Gold Brushed 2 Slice 222017</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>222017</model>
         <code>5011832059697</code>
@@ -2335,10 +2346,10 @@
         <vendor>Знаток</vendor>
         <price>3137.00</price>
       </offer>
-      <offer available="true" id="852208006274">
+      <offer available="false" id="852208006274">
         <name>CreoPop. Книга трафаретов для 3D ручки CreoPop AV71022, (18 уроков)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>AV71022</model>
         <code>852208006274</code>
@@ -2346,10 +2357,10 @@
         <vendor>Creopop</vendor>
         <price>399.00</price>
       </offer>
-      <offer available="false" id="2002000210012">
+      <offer available="true" id="2002000210012">
         <name>Текс-Дизайн Комплект детского постельного белья 1,5-спальный Звездочка, бязь 1732775 (сиреневый)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>1732775</model>
         <code>2002000210012</code>
@@ -2357,10 +2368,10 @@
         <vendor>Текс-Дизайн</vendor>
         <price>1390.00</price>
       </offer>
-      <offer available="true" id="4601772001729">
+      <offer available="false" id="4601772001729">
         <name>Виталад Мюсли прессованные Батончик "Готовый завтрак овсянка с фруктами", ТМ "Лунтик", шоу-бокс 18 шт.</name>
         <outlets>
-          <outlet id="0" instock="6"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>BAT04</model>
         <code>4601772001729</code>
@@ -2448,7 +2459,7 @@
       <offer available="true" id="5011832060952">
         <name>Morphy Richards Электрический чайник Evoke Pyramid White 100109EE</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>100109EE</model>
         <code>5011832060952</code>
@@ -2456,10 +2467,10 @@
         <vendor>Morphy Richards</vendor>
         <price>3490.00</price>
       </offer>
-      <offer available="false" id="2001993010012">
+      <offer available="true" id="2001993010012">
         <name>Текс-Дизайн Комплект постельного белья 1,5-спальный Хаски, бязь 1729259 (голубой)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>1729259</model>
         <code>2001993010012</code>
@@ -2481,7 +2492,7 @@
       <offer available="true" id="4601772002252">
         <name>Виталад Батончик Протеиновый шоколадный, 40 гр, шоу-бокс 24 шт.</name>
         <outlets>
-          <outlet id="0" instock="12"/>
+          <outlet id="0" instock="13"/>
         </outlets>
         <model>BAT03</model>
         <code>4601772002252</code>
@@ -2492,7 +2503,7 @@
       <offer available="true" id="7319599034758">
         <name>Electrolux Мешок для пылесоса E 201SMR (91240) 12 шт.</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>91240</model>
         <code>7319599034758</code>
@@ -2511,10 +2522,10 @@
         <vendor>Знаток</vendor>
         <price>3990.00</price>
       </offer>
-      <offer available="true" id="6925108707078">
+      <offer available="false" id="6925108707078">
         <name>(EOL) Знаток Электронный конструктор "Магия голоса"  ZP-70707</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>ZP-70707</model>
         <code>6925108707078</code>
@@ -2533,10 +2544,10 @@
         <vendor>Hoverbot</vendor>
         <price>8990.00</price>
       </offer>
-      <offer available="true" id="6970065200063">
+      <offer available="false" id="6970065200063">
         <name>(EOL) Roobo Интеллектуальный робот для ребенка Pudding Roobo (розовый)</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>AV71104</model>
         <code>6970065200063</code>
@@ -2553,7 +2564,7 @@
         <code>4660042111247</code>
         <categoryId>126</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>8990.00</price>
+        <price>7875.00</price>
       </offer>
       <offer available="false" id="4660042111346">
         <name>Hoverbot Гироскутер A-3 LED Light GA3LCNLED carbon</name>
@@ -2635,7 +2646,7 @@
       <offer available="true" id="4627138299296">
         <name>Dolce bambino Сменная наволочка-простыня Dolce Cocon SHEET D01.0200001</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>D01.0200001</model>
         <code>4627138299296</code>
@@ -2690,7 +2701,7 @@
       <offer available="false" id="5011832053701">
         <name>(EOL) Morphy Richards Беспроводной пылесос 734000EE</name>
         <outlets>
-          <outlet id="0" instock="-11"/>
+          <outlet id="0" instock="-1"/>
         </outlets>
         <model>734000EE</model>
         <code>5011832053701</code>
@@ -2863,10 +2874,10 @@
         <vendor>Spider Pen</vendor>
         <price>2990.00</price>
       </offer>
-      <offer available="true" id="2006694160172">
+      <offer available="false" id="2006694160172">
         <name>Wild Bear Ремень RM-024f Dark-blue, в деревянном футляре</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>RM-024f</model>
         <code>2006694160172</code>
@@ -2899,13 +2910,13 @@
       <offer available="true" id="4660042111292">
         <name>Hoverbot Гироскутер A-3 Light AV80411 scull</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>AV80411</model>
         <code>4660042111292</code>
         <categoryId>126</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>8990.00</price>
+        <price>7875.00</price>
       </offer>
       <offer available="false" id="2006694134203">
         <name>Wild Bear Ремень RM-013f Black, в деревянном футляре</name>
@@ -2962,10 +2973,10 @@
         <vendor>Dolce Bambino</vendor>
         <price>4890.00</price>
       </offer>
-      <offer available="false" id="0011120250855">
+      <offer available="true" id="0011120250855">
         <name>Bissell Пылесос моющий Hydrowave 2571N</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>2571N</model>
         <code>0011120250855</code>
@@ -2982,7 +2993,7 @@
         <code>4260376292522</code>
         <categoryId>110</categoryId>
         <vendor>IKOO</vendor>
-        <price>9450.00</price>
+        <price>7990.00</price>
       </offer>
       <offer available="false" id="4650100440129">
         <name>Hoverbot Электровелосипед CB-7 Optimus VCB7BK2019</name>
@@ -2998,7 +3009,7 @@
       <offer available="true" id="4627145122914">
         <name>Dolce bambino Кокон-матрас Dolce Cocon Plus для новорожденных AV80215, бежевый</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>AV80215</model>
         <code>4627145122914</code>
@@ -3042,7 +3053,7 @@
       <offer available="true" id="4601772002160">
         <name>Виталад Батончик "Протеиновый с малиной" 40гр, шоу-бокс 24 шт.</name>
         <outlets>
-          <outlet id="0" instock="4"/>
+          <outlet id="0" instock="8"/>
         </outlets>
         <model>BAT11</model>
         <code>4601772002160</code>
@@ -3053,7 +3064,7 @@
       <offer available="true" id="9785424400162">
         <name>ЗНАТОК "Мы познаем мир"-2  Набор из 4 книг для говорящей ручки "ЗНАТОК" ZP40016</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>ZP40016</model>
         <code>9785424400162</code>
@@ -3075,7 +3086,7 @@
       <offer available="true" id="011120247237">
         <name>Bissell Пылесос беспроводной MultiReach 18V 2280N</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>2280N</model>
         <code>011120247237</code>
@@ -3097,7 +3108,7 @@
       <offer available="true" id="7332543436620">
         <name>Electrolux пылесос PowerForce  ZPF2200</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>ZPF2200</model>
         <code>7332543436620</code>
@@ -3116,10 +3127,10 @@
         <vendor>Знаток</vendor>
         <price>519.00</price>
       </offer>
-      <offer available="true" id="5011832064639">
+      <offer available="false" id="5011832064639">
         <name>Morphy Richards Кофеварка Evoke Steel Blue 162524EE</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>162524EE</model>
         <code>5011832064639</code>
@@ -3185,7 +3196,7 @@
       <offer available="true" id="2000000041926">
         <name>Маска защитная</name>
         <outlets>
-          <outlet id="0" instock="145"/>
+          <outlet id="0" instock="20"/>
         </outlets>
         <model>MASK1</model>
         <code>2000000041926</code>
@@ -3229,7 +3240,7 @@
       <offer available="true" id="4716873840143">
         <name>Hobot Робот мойщик полов Legee-669</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="5"/>
         </outlets>
         <model>Legee-669</model>
         <code>4716873840143</code>
@@ -3328,7 +3339,7 @@
       <offer available="false" id="5011832049162">
         <name>Morphy Richards Блендер  402052EE</name>
         <outlets>
-          <outlet id="0" instock="-1"/>
+          <outlet id="0" instock="-4"/>
         </outlets>
         <model>402052EE</model>
         <code>5011832049162</code>
@@ -3394,7 +3405,7 @@
       <offer available="false" id="5011832046697">
         <name>(EOL) Morphy Richards Электрический чайник Accents White 102005EE</name>
         <outlets>
-          <outlet id="0" instock="-4"/>
+          <outlet id="0" instock="-1"/>
         </outlets>
         <model>102005EE</model>
         <code>5011832046697</code>
@@ -3427,7 +3438,7 @@
       <offer available="true" id="5011832059352">
         <name>Morphy Richards Электрический чайник Evoke Platinum Jug 104403EE</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="5"/>
         </outlets>
         <model>104403EE</model>
         <code>5011832059352</code>
@@ -3515,7 +3526,7 @@
       <offer available="true" id="2002049320093">
         <name>Текс-Дизайн Комплект постельного белья 2-спальный Махровый тюльпан, перкаль 1743358 (красный)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>1743358</model>
         <code>2002049320093</code>
@@ -3537,13 +3548,13 @@
       <offer available="true" id="011120240122">
         <name>Bissell Пылесос беспроводной 2166N (MultiReach Ion XL 36V)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>2166N</model>
         <code>011120240122</code>
         <categoryId>69</categoryId>
         <vendor>Bissell</vendor>
-        <price>26990.00</price>
+        <price>21990.00</price>
       </offer>
       <offer available="true" id="9785424401497">
         <name>ЗНАТОК Лучшие сказки мира. Звуковые сказки — спектакли. Книга 2 ZP-40149</name>
@@ -3559,7 +3570,7 @@
       <offer available="true" id="5011832061003">
         <name>Morphy Richards Тостер Evoke White 240109</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>240109</model>
         <code>5011832061003</code>
@@ -3644,10 +3655,10 @@
         <vendor>Hoverbot</vendor>
         <price>49990.00</price>
       </offer>
-      <offer available="false" id="8681665066079">
+      <offer available="true" id="8681665066079">
         <name>Nishman Матовый Воск для укладки волос с сильной фиксацией на водной основе, серия Matte Wax 08, 150 мл</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>NM086</model>
         <code>8681665066079</code>
@@ -3908,10 +3919,10 @@
         <vendor>Wild Bear</vendor>
         <price>7290.00</price>
       </offer>
-      <offer available="false" id="7319599030811">
+      <offer available="true" id="7319599030811">
         <name>Electrolux Фильтр для пылесоса EF150 (86122)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="6"/>
         </outlets>
         <model>86122</model>
         <code>7319599030811</code>
@@ -3919,10 +3930,10 @@
         <vendor>Electrolux</vendor>
         <price>1290.00</price>
       </offer>
-      <offer available="true" id="6925108701977">
+      <offer available="false" id="6925108701977">
         <name>Знаток Электронный конструктор "Первые шаги в электронике." Набор "В" (15схем) 70197</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>70197</model>
         <code>6925108701977</code>
@@ -3974,10 +3985,10 @@
         <vendor>ILIFE</vendor>
         <price>12300.00</price>
       </offer>
-      <offer available="true" id="2000000036977">
+      <offer available="false" id="2000000036977">
         <name>Текс-Дизайн Комплект постельного белья Евро 1 Шоколадный десерт, трикотаж 1742507 (коричневый)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>1742507</model>
         <code>2000000036977</code>
@@ -4054,7 +4065,7 @@
       <offer available="true" id="7332543558469">
         <name>Electrolux беспроводной пылесос EER73IGM</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>EER73IGM</model>
         <code>7332543558469</code>
@@ -4120,7 +4131,7 @@
       <offer available="true" id="5011832059703">
         <name>Morphy Richards Тостер Accents Rose Gold Black 2 Slice 222016</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>222016</model>
         <code>5011832059703</code>
@@ -4150,21 +4161,21 @@
         <vendor>Moodo</vendor>
         <price>2390.00</price>
       </offer>
-      <offer available="false" id="8435484054287">
+      <offer available="true" id="8435484054287">
         <name>Cecotec Робот-пылесос Conga 1490 Impulse (05428) моющий, ультратонкий, турбо всасывание, гиро карты, смарт навигация, Google assistant</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>5428</model>
         <code>8435484054287</code>
         <categoryId>141</categoryId>
         <vendor>Cecotec</vendor>
-        <price>21590.00</price>
+        <price>20990.00</price>
       </offer>
-      <offer available="true" id="6906053058644">
+      <offer available="false" id="6906053058644">
         <name>BG Berlin Рюкзак Metrobag 17" BG010/01/Burgundy (бордовый)</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>BG010/01/Burgundy</model>
         <code>6906053058644</code>
@@ -4296,7 +4307,7 @@
       <offer available="true" id="5011832058881">
         <name>Morphy Richards Электрический чайник Accents Pyramid Rose Gold and Brushed  102105EE</name>
         <outlets>
-          <outlet id="0" instock="4"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>102105EE</model>
         <code>5011832058881</code>
@@ -4304,10 +4315,10 @@
         <vendor>Morphy Richards</vendor>
         <price>6990.00</price>
       </offer>
-      <offer available="true" id="5011832061027">
+      <offer available="false" id="5011832061027">
         <name>Morphy Richards Тостер Evoke Brushed 2 Slice 224406EE</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>224406EE</model>
         <code>5011832061027</code>
@@ -4359,10 +4370,10 @@
         <vendor>Знаток</vendor>
         <price>417.00</price>
       </offer>
-      <offer available="true" id="4601772002016">
+      <offer available="false" id="4601772002016">
         <name>Виталад Мюсли прессованные Батончик Мюсли яблоко и злаки, 40гр, шоу-бокс 24 шт.</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>BAT08</model>
         <code>4601772002016</code>
@@ -4384,7 +4395,7 @@
       <offer available="true" id="9785917200293">
         <name>ЗНАТОК  Набор книг "Музыкальная азбука / Русский язык дошкольникам" (2 книги+тетрадь) ZP20029</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>ZP20029</model>
         <code>9785917200293</code>
@@ -4392,10 +4403,10 @@
         <vendor>Знаток</vendor>
         <price>1408.00</price>
       </offer>
-      <offer available="true" id="2001982010016">
+      <offer available="false" id="2001982010016">
         <name>Текс-Дизайн Комплект детского постельного белья 1,5-спальный Блеск, бязь 1732772 (розовый)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>1732772</model>
         <code>2001982010016</code>
@@ -4417,7 +4428,7 @@
       <offer available="true" id="2000000042220">
         <name>Lolidream Маска защитная Stop</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>MASK71106</model>
         <code>2000000042220</code>
@@ -4439,7 +4450,7 @@
       <offer available="true" id="6970145351272">
         <name>Roobo Развивающая игрушка Кубик Рубика Cube-tastic! P001U</name>
         <outlets>
-          <outlet id="0" instock="5"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>P001U</model>
         <code>6970145351272</code>
@@ -4472,7 +4483,7 @@
       <offer available="true" id="4627146811558">
         <name>Dolce bambino кокон-матрас Dolce Cocon для новорожденных D01.010/020-01, (синий) +доп.наволочка</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>D01.010/020-01</model>
         <code>4627146811558</code>
@@ -4491,10 +4502,10 @@
         <vendor>Dolce Bambino</vendor>
         <price>5990.00</price>
       </offer>
-      <offer available="false" id="4716873840174">
+      <offer available="true" id="4716873840174">
         <name>Hobot Робот мойщик окон Hobot-388</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="9"/>
         </outlets>
         <model>HOBOT-388</model>
         <code>4716873840174</code>
@@ -4505,7 +4516,7 @@
       <offer available="true" id="4627146811565">
         <name>Dolce bambino кокон-матрас Dolce Cocon для новорожденных D01.010/020-03, (бежевый) +доп.наволочка</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>D01.010/020-03</model>
         <code>4627146811565</code>
@@ -4546,10 +4557,10 @@
         <vendor>Dolce Bambino</vendor>
         <price>4990.00</price>
       </offer>
-      <offer available="false" id="4716873840075">
+      <offer available="true" id="4716873840075">
         <name>Hobot Робот мойщик окон Hobot-268</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>Hobot-268</model>
         <code>4716873840075</code>
@@ -4601,10 +4612,10 @@
         <vendor>Амперка</vendor>
         <price>4990.00</price>
       </offer>
-      <offer available="true" id="4601772000272">
+      <offer available="false" id="4601772000272">
         <name>Виталад Мюсли прессованные Батончик тропический, 40гр, шоу-бокс 24 шт.</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>BAT09</model>
         <code>4601772000272</code>
@@ -4714,7 +4725,7 @@
       <offer available="true" id="7332543434213">
         <name>Electrolux пылесос SilentPerformer Cyclonic ZSPC2000</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>ZSPC2000</model>
         <code>7332543434213</code>
@@ -4747,7 +4758,7 @@
       <offer available="true" id="5011832053725">
         <name>Morphy Richards Беспроводной пылесос 734050EE</name>
         <outlets>
-          <outlet id="0" instock="51"/>
+          <outlet id="0" instock="40"/>
         </outlets>
         <model>734050EE</model>
         <code>5011832053725</code>
@@ -4780,7 +4791,7 @@
       <offer available="true" id="0011120236743">
         <name>Bissell Пылесос беспроводной 1971G (MultiReach Ion XL 25V)</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>1971G</model>
         <code>0011120236743</code>
@@ -4799,10 +4810,10 @@
         <vendor>Spider Pen</vendor>
         <price>4490.00</price>
       </offer>
-      <offer available="true" id="6925108706941">
+      <offer available="false" id="6925108706941">
         <name>Знаток Электронный конструктор "Супер-измеритель" ZP-70694</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>ZP-70694</model>
         <code>6925108706941</code>
@@ -4835,7 +4846,7 @@
       <offer available="true" id="4603726170697">
         <name>UNID, Набор пластика UNID для 3D ручки UNID PRO-6 (по 10м. 6 цветов в коробке)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>PRO6</model>
         <code>4603726170697</code>
@@ -4854,10 +4865,10 @@
         <vendor>IKOO</vendor>
         <price>1490.00</price>
       </offer>
-      <offer available="true" id="06970754370732">
+      <offer available="false" id="06970754370732">
         <name>Noerden ремешок для часов 20мм. кожа PAB-0108, коричневый</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>PAB-0108</model>
         <code>06970754370732</code>
@@ -4890,7 +4901,7 @@
       <offer available="true" id="6970754370565">
         <name>Noerden гибридные смарт-часы LIFE2 PNW-0402, цвет белый</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>PNW-0402</model>
         <code>6970754370565</code>
@@ -4934,7 +4945,7 @@
       <offer available="false" id="5060359287243">
         <name>iRobot Робот-пылесос Roomba 676 R676040</name>
         <outlets>
-          <outlet id="0" instock="-1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>R676040</model>
         <code>5060359287243</code>
@@ -5041,10 +5052,10 @@
         <vendor>Feizerg</vendor>
         <price>490.00</price>
       </offer>
-      <offer available="false" id="5011832064769">
+      <offer available="true" id="5011832064769">
         <name>Morphy Richards кофеварка On The Go 162740</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>162740</model>
         <code>5011832064769</code>
@@ -5066,7 +5077,7 @@
       <offer available="true" id="6970754370411">
         <name>Noerden смарт весы MINIMI PNS-0001, цвет черный</name>
         <outlets>
-          <outlet id="0" instock="33"/>
+          <outlet id="0" instock="36"/>
         </outlets>
         <model>PNS-0001</model>
         <code>6970754370411</code>
@@ -5074,10 +5085,10 @@
         <vendor>Noerden</vendor>
         <price>1990.00</price>
       </offer>
-      <offer available="false" id="5011832060754">
+      <offer available="true" id="5011832060754">
         <name>Morphy Richards Утюг-Парогенератор Saturn Steam 305000</name>
         <outlets>
-          <outlet id="0" instock="-3"/>
+          <outlet id="0" instock="7"/>
         </outlets>
         <model>305000</model>
         <code>5011832060754</code>
@@ -5085,10 +5096,10 @@
         <vendor>Morphy Richards</vendor>
         <price>6290.00</price>
       </offer>
-      <offer available="false" id="4716873840082">
+      <offer available="true" id="4716873840082">
         <name>Hobot Робот мойщик окон Hobot-198</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="10"/>
         </outlets>
         <model>Hobot-198</model>
         <code>4716873840082</code>
@@ -5096,10 +5107,10 @@
         <vendor>Hobot</vendor>
         <price>21490.00</price>
       </offer>
-      <offer available="true" id="5011832067364">
+      <offer available="false" id="5011832067364">
         <name>Morphy Richards Утюг-Парогенератор Saturn Intellitemp 305003</name>
         <outlets>
-          <outlet id="0" instock="86"/>
+          <outlet id="0" instock="-47"/>
         </outlets>
         <model>305003</model>
         <code>5011832067364</code>
@@ -5149,7 +5160,7 @@
         <code>4660042110400</code>
         <categoryId>126</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>8990.00</price>
+        <price>7875.00</price>
       </offer>
       <offer available="true" id="4603734060331">
         <name>SPIDER PEN 3D, 3D ручка SPIDER PEN KID 5800G (изумрудный зеленый)</name>
@@ -5264,7 +5275,7 @@
       <offer available="true" id="5011832067302">
         <name>Morphy Richards Утюг Breeze Easy Fill 300291</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>300291</model>
         <code>5011832067302</code>
@@ -5275,7 +5286,7 @@
       <offer available="true" id="4716873849047">
         <name>Hobot Чистящие салфетки Hobot-268/288/298 (желтые) (комплект из 3 шт.)</name>
         <outlets>
-          <outlet id="0" instock="6"/>
+          <outlet id="0" instock="13"/>
         </outlets>
         <model>HB268A02 (желтые)</model>
         <code>4716873849047</code>
@@ -5319,7 +5330,7 @@
       <offer available="true" id="5011832061140">
         <name>Morphy Richards Электрический чайник Evoke White Jug 104409EE</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>104409EE</model>
         <code>5011832061140</code>
@@ -5327,10 +5338,10 @@
         <vendor>Morphy Richards</vendor>
         <price>4990.00</price>
       </offer>
-      <offer available="true" id="5011832047014">
+      <offer available="false" id="5011832047014">
         <name>Morphy Richards Медленноварка 3.5л 460004</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>460004</model>
         <code>5011832047014</code>
@@ -5416,7 +5427,7 @@
         <price>1850.00</price>
       </offer>
       <offer available="true" id="04627183166079">
-        <name>SETA TEVES Покрывало стеганое, размер 220*240, ромб, 02319203 (бежевый)</name>
+        <name>SETA TEVES Покрывало стеганое, размер 200*240, ромб, 02319203 (бежевый)</name>
         <outlets>
           <outlet id="0" instock="4"/>
         </outlets>
@@ -5473,7 +5484,7 @@
       <offer available="true" id="9785424400834">
         <name>ЗНАТОК Испанско-русский и русско-испанский словарь Для говорящей ручки "ЗНАТОК" ZP-40083</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>ZP-40083</model>
         <code>9785424400834</code>
@@ -5495,7 +5506,7 @@
       <offer available="true" id="6970754370718">
         <name>Noerden ремешок для часов 20мм. силикон PAB-00010, синий</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>PAB-00010</model>
         <code>6970754370718</code>
@@ -5528,7 +5539,7 @@
       <offer available="true" id="4690687059079">
         <name>SETA TEVES Покрывало для кровати стеганое, размер 180х220, 02315201 (зеленый)</name>
         <outlets>
-          <outlet id="0" instock="8"/>
+          <outlet id="0" instock="10"/>
         </outlets>
         <model>02315201</model>
         <code>4690687059079</code>
@@ -5539,7 +5550,7 @@
       <offer available="true" id="5011832052339">
         <name>(EOL) Morphy Richards Электрический чайник Accents Blue 102100EE</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>102100EE</model>
         <code>5011832052339</code>
@@ -5547,10 +5558,10 @@
         <vendor>Morphy Richards</vendor>
         <price>5990.00</price>
       </offer>
-      <offer available="false" id="5011832064608">
+      <offer available="true" id="5011832064608">
         <name>Morphy Richards Кофеварка Evoke Brushed 162521EE</name>
         <outlets>
-          <outlet id="0" instock="-2"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>162521EE</model>
         <code>5011832064608</code>
@@ -5638,7 +5649,7 @@
       <offer available="true" id="4716873849016">
         <name>Hobot Чистящие салфетки Hobot-188/198 (комплект из 12 шт., серые)</name>
         <outlets>
-          <outlet id="0" instock="9"/>
+          <outlet id="0" instock="7"/>
         </outlets>
         <model>HB188A01</model>
         <code>4716873849016</code>
@@ -5649,7 +5660,7 @@
       <offer available="true" id="7319599018048">
         <name>Electrolux Фильтр для пылесоса EF129 (86121)</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>86121</model>
         <code>7319599018048</code>
@@ -5660,7 +5671,7 @@
       <offer available="true" id="6970754370428">
         <name>Noerden смарт весы MINIMI PNS-0002, цвет белый</name>
         <outlets>
-          <outlet id="0" instock="32"/>
+          <outlet id="0" instock="50"/>
         </outlets>
         <model>PNS-0002</model>
         <code>6970754370428</code>
@@ -5699,7 +5710,7 @@
         <code>4650100440198</code>
         <categoryId>24</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>28990.00</price>
+        <price>27574.00</price>
       </offer>
       <offer available="true" id="683480098202">
         <name>Знаток Звуковой коврик "День и ночь" SW9820</name>
@@ -5726,7 +5737,7 @@
       <offer available="true" id="6925108700765">
         <name>Знаток Электронный плакат "Государственные Символы" PL-07-GS</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>PL-07-GS</model>
         <code>6925108700765</code>
@@ -5737,7 +5748,7 @@
       <offer available="true" id="852208006014">
         <name>CreoPop 3D ручка с холодными чернилами для рисования в пространстве SKU001</name>
         <outlets>
-          <outlet id="0" instock="5"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>SKU001</model>
         <code>852208006014</code>
@@ -5811,10 +5822,10 @@
         <vendor>LoliDream</vendor>
         <price>2900.00</price>
       </offer>
-      <offer available="true" id="8714612109700">
+      <offer available="false" id="8714612109700">
         <name>XD Design Bobby Рюкзак для ноутбука до 15,6" Urban (P705.642), серый</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>P705.642</model>
         <code>8714612109700</code>
@@ -5924,7 +5935,7 @@
       <offer available="false" id="6970754370763">
         <name>Noerden ремешок для часов 20мм. миланское плетение PAB-0303, черный</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="-1"/>
         </outlets>
         <model>PAB-0303</model>
         <code>6970754370763</code>
@@ -5932,10 +5943,10 @@
         <vendor>Noerden</vendor>
         <price>1490.00</price>
       </offer>
-      <offer available="false" id="4610053330014">
+      <offer available="true" id="4610053330014">
         <name>(EOL) Умный Мишка</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>20190020401</model>
         <code>4610053330014</code>
@@ -5943,10 +5954,10 @@
         <vendor>Умный Мишка</vendor>
         <price>5990.00</price>
       </offer>
-      <offer available="true" id="4521718774237">
+      <offer available="false" id="4521718774237">
         <name>Знаток Конструктор ARTEC World "Веселая стая" коробка 30дет. 15-2348-ART</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>15-2348-ART</model>
         <code>4521718774237</code>
@@ -5954,10 +5965,10 @@
         <vendor>Знаток</vendor>
         <price>417.00</price>
       </offer>
-      <offer available="true" id="0852225007094">
+      <offer available="false" id="0852225007094">
         <name>Audioengine Активные настольные акустические системы HD3 (HD3-WHT), пара, цвет белый</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>HD3-WHT</model>
         <code>0852225007094</code>
@@ -5998,10 +6009,10 @@
         <vendor>Morphy Richards</vendor>
         <price>9990.00</price>
       </offer>
-      <offer available="true" id="5011832062819">
+      <offer available="false" id="5011832062819">
         <name>Morphy Richards Парогенератор Speed Steam 333202</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>333202</model>
         <code>5011832062819</code>
@@ -6012,7 +6023,7 @@
       <offer available="true" id="6906053063655">
         <name>BG Berlin Рюкзак Metrobag Cut Resistant 17" BG010/05/Сutresistant (серый)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>BG010/05/Сut_resistant</model>
         <code>6906053063655</code>
@@ -6067,7 +6078,7 @@
       <offer available="true" id="4606085600072">
         <name>Кошкин секрет Наполнитель гигиенический впитывающий Премиум 5л, 00000008325</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>00000008325 </model>
         <code>4606085600072</code>
@@ -6089,7 +6100,7 @@
       <offer available="false" id="5011832054593">
         <name>(EOL) Morphy Richards  Беспроводной пылесос 734005EE</name>
         <outlets>
-          <outlet id="0" instock="-4"/>
+          <outlet id="0" instock="-6"/>
         </outlets>
         <model>734005</model>
         <code>5011832054593</code>
@@ -6108,10 +6119,10 @@
         <vendor>Hoverbot</vendor>
         <price>8990.00</price>
       </offer>
-      <offer available="true" id="6925108702738">
+      <offer available="false" id="6925108702738">
         <name>Знаток Звуковой коврик "Хип хоп микшер" SLW9716</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>SLW9716</model>
         <code>6925108702738</code>
@@ -6122,7 +6133,7 @@
       <offer available="true" id="6970754370558">
         <name>Noerden гибридные смарт-часы LIFE2 PNW-0401, цвет голубой</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>PNW-0401</model>
         <code>6970754370558</code>
@@ -6139,18 +6150,18 @@
         <code>4650100440242</code>
         <categoryId>24</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>22880.00</price>
+        <price>22384.00</price>
       </offer>
-      <offer available="true" id="0011120225587">
-        <name>Bissell Пылесос моющий 1474J</name>
+      <offer available="false" id="0011120225587">
+        <name>(EOL) Bissell Пылесос моющий 1474J</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>1474J</model>
         <code>0011120225587</code>
         <categoryId>69</categoryId>
         <vendor>Bissell</vendor>
-        <price>19990.00</price>
+        <price>17990.00</price>
       </offer>
       <offer available="false" id="4660042111308">
         <name>Hoverbot Гироскутер A-3 Light AV90501 white multicolor</name>
@@ -6161,7 +6172,7 @@
         <code>4660042111308</code>
         <categoryId>126</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>8990.00</price>
+        <price>7875.00</price>
       </offer>
       <offer available="true" id="4603734061826">
         <name>SPIDER PEN 3D, 3D ручка SPIDER PEN LITE с ЖК дисплеем 6100B (голубой)</name>
@@ -6262,10 +6273,10 @@
         <vendor>UNID</vendor>
         <price>890.00</price>
       </offer>
-      <offer available="true" id="9785424400346">
+      <offer available="false" id="9785424400346">
         <name>ЗНАТОК  "Курс английского языка для маленьких детей"  (часть 1 + словарь) Для говорящей ручки "ЗНАТОК" ZP-40034</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>ZP-40034</model>
         <code>9785424400346</code>
@@ -6282,7 +6293,7 @@
         <code>4650100440280</code>
         <categoryId>24</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>27990.00</price>
+        <price>29041.00</price>
       </offer>
       <offer available="false" id="2006694160110">
         <name>Wild Bear Ремень RM-022m Black, в кожаном чехле</name>
@@ -6298,7 +6309,7 @@
       <offer available="true" id="2000000042923">
         <name>Маска декор.МКБК-01</name>
         <outlets>
-          <outlet id="0" instock="16943"/>
+          <outlet id="0" instock="16958"/>
         </outlets>
         <model>МКБК-01</model>
         <code>2000000042923</code>
@@ -6308,7 +6319,7 @@
       <offer available="true" id="9785424401466">
         <name>ЗНАТОК "Я Жук" книга (с иллюстрациями НЕОЗВУЧЕННАЯ) автор А.А.Бахметьев(6+) Ц-0000205929</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>Ц-0000205929</model>
         <code>9785424401466</code>
@@ -6319,7 +6330,7 @@
       <offer available="true" id="5011832067227">
         <name>Morphy Richards Утюг Breeze Easy Store 300283</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>300283</model>
         <code>5011832067227</code>
@@ -7020,10 +7031,10 @@
         <vendor>Ricotio</vendor>
         <price>1053.00</price>
       </offer>
-      <offer available="true" id="5011832059413">
+      <offer available="false" id="5011832059413">
         <name>Morphy Richards Тостер Evoke 2 Slice Platinum 224403EE</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="-3"/>
         </outlets>
         <model>224403EE</model>
         <code>5011832059413</code>
@@ -7166,7 +7177,7 @@
       <offer available="true" id="4607947683509">
         <name>Ricotio Простыня трикотажная на резинке 1743004 180х200х20, цвет белый</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>1743004</model>
         <code>4607947683509</code>
@@ -7452,7 +7463,7 @@
       <offer available="true" id="5011832052377">
         <name>Morphy Richards Электрический чайник Accents Rose Gold Black 102104EE</name>
         <outlets>
-          <outlet id="0" instock="7"/>
+          <outlet id="0" instock="17"/>
         </outlets>
         <model>102104EE</model>
         <code>5011832052377</code>
@@ -7518,7 +7529,7 @@
       <offer available="true" id="4607947683738">
         <name>Ricotio Простыня трикотажная на резинке 1743018 90х200х20, цвет мятный</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>1743018</model>
         <code>4607947683738</code>
@@ -7636,10 +7647,10 @@
         <vendor>Текс-Дизайн</vendor>
         <price>1549.00</price>
       </offer>
-      <offer available="true" id="4601772002283">
+      <offer available="false" id="4601772002283">
         <name>Виталад Мюсли прессованные Батончик Мюсли абрикос и злаки, 40гр, ТМ "Три кота", шоу-бокс 20 шт.</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>BAT06</model>
         <code>4601772002283</code>
@@ -7683,7 +7694,7 @@
       <offer available="true" id="011120235340">
         <name/>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>1977N</model>
         <code>011120235340</code>
@@ -7977,10 +7988,10 @@
         <vendor>Moodo</vendor>
         <price>2390.00</price>
       </offer>
-      <offer available="true" id="9785424400483">
+      <offer available="false" id="9785424400483">
         <name>ЗНАТОК Русские народные сказки" Книга № 5 для говорящей ручки "ЗНАТОК" (Курочка Ряба; Лиса и Волк; Волк и Коза) ZP-40048</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>ZP-40048</model>
         <code>9785424400483</code>
@@ -8021,10 +8032,10 @@
         <vendor>Знаток</vendor>
         <price>469.00</price>
       </offer>
-      <offer available="true" id="5011832053459">
+      <offer available="false" id="5011832053459">
         <name>Morphy Richards Кофеварка Accents Black 162008</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>162008</model>
         <code>5011832053459</code>
@@ -8068,7 +8079,7 @@
       <offer available="true" id="4716873849078">
         <name>Hobot Чистящие салфетки Hobot-188/198 (комплект из 12 шт., желтые)</name>
         <outlets>
-          <outlet id="0" instock="5"/>
+          <outlet id="0" instock="7"/>
         </outlets>
         <model>HB198A01</model>
         <code>4716873849078</code>
@@ -8076,10 +8087,10 @@
         <vendor>Hobot</vendor>
         <price>1290.00</price>
       </offer>
-      <offer available="true" id="5011832061829">
+      <offer available="false" id="5011832061829">
         <name>Morphy Richards Парогенератор Speed Steam 332102</name>
         <outlets>
-          <outlet id="0" instock="21"/>
+          <outlet id="0" instock="-4"/>
         </outlets>
         <model>332102</model>
         <code>5011832061829</code>
@@ -8090,7 +8101,7 @@
       <offer available="false" id="5011832064066">
         <name>Morphy Richards Утюг Turbosteam lIntelliTemp 303131</name>
         <outlets>
-          <outlet id="0" instock="-10"/>
+          <outlet id="0" instock="-3"/>
         </outlets>
         <model>303131</model>
         <code>5011832064066</code>
@@ -8120,10 +8131,10 @@
         <vendor>Morphy Richards</vendor>
         <price>6850.00</price>
       </offer>
-      <offer available="true" id="2000000036946">
+      <offer available="false" id="2000000036946">
         <name>Текс-Дизайн Комплект постельного белья Евро 1 Северное море, трикотаж 1742512 (серый)</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>1742512</model>
         <code>2000000036946</code>
@@ -8189,7 +8200,7 @@
       <offer available="true" id="5011832058911">
         <name>Morphy Richards Гриль-бокс Mico Potato 511648</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>511648</model>
         <code>5011832058911</code>
@@ -8299,13 +8310,13 @@
       <offer available="true" id="011120220841">
         <name>Bissell Пароочиститель 2635J</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>2635J</model>
         <code>011120220841</code>
         <categoryId>34</categoryId>
         <vendor>Bissell</vendor>
-        <price>4990.00</price>
+        <price>5690.00</price>
       </offer>
       <offer available="false" id="8697869468205">
         <name>48 hours gold Кофе с экстрактом женьшеня 48/hg/2</name>
@@ -8343,7 +8354,7 @@
       <offer available="false" id="5011832059253">
         <name>(EOL) Morphy Richards Электрический чайник Evoke Pyramid Bronze 100101EE</name>
         <outlets>
-          <outlet id="0" instock="-2"/>
+          <outlet id="0" instock="-4"/>
         </outlets>
         <model>100101EE</model>
         <code>5011832059253</code>
@@ -8453,7 +8464,7 @@
       <offer available="true" id="6970065200025">
         <name>(EOL) Roobo Игрушка - интеллектуальный робот для ребенка PUDDING PD001SRU</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="4"/>
         </outlets>
         <model>PD001SRU</model>
         <code>6970065200025</code>
@@ -8494,10 +8505,10 @@
         <vendor>Знаток</vendor>
         <price>1253.00</price>
       </offer>
-      <offer available="false" id="5011832064622">
+      <offer available="true" id="5011832064622">
         <name>Morphy Richards Кофеварка Evoke Bronze 162523EE</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>162523EE</model>
         <code>5011832064622</code>
@@ -8536,7 +8547,7 @@
         <code>4660042110158</code>
         <categoryId>126</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>8990.00</price>
+        <price>7875.00</price>
       </offer>
       <offer available="true" id="4623721386503">
         <name>Знаток Деревянный конструктор ЗНАТОК. Создай свою сказку "Колобок" ZF-38650</name>
@@ -8571,10 +8582,10 @@
         <vendor>Знаток</vendor>
         <price>1553.00</price>
       </offer>
-      <offer available="false" id="4603726170710">
+      <offer available="true" id="4603726170710">
         <name>UNID, Набор пластика UNID для 3D ручки UNID PRO-12 (по 10м. 12 цветов в коробке)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>PRO12</model>
         <code>4603726170710</code>
@@ -8794,7 +8805,7 @@
       <offer available="false" id="5011832052544">
         <name>(EOL) Morphy Richards Электрический чайник Accents Sand 102101EE</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="-1"/>
         </outlets>
         <model>102101EE</model>
         <code>5011832052544</code>
@@ -9069,7 +9080,7 @@
       <offer available="true" id="4627184323952">
         <name>LoliDream Наволочка Кофе с молоком</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>AV80114</model>
         <code>4627184323952</code>
@@ -9121,10 +9132,10 @@
         <vendor>Знаток</vendor>
         <price>693.00</price>
       </offer>
-      <offer available="false" id="4716873840051">
+      <offer available="true" id="4716873840051">
         <name>Hobot Робот мойщик окон Hobot-188</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="26"/>
         </outlets>
         <model>Hobot-188</model>
         <code>4716873840051</code>
@@ -9135,7 +9146,7 @@
       <offer available="true" id="2002035810058">
         <name>Текс-Дизайн Комплект постельного белья 2-спальный Дуновение 1, перкаль 1743108 (зеленый)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>1743108</model>
         <code>2002035810058</code>
@@ -9165,10 +9176,10 @@
         <vendor>ILIFE</vendor>
         <price>11834.00</price>
       </offer>
-      <offer available="true" id="4601772000319">
+      <offer available="false" id="4601772000319">
         <name>Виталад Мюсли прессованные Батончик черничный, 40гр, шоу-бокс 24 шт.</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>BAT10</model>
         <code>4601772000319</code>
@@ -9220,10 +9231,10 @@
         <vendor>Cleopatra for trading and international marketing</vendor>
         <price>2571.00</price>
       </offer>
-      <offer available="true" id="5011832061126">
+      <offer available="false" id="5011832061126">
         <name>Morphy Richards Электрический чайник Evoke Metallic Jug 104406EE</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>104406EE</model>
         <code>5011832061126</code>
@@ -9267,7 +9278,7 @@
       <offer available="true" id="5011832068125">
         <name>Morphy Richards пароварка Intellisteam 470006</name>
         <outlets>
-          <outlet id="0" instock="10"/>
+          <outlet id="0" instock="9"/>
         </outlets>
         <model>470006</model>
         <code>5011832068125</code>
@@ -9311,13 +9322,13 @@
       <offer available="true" id="6971263070182">
         <name>ILIFE Робот-пылесос V4 RUS AV90414, (белый)</name>
         <outlets>
-          <outlet id="0" instock="23"/>
+          <outlet id="0" instock="15"/>
         </outlets>
         <model>AV90414</model>
         <code>6971263070182</code>
         <categoryId>141</categoryId>
         <vendor>ILIFE</vendor>
-        <price>10990.00</price>
+        <price>9990.00</price>
       </offer>
       <offer available="false" id="7610917150823">
         <name>Jura Кофемашина E60 Pianoblack (15082) черный</name>
@@ -9355,13 +9366,13 @@
       <offer available="true" id="9310293201185">
         <name>(EOL) Breville Мини-гриль G360</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="8"/>
         </outlets>
         <model>G360</model>
         <code>9310293201185</code>
         <categoryId>26</categoryId>
         <vendor>Breville</vendor>
-        <price>4990.00</price>
+        <price>3490.00</price>
       </offer>
       <offer available="false" id="6971263070137">
         <name>ILIFE Робот-пылесос A8 AV90406, (черный)</name>
@@ -9399,7 +9410,7 @@
       <offer available="true" id="8435484054102">
         <name>Cecotec Робот-пылесос Conga 1090 Connected 05410</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>5410</model>
         <code>8435484054102</code>
@@ -9410,7 +9421,7 @@
       <offer available="true" id="4690687059093">
         <name>SETA TEVES Покрывало для кровати стеганое, размер 180х220, 02315203 (кораловый)</name>
         <outlets>
-          <outlet id="0" instock="4"/>
+          <outlet id="0" instock="7"/>
         </outlets>
         <model>02315203</model>
         <code>4690687059093</code>
@@ -9418,16 +9429,16 @@
         <vendor>SETA TEVES</vendor>
         <price>990.00</price>
       </offer>
-      <offer available="true" id="8435484054157">
+      <offer available="false" id="8435484054157">
         <name>Cecotec Робот-пылесос Conga 3290 Titanium (05415) моющий, ультратонкий, турбина, лазерная навигация, карты</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>5415</model>
         <code>8435484054157</code>
         <categoryId>141</categoryId>
         <vendor>Cecotec</vendor>
-        <price>26990.00</price>
+        <price>30990.00</price>
       </offer>
       <offer available="false" id="4660042113524">
         <name>Hoverbot Электросамокат RUSH 2019 EF12BK black</name>
@@ -9440,10 +9451,10 @@
         <vendor>Hoverbot</vendor>
         <price>23990.00</price>
       </offer>
-      <offer available="true" id="5011832061805">
+      <offer available="false" id="5011832061805">
         <name>Morphy Richards Парогенератор S-Pro Violet 332100</name>
         <outlets>
-          <outlet id="0" instock="12"/>
+          <outlet id="0" instock="-3"/>
         </outlets>
         <model>332100</model>
         <code>5011832061805</code>
@@ -9451,10 +9462,10 @@
         <vendor>Morphy Richards</vendor>
         <price>23990.00</price>
       </offer>
-      <offer available="true" id="6925108707962">
+      <offer available="false" id="6925108707962">
         <name>ЗНАТОК Играем в испанский АЛФАВИТ. Книга для говорящей ручки "ЗНАТОК" ZP-40796</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>ZP-40796</model>
         <code>6925108707962</code>
@@ -9462,10 +9473,10 @@
         <vendor>Знаток</vendor>
         <price>548.00</price>
       </offer>
-      <offer available="true" id="5011832059123">
+      <offer available="false" id="5011832059123">
         <name>Morphy Richards Хлебопечка Premium Plus 502000</name>
         <outlets>
-          <outlet id="0" instock="9"/>
+          <outlet id="0" instock="-1"/>
         </outlets>
         <model>502000</model>
         <code>5011832059123</code>
@@ -9553,7 +9564,7 @@
       <offer available="true" id="7332543636211">
         <name>Electrolux Пылесос EC41-H2SW</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>EC41-H2SW</model>
         <code>7332543636211</code>
@@ -9583,10 +9594,10 @@
         <vendor>Moodo</vendor>
         <price>2390.00</price>
       </offer>
-      <offer available="false" id="7332543436644">
+      <offer available="true" id="7332543436644">
         <name>Electrolux пылесос PowerForce ZPF2220</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>ZPF2220</model>
         <code>7332543436644</code>
@@ -9619,13 +9630,13 @@
       <offer available="true" id="4650100440365">
         <name>Hoverbot Электросамокат BS-02 HVBTBS2</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>HVBTBS2</model>
         <code>4650100440365</code>
         <categoryId>24</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>32220.00</price>
+        <price>31003.00</price>
       </offer>
       <offer available="false" id="2006694160370">
         <name>Wild Bear Ремень RM-010m Brown, в кожаном чехле</name>
@@ -9696,7 +9707,7 @@
       <offer available="true" id="2001950110113">
         <name>Текс-Дизайн Комплект постельного белья 1,5-спальный Подводный мир, перкаль 1710242 (синий)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>1710242</model>
         <code>2001950110113</code>
@@ -9707,7 +9718,7 @@
       <offer available="true" id="4627184323921">
         <name>Lolidream Пижама (топ + шорты) черный L, LD2</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>LD2</model>
         <code>4627184323921</code>
@@ -9781,10 +9792,10 @@
         <vendor>UNID</vendor>
         <price>890.00</price>
       </offer>
-      <offer available="true" id="4601772002009">
+      <offer available="false" id="4601772002009">
         <name>Виталад Мюсли прессованные Батончик Мюсли земляника и злаки, 40гр, шоу-бокс 24 шт.</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>BAT07</model>
         <code>4601772002009</code>
@@ -9806,7 +9817,7 @@
       <offer available="true" id="9785424400667">
         <name>ЗНАТОК Русские народные сказки" Книга № 8 для говорящей ручки "ЗНАТОК" 2-го поколения (Теремок, Петушок Золотой гребешок, Волк дурень) ZP-40066</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>ZP-40066</model>
         <code>9785424400667</code>
@@ -9847,10 +9858,10 @@
         <vendor>Midzumi</vendor>
         <price>1555.00</price>
       </offer>
-      <offer available="true" id="8714612107263">
+      <offer available="false" id="8714612107263">
         <name>XD Design Сумка-рюкзак для ноутбука до 15,6" XD Design Bobby Biz (P705.571), черный</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>P705.571</model>
         <code>8714612107263</code>
@@ -9883,7 +9894,7 @@
       <offer available="false" id="5011832052988">
         <name>(EOL) Morphy Richards Тостер Accents Sand 222004EE</name>
         <outlets>
-          <outlet id="0" instock="-1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>222004EE</model>
         <code>5011832052988</code>
@@ -9957,10 +9968,10 @@
         <vendor>BG Berlin</vendor>
         <price>7890.00</price>
       </offer>
-      <offer available="true" id="5011832063038">
+      <offer available="false" id="5011832063038">
         <name>Morphy Richards Суповарка Compact 501021</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>501021</model>
         <code>5011832063038</code>
@@ -10015,7 +10026,7 @@
       <offer available="false" id="5011832050236">
         <name>(EOL) Morphy Richards Миксер 400405EE</name>
         <outlets>
-          <outlet id="0" instock="-5"/>
+          <outlet id="0" instock="-6"/>
         </outlets>
         <model>400405EE</model>
         <code>5011832050236</code>
@@ -10026,7 +10037,7 @@
       <offer available="true" id="2000493180065">
         <name>Текс-Дизайн Комплект постельного белья 2-спальный Цветущий миндаль, перкаль 1743249 (розовый)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>1743249</model>
         <code>2000493180065</code>
@@ -10065,12 +10076,12 @@
         <code>4660042111278</code>
         <categoryId>126</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>8990.00</price>
+        <price>7875.00</price>
       </offer>
       <offer available="true" id="011120188219">
         <name>Bissell Чистящее средство 1144J для твердых полов</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>1144J</model>
         <code>011120188219</code>
@@ -10089,10 +10100,10 @@
         <vendor>Cleopatra for trading and international marketing</vendor>
         <price>513.00</price>
       </offer>
-      <offer available="false" id="5011832053473">
+      <offer available="true" id="5011832053473">
         <name>Morphy Richards Кофеварка Accents Stainless Steel 162010EE</name>
         <outlets>
-          <outlet id="0" instock="-1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>162010EE</model>
         <code>5011832053473</code>
@@ -10125,7 +10136,7 @@
       <offer available="true" id="6925108701892">
         <name>ЗНАТОК Говорящая ручка "ЗНАТОК" (2-го поколения) ZP-70189 память 4Гб + аудиостикеры/10 компл.</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="11"/>
         </outlets>
         <model>ZP-70189</model>
         <code>6925108701892</code>
@@ -10191,7 +10202,7 @@
       <offer available="true" id="7319599031443">
         <name>Electrolux Мешок для пылесоса E 201S (91239) 4 шт</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>91239</model>
         <code>7319599031443</code>
@@ -10221,10 +10232,10 @@
         <vendor>Spider Pen</vendor>
         <price>4490.00</price>
       </offer>
-      <offer available="true" id="4606085600089">
+      <offer available="false" id="4606085600089">
         <name>Кошкин секрет Наполнитель гигиенический Юниор 5л, 00000008329</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>00000008329</model>
         <code>4606085600089</code>
@@ -10298,16 +10309,16 @@
         <vendor>Wild Bear</vendor>
         <price>2690.00</price>
       </offer>
-      <offer available="true" id="8435484051453">
+      <offer available="false" id="8435484051453">
         <name>Cecotec Робот-пылесос Conga 1290 (05145) моющий, ультратонкий, турбо всасывание, пульт, смарт гиронавигация, GPS, маневр ножек, магнитная стена</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="-1"/>
         </outlets>
         <model>5145</model>
         <code>8435484051453</code>
         <categoryId>141</categoryId>
         <vendor>Cecotec</vendor>
-        <price>19990.00</price>
+        <price>22900.00</price>
       </offer>
       <offer available="false" id="7332543567447">
         <name>Electrolux пылесос UltraSilencer  ZEN EUS89TM</name>
@@ -10384,7 +10395,7 @@
         <code>4660042111469</code>
         <categoryId>126</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>10990.00</price>
+        <price>9668.00</price>
       </offer>
       <offer available="false" id="7290016389081">
         <name>Moodo Agan Aroma Коллекция ароматических капсул (4 шт.) Moodo Beach Party Family Pack Пляжная вечеринка MOD-SET_BEACH</name>
@@ -10400,7 +10411,7 @@
       <offer available="true" id="4627184323822">
         <name>Lolidream Маска для сна бархатно-шелковая (пудра)</name>
         <outlets>
-          <outlet id="0" instock="5"/>
+          <outlet id="0" instock="6"/>
         </outlets>
         <model>LDM1</model>
         <code>4627184323822</code>
@@ -10409,7 +10420,7 @@
         <price>590.00</price>
       </offer>
       <offer available="false" id="011120188547">
-        <name>Bissell чистящие средства 1146J для очистки ковров и мебельной обивки</name>
+        <name>(EOL) Bissell чистящие средства 1146J для очистки ковров и мебельной обивки</name>
         <outlets>
           <outlet id="0" instock="0"/>
         </outlets>
@@ -10499,7 +10510,7 @@
       <offer available="true" id="7332543434237">
         <name>Electrolux пылесос SilentPerformer  Cyclonic ZSPC2010</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>ZSPC2010</model>
         <code>7332543434237</code>
@@ -10543,7 +10554,7 @@
       <offer available="false" id="852208006083">
         <name>CreoPop Чернила 3А Чувствительные к температуре SKU008 (Blue =&gt;transparent, Green =&gt; Yellow, Purple =&gt; Blue)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="-1"/>
         </outlets>
         <model>SKU008</model>
         <code>852208006083</code>
@@ -10606,10 +10617,10 @@
         <vendor>Haier</vendor>
         <price>1899.00</price>
       </offer>
-      <offer available="true" id="6970754370671">
+      <offer available="false" id="6970754370671">
         <name>Noerden ремешок для часов 20мм. силикон PAB-0006, красный</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>PAB-0006</model>
         <code>6970754370671</code>
@@ -10895,7 +10906,7 @@
       <offer available="true" id="683480009284">
         <name>Знаток Звуковой коврик "Гигантский напольный синтезатор" SW928</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>SW928</model>
         <code>683480009284</code>
@@ -10906,7 +10917,7 @@
       <offer available="true" id="9785424400711">
         <name>ЗНАТОК Лесные истории. Книга №5 для Говорящей ручки "ЗНАТОК" Автор Дмитрий Дмитриев ZP-40071</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>ZP-40071</model>
         <code>9785424400711</code>
@@ -11027,7 +11038,7 @@
       <offer available="true" id="5011832061836">
         <name>Morphy Richards Парогенератор Speed Intellitepm 333300</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>333300</model>
         <code>5011832061836</code>
@@ -11035,10 +11046,10 @@
         <vendor>Morphy Richards</vendor>
         <price>11990.00</price>
       </offer>
-      <offer available="true" id="5011832059277">
+      <offer available="false" id="5011832059277">
         <name>Morphy Richards Электрический чайник Evoke Pyramid Platinum 100103EE</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>100103EE</model>
         <code>5011832059277</code>
@@ -11049,7 +11060,7 @@
       <offer available="true" id="6970754371142">
         <name>Noerden Умная термобутылка LIZ 480мл. PND-0001, цвет белый</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>PND-0001</model>
         <code>6970754371142</code>
@@ -11093,7 +11104,7 @@
       <offer available="false" id="4716873890095">
         <name>Hobot Чистящие салфетки для Legee 668 / 669 / 688 (2 комплекта/упак)</name>
         <outlets>
-          <outlet id="0" instock="-1"/>
+          <outlet id="0" instock="-5"/>
         </outlets>
         <model>LG668A01 </model>
         <code>4716873890095</code>
@@ -11137,7 +11148,7 @@
       <offer available="true" id="3023372018623">
         <name>Electrolux Фильтр для пылесоса EFH12 W HEPA (24153)</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>24153</model>
         <code>3023372018623</code>
@@ -11354,10 +11365,10 @@
         <vendor>Знаток</vendor>
         <price>4500.00</price>
       </offer>
-      <offer available="true" id="4690687059109">
+      <offer available="false" id="4690687059109">
         <name>SETA TEVES Покрывало для кровати стеганое, размер 220х240, 02315320 (ореховый)</name>
         <outlets>
-          <outlet id="0" instock="4"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>02315320</model>
         <code>4690687059109</code>
@@ -11453,10 +11464,10 @@
         <vendor>LoliDream</vendor>
         <price>490.00</price>
       </offer>
-      <offer available="true" id="4690687059086">
+      <offer available="false" id="4690687059086">
         <name>SETA TEVES Покрывало для кровати стеганое, размер 180х220, 02315202 (серый)</name>
         <outlets>
-          <outlet id="0" instock="13"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>02315202</model>
         <code>4690687059086</code>
@@ -11533,7 +11544,7 @@
       <offer available="true" id="4716873840167">
         <name>Hobot Робот мойщик окон Hobot-368</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="24"/>
         </outlets>
         <model>HOBOT-368</model>
         <code>4716873840167</code>
@@ -11541,10 +11552,10 @@
         <vendor>Hobot</vendor>
         <price>27489.00</price>
       </offer>
-      <offer available="true" id="4601772002573">
+      <offer available="false" id="4601772002573">
         <name>Виталад Мюсли прессованные Батончик "4 злака и малина" в молочной глазури, 40гр, шоу-бокс 24 шт.</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>BAT05</model>
         <code>4601772002573</code>
@@ -11586,7 +11597,7 @@
         <price>4990.00</price>
       </offer>
       <offer available="false" id="011120233711">
-        <name>Bissell Пылесос моющий 17132</name>
+        <name>(EOL) Bissell Пылесос моющий 17132</name>
         <outlets>
           <outlet id="0" instock="0"/>
         </outlets>
@@ -11621,7 +11632,7 @@
       <offer available="true" id="5011832053466">
         <name>Morphy Richards Кофеварка Accents Red 162009</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>162009</model>
         <code>5011832053466</code>
@@ -11643,7 +11654,7 @@
       <offer available="true" id="4601772002153">
         <name>Виталад Батончик "Протеиновый с бананом" 40гр, шоу-бокс 24 шт.</name>
         <outlets>
-          <outlet id="0" instock="9"/>
+          <outlet id="0" instock="7"/>
         </outlets>
         <model>BAT02</model>
         <code>4601772002153</code>
@@ -11673,10 +11684,10 @@
         <vendor>Знаток</vendor>
         <price>1670.00</price>
       </offer>
-      <offer available="true" id="6970754370749">
+      <offer available="false" id="6970754370749">
         <name>Noerden ремешок для часов 20мм. нейлон PAB-0203, расцветка НАТО (красный/белый/синий)</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>PAB-0203</model>
         <code>6970754370749</code>
@@ -11709,7 +11720,7 @@
       <offer available="true" id="4627159510295">
         <name>LoliDream Подушка против морщин AV71105</name>
         <outlets>
-          <outlet id="0" instock="27"/>
+          <outlet id="0" instock="34"/>
         </outlets>
         <model>AV71105</model>
         <code>4627159510295</code>
@@ -11720,7 +11731,7 @@
       <offer available="true" id="8435484051439">
         <name>Cecotec Робот-пылесос Conga 990 (05142) моющий, ультратонкий, турбо всасывание на коврах, пульт, бесконтактно-сенсорный</name>
         <outlets>
-          <outlet id="0" instock="2"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>5142</model>
         <code>8435484051439</code>
@@ -11731,7 +11742,7 @@
       <offer available="true" id="5011832067258">
         <name>Morphy Richards Утюг Breeze Easy Plus Reach 300286</name>
         <outlets>
-          <outlet id="0" instock="4"/>
+          <outlet id="0" instock="7"/>
         </outlets>
         <model>300286</model>
         <code>5011832067258</code>
@@ -11742,7 +11753,7 @@
       <offer available="true" id="6925108700987">
         <name>Знаток Электронный конструктор "320 схем" 70098</name>
         <outlets>
-          <outlet id="0" instock="3"/>
+          <outlet id="0" instock="5"/>
         </outlets>
         <model>70098</model>
         <code>6925108700987</code>
@@ -11852,7 +11863,7 @@
       <offer available="true" id="4716873849030">
         <name>Hobot Чистящие салфетки Hobot-268/288/298  (синие) (комплект из 3 шт.)</name>
         <outlets>
-          <outlet id="0" instock="6"/>
+          <outlet id="0" instock="7"/>
         </outlets>
         <model>HB268A01 (синие)</model>
         <code>4716873849030</code>
@@ -11880,7 +11891,7 @@
         <code>4660042110394</code>
         <categoryId>126</categoryId>
         <vendor>Hoverbot</vendor>
-        <price>8990.00</price>
+        <price>7875.00</price>
       </offer>
       <offer available="true" id="6906053058590">
         <name>BG Berlin Рюкзак Metrobag 17" BG010/01/Black (черный)</name>
@@ -11918,7 +11929,7 @@
       <offer available="true" id="6925108702776">
         <name>(EOL) Знаток Звуковой коврик "Танцующий Зоопарк" SLW9885</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>SLW9885</model>
         <code>6925108702776</code>
@@ -11960,9 +11971,9 @@
         <price>690.00</price>
       </offer>
       <offer available="true" id="011120232400">
-        <name>Bissell Щетка универсальная для 17132 (1868F)</name>
+        <name>Bissell Щетка универсальная для пылесосов 17132/ 2223N/ 2582N (1868F)</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>1868F</model>
         <code>011120232400</code>
@@ -11970,10 +11981,10 @@
         <vendor>Bissell</vendor>
         <price>1490.00</price>
       </offer>
-      <offer available="true" id="0011120253368">
+      <offer available="false" id="0011120253368">
         <name>Bissell Пылесос моющий 2223N (Crosswave Advanced)</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>2223N</model>
         <code>0011120253368</code>
@@ -11981,10 +11992,10 @@
         <vendor>Bissell</vendor>
         <price>29990.00</price>
       </offer>
-      <offer available="false" id="0011120257564">
+      <offer available="true" id="0011120257564">
         <name>Bissell Пылесос беспроводной 2983N (MultiReach Ion XL 36V)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>2983N </model>
         <code>0011120257564</code>
@@ -11992,10 +12003,10 @@
         <vendor>Bissell</vendor>
         <price>28990.00</price>
       </offer>
-      <offer available="false" id="0011120254471">
+      <offer available="true" id="0011120254471">
         <name>Bissell Пылесос беспроводной 2602D ICON pet (Cordless stick)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="1"/>
         </outlets>
         <model>2602D</model>
         <code>0011120254471</code>
@@ -12006,7 +12017,7 @@
       <offer available="true" id="0011120245158">
         <name>Bissell Пароочиститель 2234N</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>2234N</model>
         <code>0011120245158</code>
@@ -12014,16 +12025,16 @@
         <vendor>Bissell</vendor>
         <price>16990.00</price>
       </offer>
-      <offer available="false" id="4627183161388">
+      <offer available="true" id="4627183161388">
         <name>Lolidream электрическая очищающая массажная щеточка с 2 насадками, цвет розовый</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>LD70531</model>
         <code>4627183161388</code>
         <categoryId>5</categoryId>
         <vendor>LoliDream</vendor>
-        <price>2990.00</price>
+        <price>3990.00</price>
       </offer>
       <offer available="false" id="8681665066499">
         <name>Nishman Одеколон после бритья, успокаивающий и освежающий, серия ANTARCTICA 01, 400 мл</name>
@@ -12036,10 +12047,10 @@
         <vendor>Nishman</vendor>
         <price>1160.00</price>
       </offer>
-      <offer available="true" id="8435484054430">
+      <offer available="false" id="8435484054430">
         <name>Cecotec Сверхмощный ручной пылесос Conga Rockstar Micro 8000 (05443) 120 Вт (14 кПа)</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="0"/>
         </outlets>
         <model>05443</model>
         <code>8435484054430</code>
@@ -12072,7 +12083,7 @@
       <offer available="true" id="8435484050845">
         <name>Cecotec Пылесос Conga PowerAsh 1200, 05084</name>
         <outlets>
-          <outlet id="0" instock="1"/>
+          <outlet id="0" instock="3"/>
         </outlets>
         <model>05084</model>
         <code>8435484050845</code>
@@ -12223,10 +12234,10 @@
         <vendor>Знаток</vendor>
         <price>1653.00</price>
       </offer>
-      <offer available="false" id="0011120237191">
+      <offer available="true" id="0011120237191">
         <name>Bissell Фильтр для пылесоса для 1977N (2082)</name>
         <outlets>
-          <outlet id="0" instock="0"/>
+          <outlet id="0" instock="2"/>
         </outlets>
         <model>91777</model>
         <code>0011120237191</code>
@@ -12343,17 +12354,6 @@
         <categoryId>139</categoryId>
         <vendor>Знаток</vendor>
         <price>2990.00</price>
-      </offer>
-      <offer available="false" id="11111111111111111111111483">
-        <name>Знаток Конструктор ARTEC World "Веселая стая" коробка 30дет. 15-2348-ART (2)</name>
-        <outlets>
-          <outlet id="0" instock="0"/>
-        </outlets>
-        <model>15-2348-ART</model>
-        <code>11111111111111111111111483</code>
-        <categoryId>139</categoryId>
-        <vendor>Знаток</vendor>
-        <price>417.00</price>
       </offer>
       <offer available="false" id="11111111111111111111111484">
         <name>Знаток Конструктор ARTEC World "Веселая ферма" коробка 30дет. 15-2345-ART (2)</name>
@@ -12717,17 +12717,6 @@
         <categoryId>139</categoryId>
         <vendor>Знаток</vendor>
         <price>785.00</price>
-      </offer>
-      <offer available="false" id="11111111111111111111111524">
-        <name>Знаток Электронный конструктор "Супер-измеритель" ZP-70694 (2)</name>
-        <outlets>
-          <outlet id="0" instock="0"/>
-        </outlets>
-        <model>ZP-70694</model>
-        <code>11111111111111111111111524</code>
-        <categoryId>139</categoryId>
-        <vendor>Знаток</vendor>
-        <price>3400.00</price>
       </offer>
       <offer available="false" id="11111111111111111111111525">
         <name>Знаток Электронный конструктор "Умная Машина" ZP-70691 (2)</name>
