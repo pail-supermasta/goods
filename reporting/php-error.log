@@ -78,3 +78,5 @@ Stack trace:
 [10-Aug-2020 16:29:00 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 48
 [10-Aug-2020 16:29:00 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 48
 [10-Aug-2020 16:29:00 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 48
+[08-Oct-2020 12:29:26 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 48
+[05-Nov-2020 08:07:12 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 48
