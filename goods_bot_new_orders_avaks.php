@@ -39,14 +39,17 @@ function addCustomerorder($order, $organization)
     $put_data['shared'] = false;
     // Проведено
     $put_data['applicable'] = true;
-    // ООО «Новинки»
+    // ООО «АВАКС»
     $put_data['organization']['meta']['href'] = MS_PATH . "/entity/organization/$organization";
     $put_data['organization']['meta']['type'] = "organization";
+    // счет организации 4070 2810 2970 6000 0621
+    $put_data['organizationAccount']['meta']['href'] = MS_PATH.'/entity/organization/'.$organization.'/accounts/2edad4fb-d8c3-11ea-0a80-09d8000c4130';
+    $put_data['organizationAccount']['meta']['type'] = "account";
     // Покупатель Goods.ru
     $put_data['agent']['meta']['href'] = MS_PATH . "/entity/counterparty/64710328-2e6f-11e8-9ff4-34e8000f81c8";
     $put_data['agent']['meta']['type'] = "counterparty";
-    // Договор №Прод/КП-Н09.03.18 от 04.05.2018
-    $put_data['contract']['meta']['href'] = MS_PATH . "/entity/contract/f2f949de-4f79-11e8-9107-504800047057";
+    // Договор К-3411-10-2020
+    $put_data['contract']['meta']['href'] = MS_PATH . "/entity/contract/dc65416f-24c5-11eb-0a80-01400006d3d3";
     $put_data['contract']['meta']['type'] = "contract";
     // Склад MP_NFF
     $put_data['store']['meta']['href'] = MS_PATH . "/entity/store/48de3b8e-8b84-11e9-9ff4-34e8001a4ea1";
@@ -126,11 +129,10 @@ function addCustomerorder($order, $organization)
 }
 
 
-//"organization" => "07bbe005-8b17-11e7-7a34-5acf0019232a",
 
 $orderMS = new OrderMS();
 
-$goods = new Order('608', '97B1BC55-189D-4EB4-91AF-4B9E9A985B3D');
+$goods = new Order('9308', 'B58874A5-7AE5-452A-8C31-F0DDEA37AA56');
 
 $goodsOrdersNew = $goods->getOrdersNew();
 
@@ -144,7 +146,7 @@ if (is_array($goodsOrdersNew)) {
             $message .= 'Заказ №' . $customerorder['name'] . " уже существует в МС\n";
         } else {
             $goodsOrderDetails = $goods->getOrder($orderToCreate);
-            $customerorder = addCustomerorder($goodsOrderDetails, "07bbe005-8b17-11e7-7a34-5acf0019232a");
+            $customerorder = addCustomerorder($goodsOrderDetails, "b2c9e371-1b98-11e6-7a69-93a700176cab");
 
 
             $message .= 'Заказ №' . $orderMS->name . " создан\n";

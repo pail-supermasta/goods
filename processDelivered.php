@@ -24,15 +24,12 @@ use Avaks\MS\Orders;
 
 require_once 'class/Telegram.php';
 
-//Amaze 97B1BC55-189D-4EB4-91AF-4B9E9A985B3D
-//Фирдус C12405BF-01CB-4A6C-A41E-0E179EF00F54
 
 
-//ID	продавца:	2998
-//ID	продавца:	608
 $goodsTokens = array(
     '608' => '97B1BC55-189D-4EB4-91AF-4B9E9A985B3D',//novinki - amaze
-    '2998' => 'C12405BF-01CB-4A6C-A41E-0E179EF00F54', //nezabudka - firdus
+    '9308' => 'B58874A5-7AE5-452A-8C31-F0DDEA37AA56',//АВАКС
+//    '2998' => 'C12405BF-01CB-4A6C-A41E-0E179EF00F54', //nezabudka - firdus
 //    'НОВИНКИ test' => '6881430B-882F-4C4F-8DCA-14FDAFEBAFEC'
 );
 
@@ -40,20 +37,7 @@ $goodsTokens = array(
 /*ШАГ 0 НАЧАЛО доставленные заказы - ставим Доставлен в МС*/
 
 
-/*function getMSOrdersDeliveringMonth($organization)
-{
-    $queryOrderByState = "SELECT id,`name`,positions
-                  FROM `ms_customerorder`
-                  WHERE agent = '64710328-2e6f-11e8-9ff4-34e8000f81c8'
-                    AND state = '327c03c6-75c5-11e5-7a40-e89700139938'
-                    AND organization = '".$organization."'
-                    AND moment > CURDATE() - INTERVAL 14 DAY
-                    AND deleted=''";
-    $ordersByState = AvaksSQL::selectOrdersByState($queryOrderByState);
 
-
-    return $ordersByState;
-}*/
 
 
 function processDelivered($boxID, $token, $organization)
@@ -100,6 +84,10 @@ foreach ($goodsTokens as $goodsID => $goodsToken) {
         case "608":
             //novink
             $organization = "07bbe005-8b17-11e7-7a34-5acf0019232a";
+            break;
+        case "9308":
+            //avaks
+            $organization = "b2c9e371-1b98-11e6-7a69-93a700176cab";//OOО "АВАКС"
             break;
         case "2998":
             // NZ

@@ -25,12 +25,6 @@ class Sticker
     public function printPdf($shipmentId,$shopToken, $boxCode)
     {
         $toReturn = false;
-//        продавец на проде 608 на тесте 1231
-//        "boxCodes":['608*846882375*1']
-        /*$data = '{
-                    "shipmentId": "842818431",
-                    "boxCodes":["1231*842818431*1"]
-                }';*/
         $data = '{
                     "shipmentId": "' . $shipmentId . '",
                     "boxCodes":["' . $boxCode . '*' . $shipmentId . '*1"]

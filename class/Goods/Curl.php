@@ -21,8 +21,6 @@ class Curl
      */
 
 
-//Amaze 97B1BC55-189D-4EB4-91AF-4B9E9A985B3D
-//Фирдус C12405BF-01CB-4A6C-A41E-0E179EF00F54
     public static function execute($link,$token, $_data, $display = true)
     {
 

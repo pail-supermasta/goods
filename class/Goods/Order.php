@@ -11,8 +11,6 @@ namespace Avaks\Goods;
 
 class Order
 {
-//    private $token = "97B1BC55-189D-4EB4-91AF-4B9E9A985B3D";
-//    private $api_url = "https://partner.goods.ru/api/market/v1/";
     public $state;
     public $id;
     public $shopToken;

@@ -24,8 +24,6 @@ use Avaks\MS\OrderMS;
 require_once 'class/Telegram.php';
 
 
-//define('BOX_CODE_ID', '1231'); //TEST
-//define('BOX_CODE_ID','608'); //PRODUCTION
 define('ID_REGEXP', '/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/'); // Регулярка для UUID
 
 date_default_timezone_set('Europe/Moscow');
