@@ -80,6 +80,9 @@ function addCustomerorder($order, $organization)
         $product->id = $productApi['rows'][0]['_id'];
         if ($product->id == null) {
             $put_data['description'] .= "Внимание! Ошибка при сопоставлении товара! Проверьте заказ вручную!\n";
+            $orderName = $put_data['name'];
+            $offerId = $item['offerId'];
+            telegram("Внимание! Заказ $orderName  Ошибка при сопоставлении товара $offerId !", '-486167604');
             continue;
         }
 
@@ -103,7 +106,7 @@ function addCustomerorder($order, $organization)
                 $position['assortment']['meta']['href'] = MS_PATH . '/entity/service/a3af6531-6fce-11e9-9109-f8fc0025a229';
                 $position['assortment']['meta']['type'] = 'service';
                 $put_data['positions'][] = $position;
-                $put_data['description'] .= "Предоставлена скидка типа {$discount['discountType']} ({$discount['discountDescription']}) от goods на товар {$productMongo->name} в размере {$discount['discountAmount']} руб\n";
+                $put_data['description'] .= "Предоставлена скидка типа {$discount['discountType']} ({$discount['discountDescription']}) от goods  в размере {$discount['discountAmount']} руб\n";
             }
         }
 
