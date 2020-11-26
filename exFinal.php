@@ -351,11 +351,20 @@ function processShop($boxID, $token)
 
             $orderMS = new OrderMS($orderMSNew['id'], $orderMSNew['name'], '');
             $oldDescription = $orderMSNew['description'];
-            $setWork = $orderMS->setInWork($oldDescription);
-            if (strpos($setWork, 'обработка-ошибок') > 0) {
-                telegram("error found $setWork", '-289839597');
-                var_dump($setWork);
+
+            $findme   = 'Внимание! Ошибка при сопоставлении товара!';
+            $pos = strpos($oldDescription, $findme);
+
+            if ($pos === false) {
+                $setWork = $orderMS->setInWork($oldDescription);
+                if (strpos($setWork, 'обработка-ошибок') > 0) {
+                    telegram("error found $setWork", '-289839597');
+                    var_dump($setWork);
+                }
+            } else{
+                $orderMS->setProcessManually();
             }
+
         }
     }
 

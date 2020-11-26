@@ -27,7 +27,7 @@ class BackendAPI
         $this->urlService = 'https://api.backendserver.ru/api/v1/service';
         $this->urlStock = 'https://api.backendserver.ru/api/v1/report_stock_all';
         $this->userData = array("username" => "mongodb@техтрэнд", "password" => "!!@th9247t924");
-        $this->token = $this->getToken();
+        $this->token = "bW9uZ29kYkDRgtC10YXRgtGA0Y3QvdC0OiEhQHRoOTI0N3Q5MjQ=";
 
     }
 
@@ -58,7 +58,7 @@ class BackendAPI
 
         $ch = curl_init($urlProduct);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-        curl_setopt($ch, CURLOPT_URL, $urlProduct . '/?' . $data_string);
+        curl_setopt($ch, CURLOPT_URL, $urlProduct . '/?' . $data_string.'&token=bW9uZ29kYkDRgtC10YXRgtGA0Y3QvdC0OiEhQHRoOTI0N3Q5MjQ=');
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
