@@ -157,6 +157,7 @@ class Order
 
         if ($this->state == 'NEW') {
             $this->state = 'REJECT PARTIALLY';
+
         }
         return $goodsOrderNames;
     }
@@ -304,7 +305,7 @@ class Order
 
     public function setShipping(array $orderToShip)
     {
-
+        status
 
         $ThatTime = "14:00:00";
         if (time() >= strtotime($ThatTime)) {

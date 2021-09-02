@@ -39,9 +39,12 @@ function addDSH($orderData)
     $result = false;
 
     $ordername = $orderData[0];
-    $DSHSumm = str_replace('t', "", $orderData[6]);
+    $DSHSumm = str_replace('t', "", $orderData[7]);
     $DSHSumNum = (float)$DSHSumm;
 //    $DSHSumComment = " ДШ Сумма: $DSHSumm";
+
+    $LogisticSumm = str_replace('t', "", $orderData[10]);
+    $LogisticSumNum = (float)$LogisticSumm;
 
     $orderMS = new OrderMS('', $ordername);
     $orderDetails = $orderMS->getByName();
@@ -49,10 +52,10 @@ function addDSH($orderData)
 
 
 //    $result = $orderMS->setDSHSum($orderDetails['description'], $DSHSumNum, $DSHSumComment);
-    $result = $orderMS->setDSHSum($DSHSumNum);
+    $result = $orderMS->setDSHSumAndLogisticSum($DSHSumNum,$LogisticSumNum);
 
 
-    echo "$ordername $DSHSumNum\n";
+    echo "$ordername $DSHSumNum\n $LogisticSumNum\n";
 
     return $result;
 }
@@ -68,8 +71,8 @@ function getDSH($inputFileName)
 
     try {
         $sheet = $spreadsheet->getActiveSheet();
-        $maxCell = $sheet->getHighestDataRow("B");
-        $data = $sheet->rangeToArray('B5:H' . $maxCell);
+        $maxCell = $sheet->getHighestDataRow("C");
+        $data = $sheet->rangeToArray('C3:M' . $maxCell);
     } catch (\PhpOffice\PhpSpreadsheet\Exception $e) {
         die('Error getActiveSheet: ' . $e->getMessage());
     }

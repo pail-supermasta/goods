@@ -166,4 +166,28 @@ class OrderMS
         return $res;
         
     }
+
+    public function setDSHSumAndLogisticSum($DSHSumNum,$LogisticSumNum)
+    {
+
+        $put_data = array();
+        $attribute = array();
+
+//        DSH sum new
+        $attribute['id'] = '535dd809-1db1-11ea-0a80-04c00009d6bf';
+        $attribute['value'] = $DSHSumNum;
+        $put_data['attributes'][] = $attribute;
+
+//        logistic sum
+        $attribute['id'] = '8a500531-10fc-11ea-0a80-0533000590c7';
+        $attribute['value'] = $LogisticSumNum;
+        $put_data['attributes'][] = $attribute;
+
+        $postdata = json_encode($put_data,JSON_UNESCAPED_UNICODE);
+
+        $res = '';
+        $res = CurlMoiSklad::curlMS('/entity/customerorder/' . $this->id, $postdata, 'put');
+        return $res;
+
+    }
 }

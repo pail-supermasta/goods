@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+		<yml_catalog date="2021-04-19 16:05">
+		  <shop>
+			<name>Магазин орион</name>
+			<company>ООО «Орион»</company>
+			<url>http://orionz.ru</url>
+			<currencies>
+			  <currency id="RUR" rate="1"/>
+			</currencies>
+			<categories>
+				<category id="1">Беспроводной пылесос</category>
+				<category id="2">Мойщик окон</category>
+				<category id="3">Умная бутылка-термос</category>
+			</categories>
+			<shipment-options>
+			  <option days="0" order-before="9"/>
+			</shipment-options>
+			<offers>
+				<offer available="true" id="4627185305933">
+					<name>Atvel Беспроводной пылесос Upright G9</name>
+					<outlets>
+						<outlet id="0" instock="0"/>
+					</outlets>
+					<model>G9</model>
+					<code>4627185305933</code>
+					<categoryId>1</categoryId>
+					<vendor>Atvel</vendor>
+					<price>29990.00</price>
+				</offer>
+				<offer available="true" id="6970626160218">
+					<name>Mamibot робот мойщик окон W110-T Black</name>
+					<outlets>
+						<outlet id="0" instock="0"/>
+					</outlets>
+					<model>W110-T</model>
+					<code>6970626160218</code>
+					<categoryId>2</categoryId>
+					<vendor>Mamibot</vendor>
+					<price>14999.00</price>
+				</offer>
+				<offer available="true" id="6970626160294">
+					<name>Mamibot робот мойщик окон W120-T Black</name>
+					<outlets>
+						<outlet id="0" instock="0"/>
+					</outlets>
+					<model>W120-T</model>
+					<code>6970626160294</code>
+					<categoryId>2</categoryId>
+					<vendor>Mamibot</vendor>
+					<price>17999.00</price>
+				</offer>
+				<offer available="true" id="4627189375178">
+					<name>Atvel Умная бутылка-термос с LCD дисплеем и термометром D3-400W, белая</name>
+					<outlets>
+						<outlet id="0" instock="0"/>
+					</outlets>
+					<model>D3-400W</model>
+					<code>4627189375178</code>
+					<categoryId>3</categoryId>
+					<vendor>Atvel</vendor>
+					<price>2990.00</price>
+				</offer>
+				<offer available="true" id="4627189375192">
+					<name>Atvel Умная бутылка-термос с LCD дисплеем и термометром D3-600W, белая</name>
+					<outlets>
+						<outlet id="0" instock="0"/>
+					</outlets>
+					<model>D3-600W</model>
+					<code>4627189375192</code>
+					<categoryId>3</categoryId>
+					<vendor>Atvel</vendor>
+					<price>3290.00</price>
+				</offer>
+				<offer available="true" id="4627189375185">
+					<name>Atvel Умная бутылка-термос с LCD дисплеем и термометром D3-400B, чёрная</name>
+					<outlets>
+						<outlet id="0" instock="0"/>
+					</outlets>
+					<model>D3-400B</model>
+					<code>4627189375185</code>
+					<categoryId>3</categoryId>
+					<vendor>Atvel</vendor>
+					<price>2990.00</price>
+				</offer>
+				<offer available="true" id="4627189375208">
+					<name>Atvel Умная бутылка-термос с LCD дисплеем и термометром D3-600B, чёрная</name>
+					<outlets>
+						<outlet id="0" instock="0"/>
+					</outlets>
+					<model>D3-600B</model>
+					<code>4627189375208</code>
+					<categoryId>3</categoryId>
+					<vendor>Atvel</vendor>
+					<price>3290.00</price>
+				</offer>
+			</offers>
+		  </shop>
+		</yml_catalog>
