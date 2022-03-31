@@ -313,3 +313,10 @@ Stack trace:
 [10-Aug-2021 07:34:42 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 51
 [10-Aug-2021 07:35:32 UTC] PHP Warning:  Illegal string offset 'id' in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 51
 [10-Aug-2021 07:44:34 UTC] PHP Warning:  rename(files/new/608_1413_1628502014059_4e.xls,files/old/608_1413_1628502014059_4e.xls): Процесс не может получить доступ к файлу, так как этот файл занят другим процессом. (code: 32) in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 32
+[03-Sep-2021 08:38:11 UTC] PHP Warning:  rename(files/new/Goods_РќРѕРІРёРЅРєРё_608_1413_1630576272834_28.xls,files/old/Goods_РќРѕРІРёРЅРєРё_608_1413_1630576272834_28.xls): Процесс не может получить доступ к файлу, так как этот файл занят другим процессом. (code: 32) in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 32
+[03-Sep-2021 09:34:50 UTC] PHP Warning:  rename(files/new/Goods_РђР’РЎ_9308_26782_1630575361430_a4.xls,files/old/Goods_РђР’РЎ_9308_26782_1630575361430_a4.xls): Процесс не может получить доступ к файлу, так как этот файл занят другим процессом. (code: 32) in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 32
+[08-Oct-2021 10:47:51 UTC] PHP Notice:  Array to string conversion in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 91
+[28-Mar-2022 10:53:32 UTC] PHP Notice:  Undefined offset: 18 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46
+[28-Mar-2022 10:53:34 UTC] PHP Notice:  Undefined offset: 18 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46
+[28-Mar-2022 10:53:35 UTC] PHP Notice:  Undefined offset: 18 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46
+[28-Mar-2022 10:53:37 UTC] PHP Notice:  Undefined offset: 18 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46

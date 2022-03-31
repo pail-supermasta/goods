@@ -39,23 +39,34 @@ function addDSH($orderData)
     $result = false;
 
     $ordername = $orderData[0];
-    $DSHSumm = str_replace('t', "", $orderData[7]);
-    $DSHSumNum = (float)$DSHSumm;
-//    $DSHSumComment = " ДШ Сумма: $DSHSumm";
+    $DSHSummL = str_replace('t', "", $orderData[11]);
+//    $DSHSummN = str_replace('t', "", $orderData[13]);
+    $DSHSummO = str_replace('t', "", $orderData[14]);
+    $DSHSummS = str_replace('t', "", $orderData[18]);
+    $DSHSummT = str_replace('t', "", $orderData[19]);
 
-    $LogisticSumm = str_replace('t', "", $orderData[10]);
-    $LogisticSumNum = (float)$LogisticSumm;
+    $DSHSumNum = (float)$DSHSummL + (float)$DSHSummO + (float)$DSHSummS + (float)$DSHSummT;
+
+    $DSHSummM = str_replace('t', "", $orderData[12]);
+    $DSHSumComment = " Cost payments: $DSHSummM";
+
+    $LogisticSummP = str_replace('t', "", $orderData[15]);
+    $LogisticSummQ = str_replace('t', "", $orderData[16]);
+    $LogisticSumNum = (float)$LogisticSummP + (float)$LogisticSummQ;
 
     $orderMS = new OrderMS('', $ordername);
     $orderDetails = $orderMS->getByName();
     $orderMS->id = $orderDetails['id'];
 
 
-//    $result = $orderMS->setDSHSum($orderDetails['description'], $DSHSumNum, $DSHSumComment);
-    $result = $orderMS->setDSHSumAndLogisticSum($DSHSumNum,$LogisticSumNum);
+    $result = $orderMS->setDSHSumAndLogisticSum(
+        $orderDetails['description'],
+        $DSHSumNum,
+        $LogisticSumNum,
+        $DSHSumComment);
 
 
-    echo "$ordername $DSHSumNum\n $LogisticSumNum\n";
+    echo "$ordername $DSHSumNum\n $LogisticSumNum\n $DSHSumComment\n";
 
     return $result;
 }
@@ -71,8 +82,8 @@ function getDSH($inputFileName)
 
     try {
         $sheet = $spreadsheet->getActiveSheet();
-        $maxCell = $sheet->getHighestDataRow("C");
-        $data = $sheet->rangeToArray('C3:M' . $maxCell);
+        $maxCell = $sheet->getHighestDataRow("A");
+        $data = $sheet->rangeToArray('A4:S' . $maxCell);
     } catch (\PhpOffice\PhpSpreadsheet\Exception $e) {
         die('Error getActiveSheet: ' . $e->getMessage());
     }
@@ -82,8 +93,10 @@ function getDSH($inputFileName)
 
             $result = addDSH($orderData);
             if (strpos($result, 'обработка-ошибок') > 0) {
-                telegram("error found for addDSH", '-289839597');
-                error_log(date("Y-m-d H:i:s", strtotime(gmdate("Y-m-d H:i:s")) + 3 * 60 * 60) . $result . " " . $orderData . PHP_EOL, 3, "addDSH.log");
+//                telegram("error found for addDSH", '-289839597');
+//                error_log(date("Y-m-d H:i:s", strtotime(gmdate("Y-m-d H:i:s")) + 3 * 60 * 60) . $result . " " . $orderData . PHP_EOL, 3, "addDSH.log");
+                var_export($result);
+                var_dump('error here');
                 return false;
             }
         }

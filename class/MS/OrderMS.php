@@ -167,11 +167,18 @@ class OrderMS
         
     }
 
-    public function setDSHSumAndLogisticSum($DSHSumNum,$LogisticSumNum)
+    public function setDSHSumAndLogisticSum($oldDescription,$DSHSumNum,$LogisticSumNum,$DSHSumComment)
     {
-
         $put_data = array();
         $attribute = array();
+
+        /*удалить двойные ковычки*/
+        $oldDescription = str_replace('"', '', $oldDescription);
+
+        /*удалить новую строку*/
+        $oldDescription = preg_replace('/\s+/', ' ', trim($oldDescription));
+
+        $put_data['description'] = $oldDescription .' '.$DSHSumComment;
 
 //        DSH sum new
         $attribute['id'] = '535dd809-1db1-11ea-0a80-04c00009d6bf';
