@@ -320,3 +320,5 @@ Stack trace:
 [28-Mar-2022 10:53:34 UTC] PHP Notice:  Undefined offset: 18 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46
 [28-Mar-2022 10:53:35 UTC] PHP Notice:  Undefined offset: 18 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46
 [28-Mar-2022 10:53:37 UTC] PHP Notice:  Undefined offset: 18 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46
+[31-Mar-2022 10:15:10 UTC] PHP Notice:  Undefined offset: 19 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46
+[31-Mar-2022 10:15:12 UTC] PHP Notice:  Undefined offset: 19 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46

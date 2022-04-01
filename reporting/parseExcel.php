@@ -47,6 +47,10 @@ function addDSH($orderData)
 
     $DSHSumNum = (float)$DSHSummL + (float)$DSHSummO + (float)$DSHSummS + (float)$DSHSummT;
 
+    /*var_export("CHECK DSH AND LOG SUMs FIRST, THEN COMMENT THIS!");
+    var_dump($DSHSummS);
+    var_dump($DSHSumNum);
+    die();*/
     $DSHSummM = str_replace('t', "", $orderData[12]);
     $DSHSumComment = " Cost payments: $DSHSummM";
 
@@ -83,7 +87,7 @@ function getDSH($inputFileName)
     try {
         $sheet = $spreadsheet->getActiveSheet();
         $maxCell = $sheet->getHighestDataRow("A");
-        $data = $sheet->rangeToArray('A4:S' . $maxCell);
+        $data = $sheet->rangeToArray('A4:T' . $maxCell);
     } catch (\PhpOffice\PhpSpreadsheet\Exception $e) {
         die('Error getActiveSheet: ' . $e->getMessage());
     }
