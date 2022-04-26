@@ -322,3 +322,4 @@ Stack trace:
 [28-Mar-2022 10:53:37 UTC] PHP Notice:  Undefined offset: 18 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46
 [31-Mar-2022 10:15:10 UTC] PHP Notice:  Undefined offset: 19 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46
 [31-Mar-2022 10:15:12 UTC] PHP Notice:  Undefined offset: 19 in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 46
+[07-Apr-2022 13:04:59 UTC] PHP Warning:  rename(files/new/9308_26782_1648457240508_a4.xls,files/old/9308_26782_1648457240508_a4.xls): Процесс не может получить доступ к файлу, так как этот файл занят другим процессом. (code: 32) in C:\Users\User\Documents\goods\reporting\parseExcel.php on line 32

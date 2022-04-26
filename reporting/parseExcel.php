@@ -40,27 +40,56 @@ function addDSH($orderData)
 
     $ordername = $orderData[0];
     $DSHSummL = str_replace('t', "", $orderData[11]);
-//    $DSHSummN = str_replace('t', "", $orderData[13]);
+    $DSHSummL = str_replace(",",".",$DSHSummL);
+    $DSHSummL = preg_replace('/\.(?=.*\.)/', '', $DSHSummL);
+
     $DSHSummO = str_replace('t', "", $orderData[14]);
+    $DSHSummO = str_replace(",",".",$DSHSummO);
+    $DSHSummO = preg_replace('/\.(?=.*\.)/', '', $DSHSummO);
+
     $DSHSummS = str_replace('t', "", $orderData[18]);
+    $DSHSummS = str_replace(",",".",$DSHSummS);
+    $DSHSummS = preg_replace('/\.(?=.*\.)/', '', $DSHSummS);
+
     $DSHSummT = str_replace('t', "", $orderData[19]);
+    $DSHSummT = str_replace(",",".",$DSHSummT);
+    $DSHSummT = preg_replace('/\.(?=.*\.)/', '', $DSHSummT);
+
+
 
     $DSHSumNum = (float)$DSHSummL + (float)$DSHSummO + (float)$DSHSummS + (float)$DSHSummT;
 
-    /*var_export("CHECK DSH AND LOG SUMs FIRST, THEN COMMENT THIS!");
-    var_dump($DSHSummS);
-    var_dump($DSHSumNum);
-    die();*/
-    $DSHSummM = str_replace('t', "", $orderData[12]);
-    $DSHSumComment = " Cost payments: $DSHSummM";
+    $DSHSumComment = "";
+    if($orderData[12]){
+        $DSHSummM = str_replace('t', "", $orderData[12]);
+        $DSHSummM = str_replace(",",".",$DSHSummM);
+        $DSHSummM = preg_replace('/\.(?=.*\.)/', '', $DSHSummM);
+
+        $DSHSumComment = "\r\nCost payments: $DSHSummM";
+    }
+
 
     $LogisticSummP = str_replace('t', "", $orderData[15]);
+    $LogisticSummP = str_replace(",",".",$LogisticSummP);
+    $LogisticSummP = preg_replace('/\.(?=.*\.)/', '', $LogisticSummP);
+
     $LogisticSummQ = str_replace('t', "", $orderData[16]);
+    $LogisticSummQ = str_replace(",",".",$LogisticSummQ);
+    $LogisticSummQ = preg_replace('/\.(?=.*\.)/', '', $LogisticSummQ);
+
+
     $LogisticSumNum = (float)$LogisticSummP + (float)$LogisticSummQ;
+
+//    var_export("CHECK DSH AND LOG SUMs FIRST, THEN COMMENT THIS!");
+//    var_dump("DSHSumNum: " . $DSHSumNum);
+//    var_dump("LogisticSumNum: " . $LogisticSumNum);
+//    var_dump($DSHSumComment);
+//    die();
 
     $orderMS = new OrderMS('', $ordername);
     $orderDetails = $orderMS->getByName();
     $orderMS->id = $orderDetails['id'];
+
 
 
     $result = $orderMS->setDSHSumAndLogisticSum(
@@ -69,6 +98,10 @@ function addDSH($orderData)
         $LogisticSumNum,
         $DSHSumComment);
 
+    if (strpos($result, 'обработка-ошибок') > 0 || $result == '') {
+        var_dump($ordername . " has just caused an error. Cannot proceed any further!");
+        die();
+    }
 
     echo "$ordername $DSHSumNum\n $LogisticSumNum\n $DSHSumComment\n";
 
